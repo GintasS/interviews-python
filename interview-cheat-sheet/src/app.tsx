@@ -1536,44 +1536,6 @@ function JavaScriptReactFundamentals() {
                     <pre><code>{topic.example}</code></pre>
                   </div>
                 )}
-                
-                {topic.concepts && (
-                  <div class="concepts">
-                    <h5>Key Concepts:</h5>
-                    <ul>
-                      {topic.concepts.map((concept) => (
-                        <li>{concept}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                
-                {topic.key_methods && (
-                  <div class="key-methods">
-                    <h5>Key Methods:</h5>
-                    {topic.key_methods.map((category) => (
-                      <div class="method-category">
-                        <h6>{category.category}</h6>
-                        <ul>
-                          {category.methods.map((method) => (
-                            <li>{method}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                
-                {topic.best_practices && (
-                  <div class="best-practices">
-                    <h5>Best Practices:</h5>
-                    <ul>
-                      {topic.best_practices.map((practice) => (
-                        <li>{practice}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </div>
             );
           })}
@@ -1609,17 +1571,6 @@ function JavaScriptReactFundamentals() {
                   <ul>
                     {topic.key_points.map((point) => (
                       <li>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              
-              {topic.best_practices && (
-                <div class="best-practices">
-                  <h5>Best Practices:</h5>
-                  <ul>
-                    {topic.best_practices.map((practice) => (
-                      <li>{practice}</li>
                     ))}
                   </ul>
                 </div>
