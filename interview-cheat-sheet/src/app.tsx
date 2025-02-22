@@ -15,6 +15,12 @@ import pyModules from "./fixtures/python-modules.json";
 import apiNotes from "./fixtures/api-notes.json";
 import sqlNotes from "./fixtures/sql-notes.json";
 import resourcesLinks from "./fixtures/resources-links.json";
+import sqlQuestionsAnswers from "./fixtures/sql-questions-answers.json";
+import securityNotes from "./fixtures/security-notes.json";
+import webServices from "./fixtures/web-services.json";
+import systemDesign from "./fixtures/system-design.json";
+import jsReactFundamentals from "./fixtures/js-react-fundamentals.json";
+import genAI from "./fixtures/gen-ai.json";
 
 /*
 Best    => big-omega
@@ -545,6 +551,53 @@ function SQLTable() {
           ))}
         </tbody>
       </table>
+
+      <br />
+
+      <Title text="SQL Interview Questions" />
+      <div class="qa-list">
+        {sqlQuestionsAnswers.map((qa, index) => (
+          <details>
+            <summary>{`${index + 1}. ${qa.question}`}</summary>
+            <div class="answer">
+              {qa.answer.split('\n').map((line) => (
+                <div>{line}</div>
+              ))}
+
+              <div class="code-example">
+                <Code lang="sql" text={qa.code_example} />
+              </div>
+            </div>
+          </details>
+        ))}
+      </div>
+      <style>
+        {`
+          .answer {
+            padding: 12px;
+            line-height: 1.8;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            margin: 8px 0;
+          }
+          .code-example {
+            margin-top: 12px;
+          }
+          details {
+            margin: 8px 0;
+          }
+          summary {
+            cursor: pointer;
+            padding: 8px;
+            background-color: #eee;
+            border-radius: 4px;
+          }
+          summary:hover {
+            background-color: #ddd;
+          }
+        `}
+      </style>
+      
     </>
   );
 }
@@ -738,6 +791,1017 @@ function ResourcesView() {
   );
 }
 
+function WebServicesTable() {
+  return (
+    <>
+      <Title text="Web Services: REST vs SOAP" />
+      
+      <div class="web-services-container">
+        {/* Main Services Grid */}
+        <div class="services-grid">
+          {webServices.web_services.map((service) => (
+            <div class="service-card">
+              <h3>{service.name}</h3>
+              <p class="description">{service.description}</p>
+              
+              <div class="concepts-section">
+                <h4>Key Concepts</h4>
+                <ul>
+                  {service.key_concepts.map((concept) => (
+                    <li>{concept}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="characteristics-section">
+                <h4>Characteristics</h4>
+                {service.characteristics.map((char) => (
+                  <div class="characteristic">
+                    <strong>{char.name}:</strong> {char.details}
+                  </div>
+                ))}
+              </div>
+
+              <div class="pros-cons">
+                <div class="advantages">
+                  <h4>Advantages</h4>
+                  <ul>
+                    {service.advantages.map((adv) => (
+                      <li>{adv}</li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div class="disadvantages">
+                  <h4>Disadvantages</h4>
+                  <ul>
+                    {service.disadvantages.map((disadv) => (
+                      <li>{disadv}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="best-practices">
+                <h4>Best Practices</h4>
+                <ul>
+                  {service.best_practices.map((practice) => (
+                    <li>{practice}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Comparison Section */}
+        <div class="comparison-section">
+          <h3>Comparison</h3>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Aspect</th>
+                <th>REST</th>
+                <th>SOAP</th>
+              </tr>
+            </thead>
+            <tbody>
+              {webServices.comparison.criteria.map((criterion) => (
+                <tr>
+                  <td><strong>{criterion.aspect}</strong></td>
+                  <td>{criterion.REST}</td>
+                  <td>{criterion.SOAP}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <div class="use-cases">
+            <h3>Common Use Cases</h3>
+            <div class="use-cases-grid">
+              <div>
+                <h4>REST</h4>
+                <ul>
+                  {webServices.comparison.use_cases.REST.map((useCase) => (
+                    <li>{useCase}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4>SOAP</h4>
+                <ul>
+                  {webServices.comparison.use_cases.SOAP.map((useCase) => (
+                    <li>{useCase}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        .web-services-container {
+          padding: 20px;
+        }
+
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          gap: 30px;
+          margin-bottom: 40px;
+        }
+
+        .service-card {
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 25px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+          color: #2c3e50;
+          margin-top: 0;
+          margin-bottom: 15px;
+          border-bottom: 2px solid #3498db;
+          padding-bottom: 10px;
+        }
+
+        .concepts-section,
+        .characteristics-section,
+        .pros-cons,
+        .best-practices {
+          margin-top: 20px;
+        }
+
+        .characteristic {
+          margin: 10px 0;
+        }
+
+        .pros-cons {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+
+        .comparison-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 20px 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+          padding: 12px;
+          border: 1px solid #ddd;
+          text-align: left;
+        }
+
+        .comparison-table th {
+          background: #f5f6fa;
+        }
+
+        .use-cases-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+          margin-top: 20px;
+        }
+
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+        }
+
+        li {
+          margin-bottom: 8px;
+          padding-left: 20px;
+          position: relative;
+        }
+
+        li:before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #3498db;
+        }
+
+        .advantages li:before {
+          color: #27ae60;
+        }
+
+        .disadvantages li:before {
+          color: #e74c3c;
+        }
+
+        @media (max-width: 768px) {
+          .services-grid,
+          .pros-cons,
+          .use-cases-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      `}</style>
+    </>
+  );
+}
+
+function SystemDesignTable() {
+  return (
+    <>
+      <Title text="System Design Patterns" />
+      
+      <div class="system-design-container">
+        {/* Architectural Patterns */}
+        <section class="design-section">
+          <h3>Architectural Patterns</h3>
+          <div class="patterns-grid">
+            {systemDesign.architectural_patterns.map((pattern) => (
+              <div class="pattern-card">
+                <h4>{pattern.name}</h4>
+                <p>{pattern.description}</p>
+                
+                <div class="characteristics">
+                  <h5>Key Characteristics</h5>
+                  <ul>
+                    {pattern.key_characteristics.map((char) => (
+                      <li>{char}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div class="pros-cons">
+                  <div class="advantages">
+                    <h5>Advantages</h5>
+                    <ul>
+                      {pattern.advantages.map((adv) => (
+                        <li>{adv}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div class="challenges">
+                    <h5>Challenges</h5>
+                    <ul>
+                      {pattern.challenges.map((challenge) => (
+                        <li>{challenge}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Scalability Patterns */}
+        <section class="design-section">
+          <h3>Scalability Patterns</h3>
+          <div class="patterns-grid">
+            {systemDesign.scalability_patterns.map((pattern) => (
+              <div class="pattern-card">
+                <h4>{pattern.name}</h4>
+                <p>{pattern.description}</p>
+                
+                {pattern.types && (
+                  <div class="types">
+                    <h5>Types</h5>
+                    <ul>
+                      {pattern.types.map((type) => (
+                        <li>{type}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {pattern.strategies && (
+                  <div class="strategies">
+                    <h5>Strategies</h5>
+                    <ul>
+                      {pattern.strategies.map((strategy) => (
+                        <li>{strategy}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {pattern.considerations && (
+                  <div class="considerations">
+                    <h5>Considerations</h5>
+                    <ul>
+                      {pattern.considerations.map((consideration) => (
+                        <li>{consideration}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Common Components */}
+        <section class="design-section">
+          <h3>Common Components</h3>
+          <div class="components-grid">
+            {systemDesign.common_components.map((component) => (
+              <div class="component-card">
+                <h4>{component.name}</h4>
+                <p>{component.description}</p>
+                
+                {component.responsibilities && (
+                  <div class="responsibilities">
+                    <h5>Responsibilities</h5>
+                    <ul>
+                      {component.responsibilities.map((resp) => (
+                        <li>{resp}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {component.use_cases && (
+                  <div class="use-cases">
+                    <h5>Use Cases</h5>
+                    <ul>
+                      {component.use_cases.map((useCase) => (
+                        <li>{useCase}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Best Practices */}
+        <section class="design-section">
+          <h3>Best Practices</h3>
+          <div class="practices-grid">
+            {systemDesign.best_practices.map((category) => (
+              <div class="practice-card">
+                <h4>{category.category}</h4>
+                <ul>
+                  {category.practices.map((practice) => (
+                    <li>{practice}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Interview Process Section */}
+        <section class="design-section">
+          <h3>System Design Interview Process</h3>
+          <div class="process-grid">
+            {systemDesign.interview_process.steps.map((step) => (
+              <div class="process-card">
+                <h4>{step.phase}</h4>
+                <p>{step.description}</p>
+                
+                {step.key_questions && (
+                  <div class="questions">
+                    <h5>Key Questions</h5>
+                    <ul>
+                      {step.key_questions.map((q) => (
+                        <li>{q}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {step.key_points && (
+                  <div class="points">
+                    <h5>Key Points</h5>
+                    <ul>
+                      {step.key_points.map((point) => (
+                        <li>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {step.considerations && (
+                  <div class="considerations">
+                    <h5>Considerations</h5>
+                    <ul>
+                      {step.considerations.map((item) => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {step.components && (
+                  <div class="components">
+                    <h5>Components</h5>
+                    <ul>
+                      {step.components.map((component) => (
+                        <li>{component}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Important Questions Section */}
+        <section class="design-section">
+          <h3>Important Questions by Category</h3>
+          <div class="questions-grid">
+            {Object.entries(systemDesign.interview_process.important_questions).map(([category, questions]) => (
+              <div class="question-card">
+                <h4>{category.charAt(0).toUpperCase() + category.slice(1)}</h4>
+                <ul>
+                  {questions.map((question) => (
+                    <li>{question}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Common Numbers Section */}
+        <section class="design-section">
+          <h3>Common Numbers to Know</h3>
+          <div class="numbers-container">
+            <div class="latency-table">
+              <h4>Latency Numbers</h4>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Operation</th>
+                    <th>Latency</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {systemDesign.interview_process.common_numbers.latency_numbers.map((item) => (
+                    <tr>
+                      <td>{item.operation}</td>
+                      <td>{item.latency}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div class="availability-table">
+              <h4>Availability Numbers</h4>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Availability</th>
+                    <th>Downtime per Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {systemDesign.interview_process.common_numbers.availability_numbers.map((item) => (
+                    <tr>
+                      <td>{item.availability}</td>
+                      <td>{item.downtime_per_year}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <style>{`
+        .system-design-container {
+          padding: 20px;
+        }
+
+        .design-section {
+          margin-bottom: 40px;
+        }
+
+        .design-section h3 {
+          color: #2c3e50;
+          margin-bottom: 20px;
+          border-bottom: 2px solid #3498db;
+          padding-bottom: 10px;
+        }
+
+        .patterns-grid,
+        .components-grid,
+        .practices-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 20px;
+        }
+
+        .pattern-card,
+        .component-card,
+        .practice-card {
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 20px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h4 {
+          color: #2c3e50;
+          margin-top: 0;
+          margin-bottom: 15px;
+        }
+
+        h5 {
+          color: #34495e;
+          margin-top: 15px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: #555;
+          line-height: 1.5;
+          margin-bottom: 15px;
+        }
+
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+        }
+
+        li {
+          margin-bottom: 8px;
+          padding-left: 20px;
+          position: relative;
+        }
+
+        li:before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #3498db;
+        }
+
+        .advantages li:before {
+          color: #27ae60;
+        }
+
+        .challenges li:before {
+          color: #e74c3c;
+        }
+
+        .pros-cons {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 15px;
+          margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+          .pros-cons {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .process-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 20px;
+          margin-bottom: 30px;
+        }
+
+        .process-card {
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 20px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .questions-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+        }
+
+        .numbers-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 15px;
+        }
+
+        th, td {
+          padding: 10px;
+          border: 1px solid #ddd;
+          text-align: left;
+        }
+
+        th {
+          background: #f5f6fa;
+        }
+
+        .question-card {
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 20px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+      `}</style>
+    </>
+  );
+}
+
+function DOMPropertiesMethodsTable({ topic }: { topic: any }) {
+  return (
+    <div class="dom-section">
+      {Object.entries(topic.sections).map(([key, section]: [string, any]) => (
+        <div class="section-container">
+          <h4>{section.title}</h4>
+          <p>{section.description}</p>
+          
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 200px">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {section[key === 'node_properties' ? 'properties' : 'methods'].map((item: any) => (
+                <tr>
+                  <td class="method-name">{item.name}</td>
+                  <td class="tal">{item.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+
+      <div class="example-section">
+        <h4>Example Usage</h4>
+        <div class="code-example">
+          <pre><code>{topic.example}</code></pre>
+        </div>
+      </div>
+
+      <style>{`
+        .dom-section {
+          margin-bottom: 30px;
+        }
+
+        .section-container {
+          margin-bottom: 25px;
+        }
+
+        .method-name {
+          font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+          color: #0366d6;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 15px 0;
+          background: white;
+        }
+
+        th, td {
+          padding: 12px;
+          border: 1px solid #e1e4e8;
+        }
+
+        th {
+          background: #f6f8fa;
+          text-align: left;
+        }
+
+        .tal {
+          text-align: left;
+        }
+
+        .example-section {
+          background: #f8f9fa;
+          padding: 20px;
+          border-radius: 8px;
+          margin-top: 20px;
+        }
+      `}</style>
+    </div>
+  );
+}
+
+function JavaScriptReactFundamentals() {
+  return (
+    <>
+      <Title text={jsReactFundamentals.introduction.title} />
+      
+      {/* Introduction */}
+      <section class="introduction-section">
+        <p class="intro-text">{jsReactFundamentals.introduction.description}</p>
+        <p class="purpose-text">{jsReactFundamentals.introduction.purpose}</p>
+      </section>
+
+      {/* JavaScript Fundamentals */}
+      <section class="fundamentals-section">
+        <h3>JavaScript Fundamentals</h3>
+        <div class="resource-link">
+          <a href="https://www.interviewbit.com/javascript-cheat-sheet/" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            📚 Comprehensive JavaScript Cheat Sheet by InterviewBit
+          </a>
+        </div>
+        <div class="fundamentals-grid">
+          {jsReactFundamentals.javascript.map((topic) => {
+            if (topic.name === "DOM Properties & Methods") {
+              return <DOMPropertiesMethodsTable topic={topic} />;
+            }
+            return (
+              <div class="topic-card">
+                <h4>{topic.name}</h4>
+                <p>{topic.description}</p>
+                
+                {topic.example && (
+                  <div class="code-example">
+                    <h5>Example:</h5>
+                    <pre><code>{topic.example}</code></pre>
+                  </div>
+                )}
+                
+                {topic.concepts && (
+                  <div class="concepts">
+                    <h5>Key Concepts:</h5>
+                    <ul>
+                      {topic.concepts.map((concept) => (
+                        <li>{concept}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {topic.key_methods && (
+                  <div class="key-methods">
+                    <h5>Key Methods:</h5>
+                    {topic.key_methods.map((category) => (
+                      <div class="method-category">
+                        <h6>{category.category}</h6>
+                        <ul>
+                          {category.methods.map((method) => (
+                            <li>{method}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                
+                {topic.best_practices && (
+                  <div class="best-practices">
+                    <h5>Best Practices:</h5>
+                    <ul>
+                      {topic.best_practices.map((practice) => (
+                        <li>{practice}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* React Fundamentals */}
+      <section class="fundamentals-section">
+        <h3>React Fundamentals</h3>
+        <div class="resource-link">
+          <a href="https://github.com/sudheerj/reactjs-interview-questions" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            📚 Top 500 ReactJS Interview Questions & Answers
+          </a>
+        </div>
+        <div class="fundamentals-grid">
+          {jsReactFundamentals.react.map((topic) => (
+            <div class="topic-card">
+              <h4>{topic.name}</h4>
+              <p>{topic.description}</p>
+              
+              {topic.example && (
+                <div class="code-example">
+                  <h5>Example:</h5>
+                  <pre><code>{topic.example}</code></pre>
+                </div>
+              )}
+              
+              {topic.key_points && (
+                <div class="key-points">
+                  <h5>Key Points:</h5>
+                  <ul>
+                    {topic.key_points.map((point) => (
+                      <li>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              
+              {topic.best_practices && (
+                <div class="best-practices">
+                  <h5>Best Practices:</h5>
+                  <ul>
+                    {topic.best_practices.map((practice) => (
+                      <li>{practice}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <style>{`
+        .fundamentals-section {
+          margin-bottom: 40px;
+        }
+
+        .fundamentals-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 20px;
+          margin-top: 20px;
+        }
+
+        .topic-card {
+          background: #fff;
+          border: 1px solid #e1e4e8;
+          border-radius: 8px;
+          padding: 20px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+          color: #2c3e50;
+          border-bottom: 2px solid #3498db;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+        }
+
+        h4 {
+          color: #2c3e50;
+          margin-top: 0;
+          margin-bottom: 15px;
+          font-size: 1.2em;
+        }
+
+        h5 {
+          color: #34495e;
+          margin-top: 15px;
+          margin-bottom: 10px;
+          font-size: 1em;
+        }
+
+        p {
+          color: #555;
+          line-height: 1.5;
+          margin-bottom: 15px;
+        }
+
+        .code-example {
+          background: #f6f8fa;
+          border-radius: 6px;
+          padding: 15px;
+          margin: 10px 0;
+          overflow-x: auto;
+        }
+
+        pre {
+          margin: 0;
+          white-space: pre-wrap;
+        }
+
+        code {
+          font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+          font-size: 0.9em;
+        }
+
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          margin: 0;
+        }
+
+        li {
+          margin-bottom: 8px;
+          padding-left: 20px;
+          position: relative;
+          line-height: 1.4;
+        }
+
+        li:before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #3498db;
+        }
+
+        .key-points li:before {
+          color: #2ecc71;
+        }
+
+        .best-practices li:before {
+          color: #e74c3c;
+        }
+
+        @media (max-width: 768px) {
+          .fundamentals-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .introduction-section {
+          margin-bottom: 30px;
+          padding: 20px;
+          background: #f8f9fa;
+          border-radius: 8px;
+          border-left: 4px solid #3498db;
+        }
+
+        .intro-text, .purpose-text {
+          margin-bottom: 15px;
+          line-height: 1.6;
+          color: #2c3e50;
+        }
+
+        .intro-text {
+          font-size: 1.1em;
+        }
+
+        .purpose-text {
+          font-style: italic;
+          color: #34495e;
+        }
+
+        .key-methods {
+          margin-top: 15px;
+        }
+
+        .method-category {
+          margin-bottom: 15px;
+        }
+
+        .method-category h6 {
+          color: #2c3e50;
+          margin-bottom: 8px;
+          font-size: 0.9em;
+          font-weight: 600;
+        }
+
+        .method-category ul {
+          margin-left: 15px;
+        }
+
+        .best-practices {
+          margin-top: 15px;
+          padding: 15px;
+          background: #fff5f5;
+          border-radius: 6px;
+        }
+
+        .best-practices li {
+          color: #e74c3c;
+        }
+
+        .resource-link {
+          margin: 1rem 0;
+          padding: 0.5rem;
+          background: #f8f9fa;
+          border-radius: 4px;
+          text-align: center;
+        }
+        
+        .resource-link a {
+          color: #0366d6;
+          text-decoration: none;
+        }
+        
+        .resource-link a:hover {
+          text-decoration: underline;
+        }
+      `}</style>
+    </>
+  );
+}
+
 export function App() {
   const currentView = useSignal(0);
 
@@ -756,15 +1820,12 @@ export function App() {
         <li onClick={() => (currentView.value = 6)}>SQL</li>
         <li onClick={() => (currentView.value = 7)}>Python</li>
         <li onClick={() => (currentView.value = 8)}>Python Extended</li>
+        <li onClick={() => (currentView.value = 9)}>Security</li>
+        <li onClick={() => (currentView.value = 10)}>Web Services</li>
+        <li onClick={() => (currentView.value = 11)}>System Design</li>
+        <li onClick={() => (currentView.value = 14)}>JS/React Fundamentals</li>
+        <li onClick={() => (currentView.value = 15)}>GenAI</li>
         <li onClick={() => (currentView.value = 99)}>Resources</li>
-        <li
-          onClick={() =>
-            window.open("https://github.com/hlop3z/interviews-python", "_blank")
-          }
-          style="float: right;"
-        >
-          GitHub
-        </li>
       </ul>
 
       {show(0, <AsymptoticTable />)}
@@ -776,7 +1837,187 @@ export function App() {
       {show(6, <SQLTable />)}
       {show(7, <PythonTable />)}
       {show(8, <PythonExtended />)}
+      {show(9, <SecurityTable />)}
+      {show(10, <WebServicesTable />)}
+      {show(11, <SystemDesignTable />)}
+      {show(14, <JavaScriptReactFundamentals />)}
+      {show(15, <GenAITable />)}
       {show(99, <ResourcesView />)}
     </>
   );
 }
+
+function SecurityTable() {
+  return (
+    <>
+
+      <Title text="OWASP Top 10" />
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Broken Access Control</td>
+            <td>Restrictions on authenticated users are not properly enforced. Attackers can exploit to access unauthorized functionality.</td>
+          </tr>
+          <tr>
+            <td>Cryptographic Failures</td>
+            <td>Failures related to cryptography that often lead to exposure of sensitive data. Previously known as Sensitive Data Exposure.</td>
+          </tr>
+          <tr>
+            <td>Injection</td>
+            <td>User-supplied data is not validated, filtered, or sanitized by the application. Includes SQL, NoSQL, OS, and LDAP injection.</td>
+          </tr>
+          <tr>
+            <td>Insecure Design</td>
+            <td>Risks related to design and architectural flaws, calling for more use of threat modeling, secure design patterns, and reference architectures.</td>
+          </tr>
+          <tr>
+            <td>Security Misconfiguration</td>
+            <td>Security settings in applications, frameworks, application server, web server, database server, and platform are not secure.</td>
+          </tr>
+          <tr>
+            <td>Vulnerable Components</td>
+            <td>Using components (libraries, frameworks) with known vulnerabilities can undermine application defenses and enable attacks.</td>
+          </tr>
+          <tr>
+            <td>Auth. & ID Failures</td>
+            <td>Authentication and session management functions are often implemented incorrectly, allowing attackers to compromise passwords, keys, or tokens.</td>
+          </tr>
+          <tr>
+            <td>Software & Data Integrity</td>
+            <td>Software updates, critical data, and CI/CD pipelines without integrity verification can lead to malicious software installation.</td>
+          </tr>
+          <tr>
+            <td>Security Logging Failures</td>
+            <td>Insufficient logging and monitoring, coupled with missing incident response, allows attackers to further attack systems.</td>
+          </tr>
+          <tr>
+            <td>Server-Side Request Forgery</td>
+            <td>Occurs when a web application fetches a remote resource without validating the user-supplied URL, allowing attackers to forge requests.</td>
+          </tr>
+        </tbody>
+      </table>
+      <br/>
+      <div class="tac">
+        <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/REST_Security_Cheat_Sheet.md#rest-security-cheat-sheet" target="_blank">
+          OWASP REST Security Cheat Sheet
+        </a>
+      </div>
+      <br/>
+      <div class="tac">
+        <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md" target="_blank">
+          OWASP SQL Injection Prevention Cheat Sheet
+        </a>
+      </div>
+      <br/>
+
+
+      <Title text="Security Concepts" />
+      <div class="qa-list">
+        {securityNotes.security_q_a.map((qa, index) => (
+          <details>
+            <summary>{`${index + 1}. ${qa.question}`}</summary>
+            <div class="answer">
+              {qa.answer.split('\n').map((line: string) => (
+                <div>{line}</div>
+              ))}
+            </div>
+          </details>
+        ))}
+      </div>
+      <br/>
+      <style>
+        {`
+          .answer {
+            padding: 12px;
+            line-height: 1.8;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            margin: 8px 0;
+          }
+          details {
+            margin: 8px 0;
+          }
+          summary {
+            cursor: pointer;
+            padding: 8px;
+            background-color: #eee;
+            border-radius: 4px;
+          }
+          summary:hover {
+            background-color: #ddd;
+          }
+        `}
+      </style>
+
+      
+    </>
+  );
+}
+
+function GenAITable() {
+  return (
+    <>
+      <Title text={genAI.title} />
+      <table>
+        {/* ... existing table content ... */}
+      </table>
+
+      <br/>
+      <div class="interview-questions">
+        <h3>Top Interview Questions</h3>
+        {genAI.interview_questions.map((qa, index) => (
+          <details class="question-detail">
+            <summary>{`${index + 1}. ${qa.question}`}</summary>
+            <div class="answer">{qa.answer}</div>
+          </details>
+        ))}
+      </div>
+
+      <br/>
+      <div class="resource-links">
+        {/* ... existing resources ... */}
+      </div>
+
+      <style>{`
+        // ... existing styles ...
+
+        .interview-questions {
+          margin: 20px 0;
+        }
+
+        .question-detail {
+          margin: 15px 0;
+          border: 1px solid #e1e4e8;
+          border-radius: 6px;
+          overflow: hidden;
+        }
+
+        .question-detail summary {
+          padding: 12px;
+          background: #f6f8fa;
+          cursor: pointer;
+          font-weight: 500;
+        }
+
+        .question-detail summary:hover {
+          background: #f0f3f6;
+        }
+
+        .answer {
+          padding: 15px;
+          line-height: 1.6;
+          background: white;
+        }
+      `}</style>
+    </>
+  );
+}
+
+
+
