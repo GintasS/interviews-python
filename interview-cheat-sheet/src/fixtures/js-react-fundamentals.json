@@ -1,0 +1,201 @@
+{
+  "introduction": {
+    "title": "JavaScript & React Fundamentals",
+    "description": "JavaScript is a programming language that, together with HTML and CSS, is one of the core technologies of the World Wide Web. Over 97% of websites employ JavaScript on the client-side for web page behaviour, typically combining third-party libraries. When it comes to web development, JavaScript is one of the most popular languages owing to its features and capabilities.",
+    "purpose": "This article includes a JavaScript cheat sheet as well as rich JavaScript documentation and how-tos to make it easy for our readers to work with JavaScript. The purpose of the cheat sheet is to give you some quick, correct, and ready to use code snippets for common circumstances. In a nutshell, this article makes JavaScript simple for both novice and professional coders."
+  },
+  "javascript": [
+    {
+      "name": "Closures & Scope",
+      "description": "Understanding lexical scope and closure mechanisms in JavaScript - one of the most commonly tested concepts in interviews",
+      "example": "function makeCounter() {\n  let count = 0;  // Private variable\n  \n  return {\n    increment: () => ++count,\n    decrement: () => --count,\n    getCount: () => count\n  };\n}\n\nconst counter = makeCounter();\ncounter.increment();  // 1\ncounter.increment();  // 2\ncounter.getCount();   // 2",
+      "key_points": [
+        "Lexical scope rules",
+        "Data privacy through closures",
+        "Module pattern implementation",
+        "Memory considerations",
+        "Common closure pitfalls"
+      ],
+      "interview_questions": [
+        "What is a closure and how does it work?",
+        "How can closures be used for data privacy?",
+        "What is the difference between lexical and dynamic scope?",
+        "How do closures affect memory management?",
+        "Explain the module pattern using closures"
+      ]
+    },
+    {
+      "name": "this Keyword & Binding",
+      "description": "Understanding 'this' context and different binding mechanisms - a crucial concept for JavaScript interviews",
+      "example": "const obj = {\n  name: 'Object',\n  regularFn: function() {\n    console.log(this.name);\n  },\n  arrowFn: () => {\n    console.log(this.name);\n  },\n  delayed: function() {\n    setTimeout(function() {\n      console.log(this.name);\n    }.bind(this), 100);\n  }\n};\n\nobj.regularFn();  // 'Object'\nconst fn = obj.regularFn;\nfn();  // undefined",
+      "key_points": [
+        "Default binding rules",
+        "Implicit vs explicit binding",
+        "Arrow functions and this",
+        "bind, call, and apply",
+        "Common pitfalls"
+      ],
+      "interview_questions": [
+        "How does 'this' work in JavaScript?",
+        "What's the difference between call, apply, and bind?",
+        "How do arrow functions handle 'this'?",
+        "What are the four rules of 'this' binding?",
+        "How do you handle 'this' in callbacks?"
+      ]
+    },
+    {
+      "name": "Event Loop & Async",
+      "description": "How JavaScript handles asynchronous operations - essential for understanding JavaScript's execution model",
+      "example": "console.log('Start');\n\nsetTimeout(() => {\n  console.log('Timeout 1');\n}, 0);\n\nPromise.resolve().then(() => {\n  console.log('Promise');\n});\n\nsetTimeout(() => {\n  console.log('Timeout 2');\n}, 0);\n\nconsole.log('End');\n\n// Output:\n// Start\n// End\n// Promise\n// Timeout 1\n// Timeout 2",
+      "key_points": [
+        "Call stack execution",
+        "Microtask vs Macrotask queues",
+        "Event loop phases",
+        "Task prioritization",
+        "Browser rendering timing"
+      ],
+      "interview_questions": [
+        "Explain how the event loop works in JavaScript",
+        "What's the difference between microtasks and macrotasks?",
+        "How does Promise execution differ from setTimeout?",
+        "What is the call stack and how does it work?",
+        "How does JavaScript handle concurrent operations?"
+      ]
+    },
+    {
+      "name": "Promises & Async/Await",
+      "description": "Modern asynchronous programming patterns - fundamental for handling async operations in JavaScript",
+      "example": "// Promise chain\nfetch('/api/data')\n  .then(response => response.json())\n  .then(data => processData(data))\n  .catch(error => console.error(error));\n\n// Async/Await\nasync function getData() {\n  try {\n    const response = await fetch('/api/data');\n    const data = await response.json();\n    return processData(data);\n  } catch (error) {\n    console.error(error);\n  }\n}\n\n// Promise methods\nPromise.all([fetch('/api/1'), fetch('/api/2')])\n  .then(([res1, res2]) => {\n    // Handle both responses\n  });",
+      "key_points": [
+        "Promise states and flow",
+        "Error handling patterns",
+        "Async/Await syntax",
+        "Promise methods (all, race, allSettled)",
+        "Sequential vs parallel execution"
+      ],
+      "interview_questions": [
+        "What are the states of a Promise?",
+        "How does async/await work under the hood?",
+        "What's the difference between Promise.all and Promise.race?",
+        "How do you handle errors in async/await?",
+        "How do you execute promises in parallel?"
+      ]
+    },
+    {
+      "name": "Prototypes & Inheritance",
+      "description": "JavaScript's prototype-based inheritance model - a unique aspect of JavaScript that often comes up in interviews",
+      "example": "function Animal(name) {\n  this.name = name;\n}\n\nAnimal.prototype.speak = function() {\n  console.log(`${this.name} makes a sound`);\n};\n\nfunction Dog(name) {\n  Animal.call(this, name);\n}\n\nDog.prototype = Object.create(Animal.prototype);\nDog.prototype.constructor = Dog;\n\nconst dog = new Dog('Rex');\ndog.speak(); // 'Rex makes a sound'",
+      "key_points": [
+        "Prototype chain",
+        "Constructor functions",
+        "Object.create() vs new",
+        "Property lookup mechanism",
+        "Inheritance patterns"
+      ],
+      "interview_questions": [
+        "How does prototypal inheritance work in JavaScript?",
+        "What's the difference between __proto__ and prototype?",
+        "How do you implement inheritance in JavaScript?",
+        "Explain the prototype chain",
+        "What are the advantages of prototypal inheritance?"
+      ]
+    }
+  ],
+  "react": [
+    {
+      "name": "Components & Props",
+      "description": "Building blocks of React applications and how data flows between them",
+      "example": "// Function Component with Props\nfunction Welcome({ name, age }) {\n  return (\n    <div>\n      <h1>Hello, {name}</h1>\n      <p>Age: {age}</p>\n    </div>\n  );\n}\n\n// Usage\n<Welcome name=\"John\" age={25} />\n\n// Class Component\nclass Welcome extends React.Component {\n  render() {\n    return <h1>Hello, {this.props.name}</h1>;\n  }\n}",
+      "key_points": [
+        "Functional vs Class Components",
+        "Props are read-only and immutable",
+        "Props can be any JavaScript value",
+        "Default props and prop types",
+        "Children prop and composition"
+      ],
+      "interview_questions": [
+        "What's the difference between functional and class components?",
+        "Why are props immutable?",
+        "How do you handle default prop values?",
+        "Explain component composition vs inheritance",
+        "When would you use Class components over Function components?"
+      ]
+    },
+    {
+      "name": "State & Lifecycle",
+      "description": "Managing component state and understanding component lifecycle",
+      "example": "function Counter() {\n  const [count, setCount] = useState(0);\n  const [user, setUser] = useState(null);\n\n  useEffect(() => {\n    // ComponentDidMount equivalent\n    fetchUser().then(setUser);\n    \n    return () => {\n      // ComponentWillUnmount equivalent\n      cleanup();\n    };\n  }, []);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(c => c + 1)}>Increment</button>\n    </div>\n  );\n}",
+      "key_points": [
+        "useState for local state management",
+        "State updates may be asynchronous",
+        "State updates trigger re-renders",
+        "useEffect for side effects",
+        "Cleanup in useEffect"
+      ],
+      "interview_questions": [
+        "How does setState work and why is it async?",
+        "What are the main differences between props and state?",
+        "Explain the useEffect cleanup function",
+        "When would you use multiple state variables vs. one state object?",
+        "How do you optimize re-renders with state updates?"
+      ]
+    },
+    {
+      "name": "Hooks",
+      "description": "React Hooks fundamentals and common use cases",
+      "example": "// Custom Hook Example\nfunction useWindowSize() {\n  const [size, setSize] = useState({\n    width: window.innerWidth,\n    height: window.innerHeight\n  });\n\n  useEffect(() => {\n    const handleResize = () => {\n      setSize({\n        width: window.innerWidth,\n        height: window.innerHeight\n      });\n    };\n    \n    window.addEventListener('resize', handleResize);\n    return () => window.removeEventListener('resize', handleResize);\n  }, []);\n\n  return size;\n}\n\n// Common Hooks Usage\nfunction App() {\n  const [data, setData] = useState(null);\n  const size = useWindowSize();\n  const memoizedCallback = useCallback(() => {\n    doSomething(data);\n  }, [data]);\n\n  const memoizedValue = useMemo(() => computeExpensive(data), [data]);\n\n  return <div>...</div>;\n}",
+      "key_points": [
+        "Rules of Hooks",
+        "Built-in Hooks (useState, useEffect, useContext, etc.)",
+        "Custom Hooks for reusable logic",
+        "Performance Hooks (useMemo, useCallback)",
+        "Side-effect management"
+      ],
+      "interview_questions": [
+        "What are the Rules of Hooks and why do they exist?",
+        "When should you use useMemo vs useCallback?",
+        "How do you share logic between components using Custom Hooks?",
+        "Explain the dependency array in useEffect",
+        "What problems do Hooks solve that class components don't?"
+      ]
+    },
+    {
+      "name": "Context & State Management",
+      "description": "Managing global state and sharing data between components",
+      "example": "// Create Context\nconst ThemeContext = React.createContext('light');\n\n// Provider Component\nfunction ThemeProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n  \n  return (\n    <ThemeContext.Provider value={{ theme, setTheme }}>\n      {children}\n    </ThemeContext.Provider>\n  );\n}\n\n// Consumer Component\nfunction ThemedButton() {\n  const { theme, setTheme } = useContext(ThemeContext);\n  \n  return (\n    <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>\n      Current theme: {theme}\n    </button>\n  );\n}",
+      "key_points": [
+        "Context API vs Props drilling",
+        "Provider pattern",
+        "Multiple contexts",
+        "Context limitations",
+        "Performance considerations"
+      ],
+      "interview_questions": [
+        "When should you use Context vs Props?",
+        "How does Context affect component re-rendering?",
+        "What are the alternatives to Context for state management?",
+        "How do you optimize Context with many consumers?",
+        "Explain the difference between Context and Redux"
+      ]
+    },
+    {
+      "name": "Performance Optimization",
+      "description": "Techniques and patterns for optimizing React applications",
+      "example": "// React.memo for preventing unnecessary re-renders\nconst MemoizedComponent = React.memo(function MyComponent({ data }) {\n  return <div>{data.text}</div>;\n});\n\n// useMemo for expensive calculations\nfunction SearchResults({ items, query }) {\n  const filteredItems = useMemo(() => \n    items.filter(item => \n      item.text.toLowerCase().includes(query.toLowerCase())\n    ),\n    [items, query]\n  );\n\n  return (\n    <ul>\n      {filteredItems.map(item => (\n        <li key={item.id}>{item.text}</li>\n      ))}\n    </ul>\n  );\n}",
+      "key_points": [
+        "React.memo for component memoization",
+        "useMemo and useCallback hooks",
+        "Code splitting and lazy loading",
+        "Virtual DOM and reconciliation",
+        "Key prop importance in lists"
+      ],
+      "interview_questions": [
+        "When should you use React.memo?",
+        "How does virtual DOM help with performance?",
+        "What are the common causes of re-renders?",
+        "How do you implement code splitting in React?",
+        "Explain the importance of keys in lists"
+      ]
+    }
+  ]
+} 

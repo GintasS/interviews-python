@@ -1,0 +1,405 @@
+[
+  {
+    "question": "What is SQL?",
+    "answer": "SQL (Structured Query Language) is a standard programming language used to communicate with relational databases. It allows users to create, read, update, and delete data, and provides commands to define database schema and manage database security.",
+    "code_example": ""
+  },
+  {
+    "question": "What is a database?",
+    "answer": "A database is a collection of data organized in a way that allows for efficient storage, retrieval, and management of information."
+    ,"code_example": ""
+  },
+  {
+    "question": "What are the main types of SQL commands?",
+    "answer": "SQL commands are broadly classified into four categories:\n\n1. DDL (Data Definition Language): Commands like CREATE, ALTER, DROP, TRUNCATE that define and modify database structure\n\n2. DML (Data Manipulation Language): Commands like SELECT, INSERT, UPDATE, DELETE that manipulate data within tables\n\n3. DCL (Data Control Language): Commands like GRANT and REVOKE that control user access and permissions\n\n4. TCL (Transaction Control Language): Commands like COMMIT, ROLLBACK, SAVEPOINT that manage database transactions"
+     ,"code_example": ""
+  },
+  {
+    "question": "What is the difference between CHAR and VARCHAR2 data types?", 
+    "answer": "CHAR: Fixed-length storage. If the defined length is not fully used, it is padded with spaces.\n\nVARCHAR2: Variable-length storage. Only the actual data is stored, saving space when the full length is not needed."
+    ,"code_example": "" 
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A primary key is a unique identifier for each record in a table. It ensures that no two rows have the same value in the primary key column(s), and it does not allow NULL values."
+    ,"code_example": ""
+  },
+  {
+    "question": "What is a foreign key?", 
+    "answer": "A foreign key is a column (or set of columns) in one table that refers to the primary key in another table. It establishes and enforces a relationship between the two tables, ensuring data integrity."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the purpose of the DEFAULT constraint?",
+    "answer": "The DEFAULT constraint assigns a default value to a column when no value is provided during an INSERT operation. This helps maintain consistent data and simplifies data entry."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is normalization in databases?",
+    "answer": "Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. This involves dividing large tables into smaller, related tables and defining relationships between them to ensure consistency and avoid anomalies."
+    ,"code_example": ""
+  },
+  {
+    "question": "What is denormalization, and when is it used?",
+    "answer": "Denormalization is the process of combining normalized tables into larger tables for performance reasons. It is used when complex queries and joins slow down data retrieval, and the performance benefits outweigh the drawbacks of redundancy."
+    ,"code_example": ""
+  },
+  {
+    "question": "What is a query in SQL?",
+    "answer": "A query is a SQL statement used to retrieve, update, or manipulate data in a database. The most common type of query is a SELECT statement, which fetches data from one or more tables based on specified conditions."
+    ,"code_example": ""
+  },
+  {
+    "question": "What are the different operators available in SQL?",
+    "answer": "SQL operators can be categorized into several types:\n\n1. Arithmetic Operators: +, -, *, /, %\n\n2. Comparison Operators: =, !=, <>, >, <, >=, <=\n\n3. Logical Operators: AND, OR, NOT\n\n4. Set Operators: UNION, INTERSECT, EXCEPT\n\n5. Special Operators: BETWEEN, IN, LIKE, IS NULL"
+    ,"code_example": ""    
+  },
+  {
+    "question": "What is a view in SQL?",
+    "answer": "A view is a virtual table created by a SELECT query. It does not store data itself, but presents data from one or more tables in a structured way. Views simplify complex queries, improve readability, and enhance security by restricting access to specific rows or columns."
+    ,"code_example": "" 
+  },
+  {
+    "question": "What is the purpose of the UNIQUE constraint?",
+    "answer": "The UNIQUE constraint ensures that all values in a column (or combination of columns) are distinct. This prevents duplicate values and helps maintain data integrity."
+    ,"code_example": ""
+  },
+  {
+    "question": "What are the different types of joins in SQL?",
+    "answer": "The main types of SQL joins are:\n\n1. INNER JOIN: Returns rows that have matching values in both tables\n\n2. LEFT JOIN (LEFT OUTER JOIN): Returns all rows from the left table, and matching rows from the right table\n\n3. RIGHT JOIN (RIGHT OUTER JOIN): Returns all rows from the right table, and matching rows from the left table\n\n4. FULL JOIN (FULL OUTER JOIN): Returns all rows when there is a match in either table\n\n5. CROSS JOIN: Produces the Cartesian product of two tables"
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the difference between INNER JOIN and OUTER JOIN?",
+    "answer": "INNER JOIN: Returns only rows where there is a match in both tables.\n\nOUTER JOIN: Returns all rows from one table (LEFT, RIGHT, or FULL), and the matching rows from the other table. If there is no match, NULL values are returned for the non-matching side."
+     ,"code_example": ""
+  },
+  {
+    "question": "What is the purpose of the GROUP BY clause?",
+    "answer": "The GROUP BY clause is used to arrange identical data into groups. It is typically used with aggregate functions (such as COUNT, SUM, AVG) to perform calculations on each group rather than on the entire dataset."
+      ,"code_example": ""
+  },
+  {
+    "question": "What are aggregate functions in SQL?", 
+    "answer": "Aggregate functions perform calculations on a set of values and return a single value. Common aggregate functions include:\n\n1. COUNT(): Returns the number of rows\n\n2. SUM(): Returns the total sum of values\n\n3. AVG(): Returns the average of values\n\n4. MIN(): Returns the smallest value\n\n5. MAX(): Returns the largest value"
+      ,"code_example": ""
+  },
+  {
+    "question": "What is a subquery?",
+    "answer": "A subquery is a query nested within another query. It is often used in the WHERE clause to filter data based on the results of another query, making it easier to handle complex conditions."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the difference between the WHERE and HAVING clauses?",
+    "answer": "WHERE: Filters rows before any grouping takes place.\n\nHAVING: Filters grouped data after the GROUP BY clause has been applied.\n\nIn short, WHERE applies to individual rows, while HAVING applies to groups."
+      ,"code_example": ""
+  },
+  {
+    "question": "What are indexes, and why are they used?",
+    "answer": "Indexes are database objects that improve query performance by allowing faster retrieval of rows. They function like a book's index, making it quicker to find specific data without scanning the entire table. However, indexes require additional storage and can slightly slow down data modification operations."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the difference between DELETE and TRUNCATE commands?",
+    "answer": "DELETE: Removes rows one at a time and records each deletion in the transaction log, allowing rollback. It can have a WHERE clause.\n\nTRUNCATE: Removes all rows at once without logging individual row deletions. It cannot have a WHERE clause and is faster than DELETE for large data sets."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the purpose of the SQL ORDER BY clause?", 
+    "answer": "The ORDER BY clause sorts the result set of a query in either ascending (default) or descending order, based on one or more columns. This helps present the data in a more meaningful or readable sequence."
+      ,"code_example": ""
+  },
+  {
+    "question": "What are the differences between SQL and NoSQL databases?",
+    "answer": "SQL Databases:\n- Use structured tables with rows and columns\n- Rely on a fixed schema\n- Offer ACID properties\n\nNoSQL Databases:\n- Use flexible, schema-less structures (e.g., key-value pairs, document stores)\n- Are designed for horizontal scaling\n- Often focus on performance and scalability over strict consistency"
+      ,"code_example": ""
+  },
+  {
+    "question": "What is a table in SQL?",
+    "answer": "A table is a structured collection of related data organized into rows and columns. Columns define the type of data stored, while rows contain individual records."
+      ,"code_example": ""
+  },
+  {
+    "question": "What are the types of constraints in SQL?",
+    "answer": "Common constraints include:\n\n1. NOT NULL: Ensures a column cannot have NULL values\n\n2. UNIQUE: Ensures all values in a column are distinct\n\n3. PRIMARY KEY: Uniquely identifies each row in a table\n\n4. FOREIGN KEY: Ensures referential integrity by linking to a primary key in another table\n\n5. CHECK: Ensures that all values in a column satisfy a specific condition\n\n6. DEFAULT: Sets a default value for a column when no value is specified"
+      ,"code_example": ""
+  },
+  {
+    "question": "What is a cursor in SQL?",
+    "answer": "A cursor is a database object used to retrieve, manipulate, and traverse through rows in a result set one row at a time. Cursors are helpful when performing operations that must be processed sequentially rather than in a set-based manner."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is a trigger in SQL?", 
+    "answer": "A trigger is a set of SQL statements that automatically execute in response to certain events on a table, such as INSERT, UPDATE, or DELETE. Triggers help maintain data consistency, enforce business rules, and implement complex integrity constraints."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the purpose of the SQL SELECT statement?",
+    "answer": "The SELECT statement retrieves data from one or more tables. It is the most commonly used command in SQL, allowing users to filter, sort, and display data based on specific criteria."
+      ,"code_example": ""
+  },
+  {
+    "question": "What are NULL values in SQL?",
+    "answer": "NULL represents a missing or unknown value. It is different from zero or an empty string. NULL values indicate that the data is not available or applicable."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is a stored procedure?",
+    "answer": "A stored procedure is a precompiled set of SQL statements stored in the database. It can take input parameters, perform logic and queries, and return output values or result sets. Stored procedures improve performance and maintainability by centralizing business logic."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the difference between DDL and DML commands in SQL?",
+    "answer": "DDL (Data Definition Language):\n- Used to define and modify database structure/schema\n- Examples: CREATE, ALTER, DROP, TRUNCATE\n- Affects database objects like tables and indexes\n\nDML (Data Manipulation Language):\n- Used to manipulate data within database objects\n"
+      ,"code_example": "CREATE TABLE Employees (\n    ID INT PRIMARY KEY,\n    Name VARCHAR(50)\n);\n\nINSERT INTO Employees (ID, Name) VALUES (1, 'Alice');"
+  },
+  {
+    "question": "What is the purpose of the ALTER command in SQL?",
+    "answer": "The ALTER command is used to modify the structure of an existing database object. Common uses include:\n\n- Adding, modifying, or dropping columns in a table\n- Adding or removing constraints\n- Modifying column data types\n- Renaming tables or columns\n\nExample: ALTER TABLE Employees ADD COLUMN Email VARCHAR(100);"
+      ,"code_example": ""
+  },
+  {
+    "question": "What is a composite primary key?",
+    "answer": "A composite primary key is a primary key made up of two or more columns. Together, these columns must form a unique combination for each row in the table. It's used when a single column isn't sufficient to uniquely identify a record.\n\n"
+      ,"code_example": "CREATE TABLE OrderDetails (\n    OrderID INT,\n    ProductID INT,\n    Quantity INT,\n    PRIMARY KEY (OrderID, ProductID)\n);"
+  },
+  {
+    "question": "How is data integrity maintained in SQL databases?",
+    "answer": "Data integrity refers to the accuracy, consistency, and reliability of the data stored in the database. SQL databases maintain data integrity through several mechanisms:\n\n1. Constraints: Ensuring that certain conditions are always met. For example, NOT NULL ensures a column cannot have missing values, FOREIGN KEY ensures a valid relationship between tables, and UNIQUE ensures no duplicate values.\n\n2. Transactions: Ensuring that a series of operations either all succeed or all fail, preserving data consistency.\n\n3. Triggers: Automatically enforcing rules or validations before or after changes to data.\n\n4. Normalization: Organizing data into multiple related tables to minimize redundancy and prevent anomalies.\n\nThese measures collectively ensure that the data remains reliable and meaningful over time."
+      ,"code_example": ""
+  },
+  {
+    "question": "What are the advantages of using stored procedures?",
+    "answer": "Stored procedures offer several key advantages:\n\n1. Improved Performance:\n- Precompiled and cached in the database\n- Faster execution compared to individual queries\n\n2. Reduced Network Traffic:\n- Complex logic executes on the server\n- Fewer round trips between application and database\n\n3. Enhanced Security:\n- Restrict direct table access\n- Users can only execute authorized operations\n\n4. Reusability and Maintenance:\n- Can be reused across multiple applications\n- Changes to business logic only need to be made in one place"
+      ,"code_example": ""
+  },
+  {
+    "question": "What is a UNION operation, and how is it used?",
+    "answer": "The UNION operator combines the result sets of two or more SELECT queries into a single result set, removing duplicate rows. This is useful when we need a consolidated view of data from multiple tables or queries that have similar structure.\n\n"
+      ,"code_example": "SELECT Name FROM Customers\nUNION\nSELECT Name FROM Employees;"
+  },
+  {
+    "question": "What is the difference between UNION and UNION ALL?",
+    "answer": "UNION: Removes duplicate rows from the result set, ensuring only unique rows are returned.\nUNION ALL: Includes all rows from each query, including duplicates.\nPerformance-wise, UNION ALL is faster because it doesn't require an additional step to remove duplicates.\n\nExample:\n\nSELECT Name FROM Customers\nUNION ALL\nSELECT Name FROM Employees;"
+      ,"code_example": "SELECT Name FROM Customers\nUNION ALL\nSELECT Name FROM Employees;"
+  },
+  {
+    "question": "How does the CASE statement work in SQL?",
+    "answer": "The CASE statement is SQL's way of implementing conditional logic in queries. It evaluates conditions and returns a value based on the first condition that evaluates to true. If no condition is met, it can return a default value using the ELSE clause.\n\n"
+      ,"code_example": "SELECT ID,\n       CASE\n           WHEN Salary > 100000 THEN 'High'\n           WHEN Salary BETWEEN 50000 AND 100000 THEN 'Medium'\n           ELSE 'Low'\n       END AS SalaryLevel\nFROM Employees;"
+  },
+  {
+    "question": "What are scalar functions in SQL?", 
+    "answer": "Scalar functions operate on individual values and return a single value as a result. They are often used for formatting or converting data. Common examples include:\n\n- LEN(): Returns the length of a string\n- ROUND(): Rounds a numeric value\n- CONVERT(): Converts a value from one data type to another\n\nExample:\n\n"
+      ,"code_example": "SELECT LEN('Example') AS StringLength;"
+  },
+  {
+    "question": "What is the purpose of the COALESCE function?",
+    "answer": "The COALESCE function returns the first non-NULL value from a list of expressions. It's commonly used to provide default values or handle missing data gracefully.\n\nExample:\n\nSELECT COALESCE(NULL, NULL, 'Default Value') AS Result;"
+      ,"code_example": "SELECT COALESCE(NULL, NULL, 'Default Value') AS Result;"
+  },
+  {
+    "question": "What are the differences between SQL's COUNT() and SUM() functions?",
+    "answer": "1. COUNT(): Counts the number of rows or non-NULL values in a column.\n\n"
+      ,"code_example": "SELECT COUNT(*) FROM Orders;   SELECT SUM(TotalAmount) FROM Orders;"
+  },
+  {
+    "question": "What is the difference between the NVL and NVL2 functions?",
+    "answer": "NVL(): Replaces a NULL value with a specified replacement value.\n\nNVL2(): Evaluates two values:\n- If the first argument is NOT NULL, returns the second argument\n- If the first argument is NULL, returns the third argument\n\n"
+      ,"code_example": "SELECT NVL(Salary, 0) AS AdjustedSalary  FROM Employees;"
+  },
+  {
+    "question": "How does the RANK() function differ from DENSE_RANK()?",
+    "answer": "RANK(): Assigns a rank to each row, with gaps if there are ties.\nDENSE_RANK(): Assigns consecutive ranks without any gaps.\n\n"
+      ,"code_example": "SELECT Name, Salary, RANK() OVER (ORDER BY Salary DESC) AS Rank\nFROM Employees;"
+  },
+  {
+    "question": "What is the difference between ROW_NUMBER() and RANK()?",
+    "answer": "ROW_NUMBER(): Assigns a unique number to each row regardless of ties.\nRANK(): Assigns the same number to tied rows and leaves gaps for subsequent ranks.\n\n"
+      ,"code_example": "SELECT Name, ROW_NUMBER() OVER (ORDER BY Salary DESC) AS RowNum\nFROM Employees;"
+  },
+  {
+    "question": "What are common table expressions (CTEs) in SQL?", 
+    "answer": "A CTE is a temporary result set defined within a query. It improves query readability and can be referenced multiple times.\n\n"
+      ,"code_example": "WITH TopSalaries AS (\n    SELECT Name, Salary\n    FROM Employees\n    WHERE Salary > 50000\n)\nSELECT * FROM TopSalaries WHERE Name LIKE 'A%';"
+  },
+  {
+    "question": "What are window functions, and how are they used?",
+    "answer": "Window functions perform calculations across a set of rows that are related to the current row. Unlike aggregate functions, they don't collapse the result set."
+      ,"code_example": "SELECT Name, Salary, SUM(Salary) OVER (ORDER BY Salary) AS RunningTotal\nFROM Employees;"
+  },
+  {
+    "question": "What is the difference between an index and a key in SQL?",
+    "answer": "1. Index:\n- An index is a database object created to speed up data retrieval\n- It stores a sorted reference to table data\n- Helps database engine find rows more quickly than scanning entire table\n- Example: A non-unique index on LastName allows quick lookups\n\n2. Key:\n- A logical concept enforcing rules for uniqueness or relationships\n- PRIMARY KEY uniquely identifies each row\n- FOREIGN KEY maintains referential integrity between tables"
+      ,"code_example": ""
+  },
+  {
+    "question": "How does indexing improve query performance?",
+    "answer": "Indexing allows the database to locate and access rows corresponding to query conditions much faster than scanning the entire table. Instead of reading each row sequentially, the database uses the index to jump directly to relevant data pages. This reduces disk I/O operations and speeds up query execution.\n\n"
+      ,"code_example": "CREATE INDEX idx_lastname ON Employees(LastName);\nSELECT * FROM Employees WHERE LastName = 'Smith';"
+  },
+  {
+    "question": "What are the trade-offs of using indexes in SQL databases?",
+    "answer": "Advantages:\n- Faster query performance for SELECT queries with WHERE clauses\n- Improved sorting and filtering efficiency\n- Better JOIN performance\n\nDisadvantages:\n- Increased storage space for index structures\n- Additional overhead for write operations (INSERT, UPDATE, DELETE)\n- Slower bulk data loads due to index maintenance\n\nIn short, indexes make read operations faster but can slow down write operations and increase storage requirements."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the difference between clustered and non-clustered indexes?",
+    "answer": "1. Clustered Index:\n- Organizes physical data in the table itself by indexed column(s)\n- Table can have only one clustered index\n- Improves range queries and sorting\n- Example: If EmployeeID is clustered, rows are physically sorted by EmployeeID\n\n2. Non-Clustered Index:\n- Maintains separate structure with references to physical data\n- Table can have multiple non-clustered indexes\n- Useful for specific query conditions\n- Example: Non-clustered index on LastName enables fast lookups even if table is sorted differently"
+      ,"code_example": ""
+  },
+  {
+    "question": "What are temporary tables, and how are they used?",
+    "answer": "Temporary tables are tables that exist only for the duration of a session or transaction. They come in two types:\n\n1. Local Temporary Tables (#):\n- Prefixed with # (e.g., #TempTable)\n- Only visible to creating session\n- Automatically dropped when session ends\n\n2. Global Temporary Tables (##):\n- Prefixed with ## (e.g., ##GlobalTempTable)\n- Visible to all sessions\n- Dropped when all referencing sessions close\n\n"
+      ,"code_example": "CREATE TABLE #TempResults (ID INT, Value VARCHAR(50));\nINSERT INTO #TempResults VALUES (1, 'Test');\nSELECT * FROM #TempResults;"
+  },
+  {
+    "question": "What is a materialized view, and how does it differ from a standard view?",
+    "answer": "Standard View:\n- Virtual table defined by a query\n- No stored data; query executes each time view is referenced\n- Shows real-time data\n\nMaterialized View:\n- Physical table storing query results\n- Data is precomputed and stored for faster reads\n- Requires periodic refreshes to stay current\n\nExample: A materialized view storing aggregated sales data that updates nightly for fast reporting."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is a sequence in SQL?",
+    "answer": "A sequence is a database object that generates unique numeric values in series. It's commonly used for unique identifiers like primary keys."
+      ,"code_example": "CREATE SEQUENCE seq_emp_id START WITH 1 INCREMENT BY 1;\nSELECT NEXT VALUE FOR seq_emp_id; -- Returns 1\nSELECT NEXT VALUE FOR seq_emp_id; -- Returns 2"
+  },
+  {
+    "question": "What are the advantages of using sequences over identity columns?",
+    "answer": "Sequences offer several benefits over identity columns:\n\n1. Greater Flexibility:\n- Can specify start values, increments, and maximum values\n- Can be reused across multiple tables\n\n2. Dynamic Adjustment:\n- Can alter sequence without modifying table structure\n\n3. Cross-Table Consistency:\n- Use single sequence for multiple related tables\n- Ensures unique identifiers across tables"
+      ,"code_example": ""
+  },
+  {
+    "question": "How do constraints improve database integrity?",
+    "answer": "Constraints enforce data rules that prevent invalid or inconsistent data:\n\n1. NOT NULL: Ensures column cannot contain NULL values\n\n2. UNIQUE: Ensures all values in column are distinct\n\n3. PRIMARY KEY: Combines NOT NULL and UNIQUE for unique row identification\n\n4. FOREIGN KEY: Ensures referential integrity between tables\n\n5. CHECK: Validates values meet specific criteria\n   Example: CHECK (Salary > 0)\n\nBy automatically enforcing these rules, constraints maintain data reliability and consistency."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the difference between a local and a global temporary table?",
+    "answer": "Local Temporary Table:\n- Prefixed with # (e.g., #TempTable)\n- Exists only within the session that created it\n- Automatically dropped when the session ends\n\nGlobal Temporary Table:\n- Prefixed with ## (e.g., ##GlobalTempTable)\n- Visible to all sessions\n- Dropped only when all sessions referencing it are closed\n\n"
+      ,"code_example": "CREATE TABLE #LocalTemp (ID INT);\nCREATE TABLE ##GlobalTemp (ID INT);"
+  },
+  {
+    "question": "What is the purpose of the SQL MERGE statement?", 
+    "answer": "The MERGE statement combines multiple operations INSERT, UPDATE, and DELETE into one. It is used to synchronize two tables by:\n\n- Inserting rows that don't exist in the target table\n- Updating rows that already exist\n- Deleting rows from the target table based on conditions"
+      ,"code_example": "MERGE INTO TargetTable T  \nUSING SourceTable S  \nON T.ID = S.ID  \nWHEN MATCHED THEN  \n    UPDATE SET T.Value = S.Value  \nWHEN NOT MATCHED THEN  \n    INSERT (ID, Value) VALUES (S.ID, S.Value);"
+  },
+  {
+    "question": "How can you handle duplicates in a query without using DISTINCT?",
+    "answer": "1. GROUP BY: Aggregate rows to eliminate duplicates 2. ROW_NUMBER(): Assign a unique number to each row and filter by that"
+      ,"code_example": "-- Using GROUP BY\nSELECT Column1, MAX(Column2)  \nFROM TableName  \nGROUP BY Column1;\n\n-- Using ROW_NUMBER\nWITH CTE AS (  \n    SELECT Column1, Column2, ROW_NUMBER() OVER (PARTITION BY Column1 ORDER BY Column2) AS RowNum  \n    FROM TableName  \n)  \nSELECT * FROM CTE WHERE RowNum = 1;"
+  },
+  {
+    "question": "What is a correlated subquery?",
+    "answer": "A correlated subquery is a subquery that references columns from the outer query. It is re-executed for each row processed by the outer query. This makes it more dynamic, but potentially less efficient."
+      ,"code_example": "SELECT Name,  \n       (SELECT COUNT(*)  \n        FROM Orders  \n        WHERE Orders.CustomerID = Customers.CustomerID) AS OrderCount  \nFROM Customers;"
+  },
+  {
+    "question": "What are partitioned tables, and when should we use them?",
+    "answer": "Partitioned tables divide data into smaller, more manageable segments based on a column's value (e.g., date or region). Each partition is stored separately, making queries that target a specific partition more efficient. It is used when:\n\n- Large tables with millions or billions of rows\n- Scenarios where queries frequently filter on partitioned columns (e.g., year, region)\n- To improve maintenance operations, such as archiving older partitions without affecting the rest of the table"
+      ,"code_example": ""
+  },
+  {
+    "question": "What are the ACID properties of a transaction?",
+    "answer": "ACID is an acronym that stands for Atomicity, Consistency, Isolation, and Durability—four key properties that ensure database transactions are processed reliably:\n\n1. Atomicity:\n- A transaction is treated as a single unit of work, meaning all operations must succeed or fail as a whole\n- If any part of the transaction fails, the entire transaction is rolled back\n\n2. Consistency:\n- A transaction must take the database from one valid state to another, maintaining all defined rules and constraints\n- This ensures data integrity is preserved throughout the transaction process\n\n3. Isolation:\n- Transactions should not interfere with each other\n- Even if multiple transactions occur simultaneously, each must operate as if it were the only one in the system until it is complete\n\n4. Durability:\n- Once a transaction is committed, its changes must persist, even in the event of a system failure\n- This ensures the data remains stable after the transaction is successfully completed"
+      ,"code_example": ""
+  },
+  {
+    "question": "What are the differences between isolation levels in SQL?",
+    "answer": "Isolation levels control how transactions interact with each other:\n\n1. Read Uncommitted:\n- Lowest isolation level\n- Can read uncommitted changes from other transactions\n- Allows dirty reads (reading data that may be rolled back)\n- No locking, highest concurrency\n\n2. Read Committed:\n- Default in most databases\n- Only reads committed data\n- Prevents dirty reads\n- Still allows non-repeatable reads and phantom reads\n\n3. Repeatable Read:\n- Ensures consistent reads within transaction\n- Prevents both dirty reads and non-repeatable reads\n- May still allow phantom reads\n- Uses more locks than Read Committed\n\n4. Serializable:\n- Highest isolation level\n- Complete transaction isolation\n- Prevents all concurrency phenomena\n- Highest locking overhead, lowest concurrency\n\nHigher isolation levels provide better data consistency but reduce concurrent performance due to increased locking."
+      ,"code_example": ""
+  },
+  {
+    "question": "What is the purpose of the WITH (NOLOCK) hint in SQL Server?",
+    "answer": "The WITH (NOLOCK) hint is a query optimization feature in SQL Server that:\n\n1. Read Behavior:\n- Allows reading data without acquiring shared locks\n- Reads uncommitted data (\"dirty reads\")\n- Can read data that may be rolled back\n\n2. Performance Benefits:\n- Reduces lock contention\n- Improves query performance on frequently updated tables\n- Useful for reporting queries that don't require perfect accuracy\n\n3. Risks and Considerations:\n- May return inconsistent or incorrect results\n- Can miss or duplicate rows if data changes during query execution\n- Should not be used for transactions requiring data accuracy\n\n"
+      ,"code_example": "SELECT *  FROM Orders WITH (NOLOCK);"
+  },
+  {
+    "question": "How do you handle deadlocks in SQL databases?",
+    "answer": "Deadlocks occur when two or more transactions hold resources that the other transactions need, resulting in a cycle of dependency. Strategies to handle deadlocks include:\n\n1. Deadlock Detection and Retry:\n- Database systems detect deadlocks and terminate one transaction\n- Terminated transaction can be retried after others complete\n- Example: Using TRY/CATCH blocks to catch deadlock errors and retry\n\n2. Reducing Lock Contention:\n- Use indexes and optimized queries to minimize lock duration\n- Break transactions into smaller steps\n- Keep transactions short and focused\n\n3. Proper Isolation Levels:\n- Lower isolation levels can reduce locking overhead\n- Higher levels like Serializable ensure predictable ordering\n- Choose based on consistency vs performance needs\n\n4. Consistent Resource Access:\n- Ensure transactions acquire resources in same order\n- Prevents cyclical dependencies between transactions\n- Example: Always update Table A before Table B"
+      ,"code_example": ""
+  },
+  {
+    "question": "What is a database snapshot, and how is it used?",
+    "answer": "A database snapshot is a read-only, static view of a database at a specific point in time. Key uses include:\n\n1. Reporting:\n- Allows querying consistent dataset without affecting live operations\n- Provides stable data for analysis and reporting\n\n2. Backup and Recovery:\n- Serves as point-in-time recovery source\n- Useful for reverting unwanted changes\n\n3. Testing:\n- Provides stable dataset for testing\n- No risk of modifying original data"
+     ,"code_example": "CREATE DATABASE MySnapshot ON\n(\n    NAME = MyDatabase_Data,\n    FILENAME = 'C:\\Snapshots\\MyDatabase_Snapshot.ss'\n)\nAS SNAPSHOT OF MyDatabase;"
+  },
+  {
+    "question": "What are the differences between OLTP and OLAP systems?",
+    "answer": "1. OLTP (Online Transaction Processing):\n- Handles large volumes of simple transactions (e.g., order entry, inventory updates)\n- Optimized for fast, frequent reads and writes\n- Normalized schema to ensure data integrity and consistency\n- Examples: e-commerce sites, banking systems\n\n2. OLAP (Online Analytical Processing):\n- Handles complex queries and analysis on large datasets\n- Optimized for read-heavy workloads and data aggregation\n- Denormalized schema (e.g., star or snowflake schemas) to support faster querying\n- Examples: Business intelligence reporting, data warehousing",
+    "code_example": ""
+  },
+  {
+    "question": "What is a live lock, and how does it differ from a deadlock?",
+    "answer": "1. Live Lock:\n- Occurs when two or more transactions keep responding to each other's changes, but no progress is made\n- Unlike a deadlock, the transactions are not blocked; they are actively running, but they cannot complete\n- Example: Two transactions repeatedly rolling back and retrying due to conflicts\n\n2. Deadlock:\n- Occurs when transactions are blocked waiting for each other to release locks\n- No progress can be made unless one of the transactions is terminated\n- Example: Transaction A holds lock on Table 1 and needs Table 2, while Transaction B holds Table 2 and needs Table 1",
+    "code_example": "-- Example scenario that could cause a live lock:\nBEGIN TRANSACTION;\n  UPDATE AccountA SET Balance = Balance - 100\n  WHERE Balance >= 100;\n  \n  -- Another transaction might update AccountA\n  -- causing this transaction to roll back and retry\n  -- creating a cycle of retries without progress\n  \n  UPDATE AccountB SET Balance = Balance + 100;\nCOMMIT;"
+  },
+  {
+    "question": "What is the purpose of the SQL EXCEPT operator?",
+    "answer": "The EXCEPT operator is used to return rows from one query's result set that are not present in another query's result set. It effectively performs a set difference, showing only the data that is unique to the first query.\n\nUse Case:\n- To find discrepancies between datasets\n- To verify that certain data exists in one dataset but not in another\n\nPerformance Considerations:\n- EXCEPT works best when the datasets involved have appropriate indexing and when the result sets are relatively small\n- Large datasets without indexes may cause slower performance because the database has to compare each row",
+    "code_example": "SELECT ProductID FROM ProductsSold\nEXCEPT\nSELECT ProductID FROM ProductsReturned;"
+  },
+  {
+    "question": "How do you implement dynamic SQL, and what are its advantages and risks?",
+    "answer": "Dynamic SQL is SQL code that is constructed and executed at runtime rather than being fully defined and static. Key aspects include:\n\n1. Advantages:\n- Flexibility: Can adapt to different conditions, tables, or columns at runtime\n- Simplifies Complex Logic: Single dynamically constructed query handles multiple scenarios\n- Reusability: Can generate queries based on parameters and conditions\n\n2. Risks:\n- SQL Injection Vulnerabilities: User input must be carefully sanitized\n- Performance Overhead: May not benefit from cached execution plans\n- Complexity in Debugging: Dynamic queries are harder to read and troubleshoot\n\n3. Best Practices:\n- Always use parameterized queries\n- Validate and sanitize all inputs\n- Consider stored procedures for common dynamic scenarios\n- Document complex dynamic SQL thoroughly",
+    "code_example": "DECLARE @sql NVARCHAR(MAX);\nDECLARE @TableName NVARCHAR(128) = 'Customers';\n\nSET @sql = N'SELECT * FROM ' + QUOTENAME(@TableName) + \n          N' WHERE Status = @Status';\n\nEXEC sp_executesql @sql,\n     N'@Status varchar(20)',\n     @Status = 'Active';"
+  },
+  {
+    "question": "What is the difference between horizontal and vertical partitioning?",
+    "answer": "Partitioning is a database technique used to divide data into smaller, more manageable pieces:\n\n1. Horizontal Partitioning:\n- Divides the rows of a table into multiple partitions based on values in a specific column\n- Example: Splitting a customer table into separate partitions by geographic region or by year\n- Use Case: When dealing with large datasets, horizontal partitioning can improve performance by limiting the number of rows scanned for a query\n\n2. Vertical Partitioning:\n- Divides the columns of a table into multiple partitions\n- Example: Storing infrequently accessed columns (e.g., large text or binary fields) in a separate table or partition\n- Use Case: Helps in optimizing storage and query performance by separating commonly used columns from less frequently accessed data\n\n3. Key Difference:\n- Horizontal partitioning is row-based, focusing on distributing the dataset's rows across partitions\n- Vertical partitioning is column-based, aiming to separate less-used columns into different partitions or tables",
+    "code_example": "-- Horizontal Partitioning Example\nCREATE TABLE Customers_USA PARTITION OF Customers\n    FOR VALUES IN ('USA');\n\n-- Vertical Partitioning Example\nCREATE TABLE Customer_Basic (\n    customer_id INT,\n    name VARCHAR(100),\n    email VARCHAR(100)\n);\n\nCREATE TABLE Customer_Details (\n    customer_id INT,\n    profile_photo BLOB,\n    biography TEXT\n);"
+  },
+  {
+    "question": "What are the considerations for indexing very large tables?",
+    "answer": "Indexing large tables requires careful planning and monitoring. Key considerations include:\n\n1. Indexing Strategy:\n- Focus on frequently queried columns and JOIN/WHERE conditions\n- Avoid over-indexing as it increases storage and maintenance costs\n\n2. Index Types:\n- Use clustered indexes for primary key lookups and range queries\n- Use non-clustered indexes for filtering, ordering, and covering specific queries\n\n3. Partitioned Indexes:\n- Consider local indexes for each partition in partitioned tables\n- Improves manageability and query performance for specific partitions\n\n4. Maintenance Overhead:\n- Plan index rebuilds during off-peak hours\n- Monitor and manage index fragmentation\n- Consider the impact on DML operations\n\n5. Monitoring and Tuning:\n- Regularly evaluate query performance and execution plans\n- Remove unused or rarely accessed indexes\n- Balance query performance gains against maintenance costs",
+    "code_example": "-- Create clustered index\nCREATE CLUSTERED INDEX IX_OrderDate\nON Orders(OrderDate);\n\n-- Create covering index\nCREATE NONCLUSTERED INDEX IX_CustomerOrders\nON Orders(CustomerID, OrderDate)\nINCLUDE (OrderTotal, Status);\n\n-- Monitor index usage\nSELECT \n    DB_NAME(database_id) as DatabaseName,\n    OBJECT_NAME(object_id) as TableName,\n    index_id,\n    user_seeks,\n    user_scans\nFROM sys.dm_db_index_usage_stats\nWHERE database_id = DB_ID();"
+  },
+  {
+    "question": "What is the difference between database sharding and partitioning?",
+    "answer": "1. Sharding:\n- Splits database into multiple smaller, independent databases (shards)\n- Each shard operates on separate servers with its own subset of data\n- Used for horizontal scaling to handle massive data volumes\n- Example: Global user database divided by region (NA, EU, Asia shards)\n- Key benefit: Independent querying reduces load on individual servers\n\n2. Partitioning:\n- Splits a single table into smaller, logical pieces within same database\n- Logical organization of data to optimize performance\n- Used to improve query speed and simplify maintenance\n- Example: Sales table partitioned by year for efficient historical queries\n- Key benefit: Reduces data scan requirements for targeted queries",
+    "code_example": "-- Sharding Example (conceptual)\nCREATE DATABASE shard_na;  -- North America shard\nCREATE DATABASE shard_eu;  -- Europe shard\n\n-- Partitioning Example\nCREATE TABLE Sales (\n    sale_id INT,\n    sale_date DATE,\n    amount DECIMAL\n) PARTITION BY RANGE (YEAR(sale_date)) (\n    PARTITION p2021 VALUES LESS THAN (2022),\n    PARTITION p2022 VALUES LESS THAN (2023),\n    PARTITION p2023 VALUES LESS THAN (2024)\n);"
+  },
+  {
+    "question": "What are the best practices for writing optimized SQL queries?",
+    "answer": "Key best practices for writing optimized SQL queries include:\n\n1. Write Simple, Clear Queries:\n- Avoid overly complex joins and subqueries\n- Use straightforward, well-structured SQL\n- Break down complex logic into manageable parts\n\n2. Filter Data Early:\n- Apply WHERE clauses as early as possible\n- Use indexed columns in WHERE clauses\n- Filter before joins to reduce data volume\n\n3. Avoid SELECT *:\n- Only retrieve needed columns\n- Reduces I/O and network traffic\n- Improves overall query performance\n\n4. Use Indexes Effectively:\n- Create indexes for frequently filtered columns\n- Index JOIN and ORDER BY columns\n- Regularly maintain and monitor indexes\n\n5. Optimize Joins:\n- Choose appropriate join types (INNER, LEFT, etc.)\n- Join on indexed columns when possible\n- Consider join order for best performance\n\n6. Use Query Analysis Tools:\n- Review execution plans regularly\n- Monitor query performance metrics\n- Identify and address bottlenecks\n\n7. Consider Data Volume:\n- Use temporary tables or CTEs for complex operations\n- Pre-aggregate frequently accessed data\n- Partition large tables when appropriate",
+    "code_example": "-- Bad Practice\nSELECT * \nFROM Orders o \nJOIN Customers c ON o.CustomerID = c.CustomerID;\n\n-- Good Practice\nSELECT \n    o.OrderID,\n    o.OrderDate,\n    c.CustomerName\nFROM Orders o \nINNER JOIN Customers c ON o.CustomerID = c.CustomerID\nWHERE o.OrderDate >= '2023-01-01'\nAND c.Region = 'North'\nINDEX HINT(Orders IX_OrderDate);"
+  },
+  {
+    "question": "How can you monitor query performance in a production database?",
+    "answer": "1. Use Execution Plans:\n- Review the execution plan of queries to understand how the database is retrieving data\n- Identify which indexes are being used and potential bottlenecks\n- Analyze query costs and resource usage\n\n2. Analyze Wait Statistics:\n- Identify where queries are waiting (locks, I/O, CPU)\n- Pinpoint the cause of slowdowns\n- Track blocking and deadlock events\n\n3. Leverage Built-in Monitoring Tools:\n- SQL Server: Query Store, DMVs, performance dashboards\n- MySQL: EXPLAIN, SHOW PROFILE, Performance Schema\n- PostgreSQL: EXPLAIN (ANALYZE), pg_stat_statements\n\n4. Set Up Alerts and Baselines:\n- Monitor key performance metrics (query duration, IOPS, CPU)\n- Set thresholds for alerts\n- Establish baselines to identify performance degradation\n\n5. Continuous Query Tuning:\n- Regularly review and tune queries as data grows\n- Remove unused or inefficient indexes\n- Re-evaluate indexing strategy periodically",
+    "code_example": "-- SQL Server monitoring examples\n\n-- Check query execution stats\nSELECT \n    qs.execution_count,\n    qs.total_elapsed_time / 1000 as total_ms,\n    qs.total_elapsed_time / 1000 / qs.execution_count as avg_ms,\n    qt.text\nFROM sys.dm_exec_query_stats qs\nCROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) qt\nORDER BY avg_ms DESC;\n\n-- Monitor wait statistics\nSELECT \n    wait_type,\n    waiting_tasks_count,\n    wait_time_ms\nFROM sys.dm_os_wait_stats\nWHERE wait_time_ms > 0\nORDER BY wait_time_ms DESC;"
+  },
+  {
+    "question": "What are the trade-offs of using indexing versus denormalization?",
+    "answer": "1. Indexing:\n\nAdvantages:\n- Speeds up read operations and improves query performance without changing the data structure\n- Can be applied incrementally and is reversible if not effective\n- Consider indexing when you need faster lookups without altering the data model\n\nDisadvantages:\n- Slows down write operations as indexes need to be maintained\n- Requires additional storage\n\n2. Denormalization:\n\nAdvantages:\n- Simplifies query logic by storing pre-joined or aggregated data\n- Can improve performance for read-heavy workloads where complex joins are frequent\n- Consider denormalization when complex joins or repeated aggregations significantly slow down queries\n\nDisadvantages:\n- Introduces data redundancy, which can lead to inconsistencies\n- Increases storage requirements\n- Makes updates more complex, as redundant data must be synchronized",
+    "code_example": "-- Indexing Example\nCREATE INDEX idx_customer_name \nON Customers(LastName, FirstName);\n\n-- Denormalization Example\nCREATE TABLE OrderSummary (\n    OrderID INT,\n    CustomerName VARCHAR(100),  -- Denormalized from Customers\n    TotalAmount DECIMAL(10,2), -- Pre-calculated\n    OrderStatus VARCHAR(50),\n    ShippingAddress TEXT       -- Denormalized from Addresses\n);"
+  },
+  {
+    "question": "How does SQL handle recursive queries?",
+    "answer": "SQL handles recursive queries using Common Table Expressions (CTEs). Key components include:\n\n1. Anchor Member:\n- The initial query that starts the recursion\n- Typically selects root nodes or starting points\n\n2. Recursive Member:\n- Query that references the CTE to continue building results\n- Joins with the original table to get next level of data\n\n3. Termination Condition:\n- Ensures recursion stops at certain depth/condition\n- Prevents infinite loops\n\n4. Common Use Cases:\n- Processing hierarchical data (org charts, categories)\n- Traversing graphs or trees\n- Finding paths between nodes\n\n5. Performance Considerations:\n- Use indexes on join/filter columns\n- Avoid deep recursion levels\n- Consider materialized paths for static hierarchies",
+    "code_example": "WITH RecursiveCTE (ID, ParentID, Name, Level) AS (\n    -- Anchor member: Get root nodes\n    SELECT ID, ParentID, Name, 0 AS Level\n    FROM Categories\n    WHERE ParentID IS NULL\n    \n    UNION ALL\n    \n    -- Recursive member: Get child nodes\n    SELECT c.ID, c.ParentID, c.Name, r.Level + 1\n    FROM Categories c\n    INNER JOIN RecursiveCTE r ON c.ParentID = r.ID\n    WHERE r.Level < 5  -- Termination condition\n)\nSELECT * FROM RecursiveCTE\nORDER BY Level, ID;"
+  },
+  {
+    "question": "What are the differences between transactional and analytical queries?",
+    "answer": "1. Transactional Queries:\n- Focus on individual, short-term operations such as inserts, updates, and deletes\n- Optimize for high-throughput and low-latency\n- Often used in OLTP (Online Transaction Processing) systems\n- Typically involve small amounts of data per operation\n\n2. Analytical Queries:\n- Involve complex aggregations, multi-dimensional analysis, and data transformations\n- Typically read-heavy, processing large amounts of historical or aggregated data\n- Often used in OLAP (Online Analytical Processing) systems\n- Focus on data insights and trends\n\n3. Key Differences:\n- Query Complexity: Transactional queries are simple and focused, while analytical queries involve complex joins and aggregations\n- Data Volume: Transactional queries process small data sets, analytical queries process large historical datasets\n- Performance Goals: Transactional queries prioritize response time, analytical queries prioritize throughput\n- System Design: OLTP systems optimize for concurrent transactions, OLAP systems optimize for complex analysis",
+    "code_example": "-- Transactional Query Example\nINSERT INTO Orders (CustomerID, ProductID, Quantity)\nVALUES (1001, 5502, 2);\n\n-- Analytical Query Example\nSELECT \n    c.CustomerSegment,\n    p.Category,\n    YEAR(o.OrderDate) as Year,\n    SUM(o.Quantity * p.Price) as TotalRevenue,\n    COUNT(DISTINCT o.OrderID) as OrderCount,\n    AVG(o.Quantity) as AvgOrderSize\nFROM Orders o\nJOIN Customers c ON o.CustomerID = c.CustomerID\nJOIN Products p ON o.ProductID = p.ProductID\nGROUP BY \n    c.CustomerSegment,\n    p.Category,\n    YEAR(o.OrderDate)\nHAVING COUNT(DISTINCT o.OrderID) > 100;"
+  },
+  {
+    "question": "How can you ensure data consistency across distributed databases?",
+    "answer": "1. Use Distributed Transactions:\n- Implement two-phase commit (2PC) to ensure all participating databases commit changes simultaneously or roll back if any part fails\n- Provides strong consistency guarantees but can impact performance\n\n2. Implement Eventual Consistency:\n- Allow data to become consistent over time when strong consistency isn't required\n- Common in distributed systems prioritizing high availability\n- Use version numbers or timestamps to track changes\n\n3. Conflict Resolution Mechanisms:\n- Use versioning, timestamps, or conflict detection rules\n- Define clear resolution strategies for conflicting updates\n- Implement retry logic for failed transactions\n\n4. Data Replication and Synchronization:\n- Use reliable replication strategies (synchronous/asynchronous)\n- Monitor replication lag and health\n- Implement failover and recovery procedures\n\n5. Regular Audits and Validation:\n- Periodically verify data consistency across databases\n- Implement automated consistency checks\n- Maintain audit logs for troubleshooting",
+    "code_example": "-- Two-Phase Commit Example\nBEGIN DISTRIBUTED TRANSACTION;\n\n-- Update Order in Database 1\nUPDATE OrdersDB1.dbo.Orders\nSET Status = 'Completed'\nWHERE OrderID = 12345;\n\n-- Update Inventory in Database 2\nUPDATE InventoryDB2.dbo.Stock\nSET Quantity = Quantity - 1\nWHERE ProductID = 789;\n\nCOMMIT TRANSACTION;\n\n-- Consistency Check Example\nSELECT \n    o1.OrderID,\n    o1.Status as DB1_Status,\n    o2.Status as DB2_Status\nFROM OrdersDB1.dbo.Orders o1\nFULL OUTER JOIN OrdersDB2.dbo.Orders o2\n    ON o1.OrderID = o2.OrderID\nWHERE o1.Status != o2.Status\n    OR o1.OrderID IS NULL\n    OR o2.OrderID IS NULL;"
+  },
+  {
+    "question": "What is the purpose of the SQL PIVOT operator?",
+    "answer": "The PIVOT operator transforms rows into columns, making it easier to create summary reports. Key aspects include:\n\n1. Row-to-Column Transformation:\n- Converts row values into column headers\n- Aggregates data based on specified columns\n- Creates a cross-tabulated view of the data\n\n2. Common Use Cases:\n- Creating summary reports with dynamic columns\n- Transforming transactional data into analytical formats\n- Generating crosstab queries for data analysis\n\n3. Important Considerations:\n- Requires an aggregation function (SUM, COUNT, etc.)\n- Column values must be known in advance\n- Can make queries more complex and harder to maintain\n\n4. Alternatives:\n- CASE statements for simple pivoting\n- Dynamic SQL for unknown column values\n- Application-level pivoting for complex scenarios",
+    "code_example": "SELECT ProductID, [2021], [2022]  \nFROM (\n    SELECT ProductID, YEAR(SaleDate) AS SaleYear, Amount  \n    FROM Sales  \n) AS Source  \nPIVOT (\n    SUM(Amount)  \n    FOR SaleYear IN ([2021], [2022])  \n) AS PivotTable;"
+  },
+  {
+    "question": "What is a bitmap index, and how does it differ from a B-tree index?",
+    "answer": "1. Bitmap Index:\n- Represents data with bitmaps (arrays of bits) to indicate the presence or absence of a value in each row\n- Efficient for low-cardinality columns, such as \"gender\" or \"yes/no\" fields\n- Can perform fast logical operations (AND, OR, NOT) on multiple columns simultaneously\n\n2. B-tree Index:\n- Uses a balanced tree structure to store indexed data in a sorted order\n- Suitable for high-cardinality columns (e.g., unique identifiers, large ranges of values)\n- Supports range-based queries efficiently\n\n3. Key Differences:\n- Bitmap indexes excel with low-cardinality data and complex boolean conditions\n- B-tree indexes are better for unique or high-cardinality data and range queries\n- Storage requirements differ: bitmap indexes can be more space-efficient for low-cardinality data\n- Maintenance overhead varies: bitmap indexes require more work during DML operations",
+    "code_example": "-- Create B-tree index (common in most databases)\nCREATE INDEX btree_idx_customer_id\nON Customers(customer_id);\n\n-- Create bitmap index (Oracle syntax)\nCREATE BITMAP INDEX bmp_idx_status\nON Orders(status);\n\n-- Query using bitmap index\nSELECT COUNT(*)\nFROM Orders\nWHERE status = 'COMPLETED'\nAND payment_method = 'CREDIT_CARD';"
+  }
+
+
+  
+]

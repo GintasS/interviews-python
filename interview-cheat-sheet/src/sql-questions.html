@@ -1,0 +1,1027 @@
+<article class="content post-140730 post type-post status-publish format-standard hentry category-databases category-dbms category-sql tag-interview-questions tag-placement-preparation" id="post-140730">
+    <!-- when comment system will be scalable from practice side then we will display  Article/Discussion tab-->
+<div class="main_wrapper" style="display:flex;">
+<div style="width: 100%;">
+<div class="article-title">
+<h1>SQL Interview Questions</h1>
+</div>
+     <div class="last_updated_parent">
+<div>
+<span class="strong">Last Updated : </span>
+<span>16 Jan, 2025</span>
+</div>
+
+<!-- three dot menu -->
+<div class="three_dot_dropdown"> 
+                             <div style="display: flex;">
+                                                                                                     <div pid="140730" ptitle="SQL Interview Questions" class="article--viewer_comment tooltip top-comment-icon-div">
+<span class="comment_tooltiptext">Comments</span>
+<div class="three_dot_dropdown_div" data-gfg-action="loadComments">
+<div class="comment_header">
+<i class="discussion_button" style="position: relative; transform: scale(0.9);"></i>
+</div>
+</div>
+</div>
+                                         <div pid="140730" ptitle="SQL Interview Questions" class="article--viewer_improve tooltip">
+<span class="improve_tooltiptext">Improve</span>
+<div class="three_dot_dropdown_div three_dot_dropdown_improve" onclick="improveArticleCall()">
+<div class="improve_wrapper_top">
+<i class="gfg-icon gfg-icon-pencil  gfg-icon_edit" style="position: relative; z-index: 3;"></i>
+</div>
+</div>
+<!-- <button onclick="improveArticleCall()">
+<i class="gfg-icon gfg-icon_edit"></i>
+</button> -->
+</div> 
+                                     <!-- three dots -->
+<ul class="dropbtn icons btn-right showLeft" onclick="showDropdown()">
+<li>
+                                             </li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</div> 
+</div>
+</div>
+</div>
+<!-- menu -->
+<div id="myDropdown" class="three_dot_dropdown_content">
+<div class="article-buttons drop" onmouseleave="closeKebabMenu()">
+<!-- If the status of the summary API is true than we are showing the summarize button otherwise not  -->
+          <div pid="140730" ptitle="SQL Interview Questions" class="improve_article--viewer tooltip">
+<div class="three_dot_dropdown_div three_dot_dropdown_improve" onclick="suggestionArticleCall()" style="margin-top: 1px;">
+<div class="three_dot_dropdown_inner_div improve_dot_dropdown_inner_div">
+<i class="gfg-icon gfg-icon_suggest_changes gfg-icon_edit"></i>
+<span>Suggest changes</span>
+</div>
+</div>
+</div>                                                                                          <div pid="140730" class="article--viewer_like tooltip">
+<div class="three_dot_dropdown_div three_dot_dropdown_likearticle" onmouseleave="toggleLikeElementVisibility(&quot;showLikesContainer&quot;, false)" onmouseenter="toggleLikeElementVisibility(&quot;showLikesContainer&quot;, true)">
+<div class="showLikesContainer"> 
+<span class="likeTooltip">219 Likes</span>
+</div>
+<div class="three_dot_dropdown_inner_div" data-gfg-action="like-article" data-bookmark-value="0">
+<i class="gfg-icon gfg-icon_thumbs"></i>
+<span>Like</span>
+</div>
+</div>
+<!-- <button data-gfg-action="like-article" data-bookmark-value="0">
+<i class="gfg-icon gfg-icon_thumbs"></i>
+</button> -->
+</div>
+<div pid="140730" class="article--viewer_share tooltip">
+<div class="three_dot_dropdown_div three_dot_dropdown_share" onmouseleave="closeShareModal()" onmouseenter="openShareModal()">
+<div style="display: flex;align-items: center;" class="three_dot_dropdown_inner_div" data-gfg-action="share-article" data-bookmark-value="0">
+<i class="gfg-share-icon"></i>
+<span>Share</span>
+</div>
+</div>
+</div>
+<div class="article--viewer_report tooltip">
+<div class="three_dot_dropdown_div three_dot_dropdown_reportarticle">
+<div class="three_dot_dropdown_inner_div" data-gfg-action="report-article" onclick="report_article();">
+<i class="gfg-icon gfg-icon_report"></i>
+<span>Report</span>
+</div>
+</div>
+<!-- <button data-gfg-action="like-article" data-bookmark-value="0">
+<i class="gfg-icon gfg-icon_thumbs"></i>
+</button> -->
+</div>
+<div class="article--viewer_Gnews tooltip">
+<a class="three_dot_dropdown_inner_div Gnews_wrapper" href="https://news.google.com/publications/CAAqBwgKMLTrzwsw44bnAw?hl=en-IN&amp;gl=IN&amp;ceid=IN%3Aen" target="_blank">
+<img class="gfg-icon_Gnews no-zoom-in-cursor" src="https://media.geeksforgeeks.org/auth-dashboard-uploads/Google-news.svg" loading="lazy" alt="News">
+<span class="kebab_menu_news_text">Follow</span>
+</a>
+</div>
+</div>
+</div>
+<div class="text">
+<p dir="ltr" style="text-align: justify;"><span>Are you preparing for a </span><b><strong>SQL interview</strong></b><span>?</span><b><strong> SQL</strong></b><span>&nbsp;is a standard database language used for </span><b><strong>accessing </strong></b><span>and </span><b><strong>manipulating data </strong></b><span>in databases. It stands for&nbsp;</span><b><strong>Structured Query Language</strong></b><span>&nbsp;and was developed by </span><b><strong>IBM</strong></b><span> in the 1970s, SQL allows us to </span><b><strong>create</strong></b><span>, </span><b><strong>read</strong></b><span>, </span><b><strong>update</strong></b><span>, and delete data with simple yet effective commands. For both </span><b><strong>newcomers </strong></b><span>and </span><b><strong>seasoned professionals</strong></b><span>, mastering SQL is a must-have skill in today’s data-driven job market</span></p>
+<p dir="ltr" style="text-align: justify;"><span>In this article, we cover&nbsp;</span><b><strong>100 SQL Interview Questions with answers</strong></b><span>&nbsp;asked in SQL developer interviews at MAANG and other high-paying companies. Whether we’re preparing for our first</span><b><strong> data-related role</strong></b><span> or seeking to </span><b><strong>advance our career</strong></b><span>, this guide will walk us through the most commonly asked </span><b><strong>SQL interview questions</strong></b><span> to help us stand out in </span><b><strong>competitive job interviews.</strong></b></p><div id="GFG_AD_gfg_mobile_336x280" style="margin: 5px 0;"></div>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230503174339/Sql-interview-Questions.webp" alt="SQL Interview Questions" width="1000" height="inherit"></p>
+<div id="table_of_content">
+<p style="margin:4px; font-size:20px; font-weight:bold;">Table of Content</p>
+<ul>
+<li key="0"><a href="#sql-interview-questions-and-answers-for-freshers">SQL Interview Questions and Answers for Freshers</a></li>
+<li key="1"><a href="#intermediate-sql-interview-questions-and-answers">Intermediate SQL Interview Questions and Answers</a></li>
+<li key="2"><a href="#advanced-sql-interview-questions-and-answers">Advanced SQL Interview Questions and Answers</a></li>
+</ul>
+</div>
+<h2 style="text-align:left"><span>SQL Basic Interview Questions</span></h2>
+<p dir="ltr" style="text-align: justify;"><b><strong>“SQL Basic Interview Questions</strong></b><span>” covers fundamental concepts that are essential for anyone preparing for a&nbsp;</span><a href="https://www.geeksforgeeks.org/sql-tutorial/" target="_blank" rel="noopener"><span>SQL&nbsp;</span></a><b><strong>interview</strong></b><span>. Explore these essential questions to build a strong understanding and boost our confidence in&nbsp;</span><b><strong>SQL basics</strong></b><span>.</span></p>
+<h3 style="text-align:left"><b><strong>1. What is SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>SQL (Structured Query Language) is a standard programming language used to communicate with </span><b><strong>relational databases</strong></b><span>. It allows users to create, read, update, and delete data, and provides commands to define </span><a href="https://www.geeksforgeeks.org/database-schemas/" target="_blank" rel="noopener"><span>database schema</span></a><span> and manage database security.</span></p><div id="GFG_AD_Desktop_InContent_ATF_728x280" style="text-align: center; margin: 10px 0px;"></div>
+<h3 style="text-align:left"><b><strong>2. What is a database?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/what-is-database/" target="_blank" rel="noopener"><span>database </span></a><span>is an </span><b><strong>organized collection of data</strong></b><span> stored electronically, typically structured in tables with rows and columns. It is managed by a </span><b><strong>database management system</strong></b><span> (DBMS), which allows for efficient </span><b><strong>storage</strong></b><span>, </span><b><strong>retrieval</strong></b><span>, and </span><b><strong>manipulation </strong></b><span>of data.</span></p><div id="GFG_AD_Desktop_InContent_ATF_336x280" style="text-align:center; max-height: 280px;"></div><div id="GFG_AD_gfg_mobile_336x280_1" style="margin: 5px 0;"></div>
+<h3 style="text-align:left"><b><strong>3. What are the main types of SQL commands?</strong></b></h3>
+<p dir="ltr"><span>SQL commands are broadly classified into:</span></p><div id="_GFG_ABP_Incontent_728x90" style="text-align:center;"></div>
+<ul>
+<li value="1"><b><strong>DDL (Data Definition Language):</strong></b><span> CREATE, ALTER, DROP, TRUNCATE.</span></li>
+<li value="2"><b><strong>DML (Data Manipulation Language):</strong></b><span> SELECT, INSERT, UPDATE, DELETE.</span></li>
+<li value="3"><b><strong>DCL (Data Control Language):</strong></b><span> GRANT, REVOKE.</span></li>
+<li value="4"><b><strong>TCL (Transaction Control Language):</strong></b><span> COMMIT, ROLLBACK, SAVEPOINT.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>4. What is the difference between CHAR and VARCHAR2 data types?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>CHAR:</strong></b><span> Fixed-length storage. If the defined length is not fully used, it is padded with spaces.</span></li>
+<li value="2"><b><strong>VARCHAR2:</strong></b><span> Variable-length storage. Only the actual data is stored, saving space when the full length is not needed.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>5. What is a primary key?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/primary-key-constraint-in-sql/" target="_blank" rel="noopener"><span>primary key</span></a><span> is a unique identifier for each record in a table. It ensures that no two rows have the same value in the primary key column(s), and it does not allow NULL values.</span></p>
+<h3 style="text-align:left"><b><strong>6. What is a foreign key?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/foreign-key-constraint-in-sql/" target="_blank" rel="noopener"><span>foreign key</span></a><span> is a column (or set of columns) in one table that refers to the primary key in another table. It establishes and enforces a relationship between the two tables, ensuring data integrity.</span></p>
+<h3 style="text-align:left"><b><strong>7. What is the purpose of the DEFAULT constraint?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The </span><a href="https://www.geeksforgeeks.org/sql-default-constraint/" target="_blank" rel="noopener"><span>DEFAULT constraint</span></a><span> assigns a default value to a column when no value is provided during an </span><b><strong>INSERT operation</strong></b><span>. This helps maintain consistent data and simplifies data entry.</span></p><div id="GFG_AD_Incontent_2" style="text-align: center; margin: 10px 0px;"></div>
+<h3 style="text-align:left"><b><strong>8. What is normalization in databases?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><a href="https://www.geeksforgeeks.org/introduction-of-database-normalization/" target="_blank" rel="noopener"><span>Normalization</span></a><span> is the process of organizing data in a database to</span><b><strong> reduce redundancy</strong></b><span> and</span><b><strong> improve data integrity</strong></b><span>. This involves dividing large tables into smaller, related tables and defining relationships between them to ensure consistency and avoid anomalies.</span></p>
+<h3 style="text-align:left"><b><strong>9. What is denormalization, and when is it used?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><a href="https://www.geeksforgeeks.org/denormalization-in-databases/" target="_blank" rel="noopener"><span>Denormalization</span></a><span> is the process of combining </span><b><strong>normalized tables</strong></b><span> into larger tables for performance reasons. It is used when </span><b><strong>complex queries</strong></b><span> and joins slow down data retrieval, and the performance benefits outweigh the </span><b><strong>drawbacks of redundancy</strong></b><span>.</span></p><div style="text-align:center;margin:20px 0; max-height: 280px;" id="GFG_AD_gfg_outstream_incontent"></div>
+<h3 style="text-align:left"><b><strong>10. What is a query in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A query is a SQL statement used to retrieve, update, or manipulate data in a </span><b><strong>database</strong></b><span>. The most common type of query is a </span><a href="https://www.geeksforgeeks.org/sql-select-query/" target="_blank" rel="noopener"><span>SELECT statement</span></a><span>, which fetches data from one or more tables based on specified conditions.</span></p>
+<h3 style="text-align:left"><b><strong>11. What are the different operators available in SQL?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>Arithmetic Operators:</strong></b><span> +, -, *, /, %</span></li>
+<li value="2"><b><strong>Comparison Operators:</strong></b><span> =, !=, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=</span></li>
+<li value="3"><b><strong>Logical Operators:</strong></b><span> AND, OR, NOT</span></li>
+<li value="4"><b><strong>Set Operators:</strong></b><span> UNION, INTERSECT, EXCEPT</span></li>
+<li value="5"><b><strong>Special Operators:</strong></b><span> BETWEEN, IN, LIKE, IS NULL</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>12. What is a view in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/sql-views/" target="_blank" rel="noopener"><span>view</span></a><span> is a </span><b><strong>virtual table</strong></b><span> created by a </span><b><strong>SELECT query</strong></b><span>. It does not store data itself, but presents data from one or more tables in a structured way. Views simplify complex queries, improve readability, and enhance security by restricting access to specific rows or columns.</span></p>
+<h3 style="text-align:left"><b><strong>13. What is the purpose of the UNIQUE constraint?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The </span><a href="https://www.geeksforgeeks.org/sql-unique-constraint/" target="_blank" rel="noopener"><span>UNIQUE constraint</span></a><span> ensures that all values in a column (or combination of columns) are </span><b><strong>distinct</strong></b><span>. This prevents duplicate values and helps maintain data integrity.</span></p>
+<h3 style="text-align:left"><b><strong>14. What are the different types of joins in SQL?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>INNER JOIN:</strong></b><span> Returns rows that have matching values in both tables.</span></li>
+<li value="2"><b><strong>LEFT JOIN (LEFT OUTER JOIN):</strong></b><span> Returns all rows from the left table, and matching rows from the right table.</span></li>
+<li value="3"><b><strong>RIGHT JOIN (RIGHT OUTER JOIN):</strong></b><span> Returns all rows from the right table, and matching rows from the left table.</span></li>
+<li value="4"><b><strong>FULL JOIN (FULL OUTER JOIN):</strong></b><span> Returns all rows when there is a match in either table.</span></li>
+<li value="5"><b><strong>CROSS JOIN:</strong></b><span> Produces the Cartesian product of two tables.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>15. What is the difference between INNER JOIN and OUTER JOIN?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>INNER JOIN:</strong></b><span> Returns only rows where there is a match in both tables.</span></li>
+<li value="2"><b><strong>OUTER JOIN:</strong></b><span> Returns all rows from one table (LEFT, RIGHT, or FULL), and the matching rows from the other table. If there is no match, NULL values are returned for the non-matching side.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>16. What is the purpose of the GROUP BY clause?</strong></b></h3>
+<p dir="ltr"><span>The </span><a href="https://www.geeksforgeeks.org/sql-group-by/" target="_blank" rel="noopener"><span>GROUP BY</span></a><span> clause is used to arrange</span><b><strong> identical data</strong></b><span> into </span><b><strong>groups</strong></b><span>. It is typically used with aggregate functions (such as COUNT, SUM, AVG) to perform calculations on each group rather than on the entire dataset.</span></p>
+<h3 style="text-align:left"><b><strong>17. What are aggregate functions in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>Aggregate functions perform calculations on a set of values and return a single value. Common aggregate functions include:</span></p>
+<ul>
+<li value="1"><span>COUNT(): Returns the number of rows.</span></li>
+<li value="2"><span>SUM(): Returns the total sum of values.</span></li>
+<li value="3"><span>AVG(): Returns the average of values.</span></li>
+<li value="4"><span>MIN(): Returns the smallest value.</span></li>
+<li value="5"><span>MAX(): Returns the largest value.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>18. What is a subquery?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/sql-subquery/" target="_blank" rel="noopener"><span>subquery </span></a><span>is a query nested within another query. It is often used in the </span><b><strong>WHERE clause</strong></b><span> to filter data based on the results of another query, making it easier to handle complex conditions.</span></p>
+<h3 style="text-align:left"><b><strong>19. What is the difference between the WHERE and HAVING clauses?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>WHERE:</strong></b><span> Filters rows before any grouping takes place.</span></li>
+<li value="2"><b><strong>HAVING:</strong></b><span> Filters grouped data after the GROUP BY clause has been applied.</span><br><span>In short, WHERE applies to individual rows, while HAVING applies to groups.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>20. What are indexes, and why are they used?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><a href="https://www.geeksforgeeks.org/sql-indexes/" target="_blank" rel="noopener"><span>Indexes</span></a><span> are </span><b><strong>database objects</strong></b><span> that improve query performance by allowing</span><b><strong> faster retrieval of rows</strong></b><span>. They function like a book’s index, making it quicker to find specific data without scanning the entire table. However, indexes require </span><b><strong>additional storage</strong></b><span> and can slightly slow down </span><b><strong>data modification</strong></b><span> operations.</span></p>
+<h3 style="text-align:left"><b><strong>21. What is the difference between DELETE and TRUNCATE commands?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>DELETE:</strong></b><span> Removes rows one at a time and records each deletion in the transaction log, allowing rollback. It can have a WHERE clause.</span></li>
+<li value="2"><b><strong>TRUNCATE:</strong></b><span> Removes all rows at once without logging individual row deletions. It cannot have a WHERE clause and is faster than DELETE for large data sets.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>22. What is the purpose of the SQL ORDER BY clause?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The</span><a href="https://www.geeksforgeeks.org/sql-order-by/" target="_blank" rel="noopener"><span> ORDER BY</span></a><span> clause sorts the result set of a query in either </span><b><strong>ascending </strong></b><span>(default) or </span><b><strong>descending order</strong></b><span>, based on one or more columns. This helps present the data in a more meaningful or readable sequence.</span></p>
+<h3 style="text-align:left"><b><strong>23. What are the differences between SQL and NoSQL databases?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>SQL Databases:</strong></b>
+<ul>
+<li value="1"><span>Use structured tables with rows and columns.</span></li>
+<li value="2"><span>Rely on a fixed schema.</span></li>
+<li value="3"><span>Offer </span><b><strong>ACID</strong></b><span> properties.</span></li>
+</ul>
+</li>
+<li value="2"><b><strong>NoSQL Databases:</strong></b>
+<ul>
+<li value="1"><span>Use flexible, schema-less structures (e.g., key-value pairs, document stores).</span></li>
+<li value="2"><span>Are designed for horizontal scaling.</span></li>
+<li value="3"><span>Often focus on performance and scalability over strict consistency.</span></li>
+</ul>
+</li>
+</ul>
+<h3 style="text-align:left"><b><strong>24. What is a table in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A table is a </span><b><strong>structured collection</strong></b><span> of related data organized into rows and columns. Columns define the type of data stored, while rows contain individual records.</span></p>
+<h3 style="text-align:left"><b><strong>25. What are the types of constraints in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>Common constraints include:</span></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-1"></div>
+<ul>
+<li value="1"><b><strong>NOT NULL:</strong></b><span> Ensures a column cannot have NULL values.</span></li>
+<li value="2"><b><strong>UNIQUE:</strong></b><span> Ensures all values in a column are distinct.</span></li>
+<li value="3"><b><strong>PRIMARY KEY:</strong></b><span> Uniquely identifies each row in a table.</span></li>
+<li value="4"><b><strong>FOREIGN KEY:</strong></b><span> Ensures referential integrity by linking to a primary key in another table.</span></li>
+<li value="5"><b><strong>CHECK:</strong></b><span> Ensures that all values in a column satisfy a specific condition.</span></li>
+<li value="6"><b><strong>DEFAULT:</strong></b><span> Sets a default value for a column when no value is specified.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>26. What is a cursor in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/what-is-cursor-in-sql/" target="_blank" rel="noopener"><span>cursor </span></a><span>is a database object used to </span><b><strong>retrieve</strong></b><span>, </span><b><strong>manipulate</strong></b><span>, and traverse through rows in a result set one row at a time. Cursors are helpful when performing operations that must be processed sequentially rather than in a set-based manner.</span></p>
+<h3 style="text-align:left"><b><strong>27. What is a trigger in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/sql-trigger-student-database/" target="_blank" rel="noopener"><span>trigger </span></a><span>is a set of SQL statements that automatically execute in response to certain events on a table, such as </span><b><strong>INSERT</strong></b><span>, </span><b><strong>UPDATE</strong></b><span>, or </span><b><strong>DELETE</strong></b><span>. Triggers help maintain </span><b><strong>data consistency</strong></b><span>, enforce business rules, and implement complex integrity constraints.</span></p>
+<h3 style="text-align:left"><b><strong>28. What is the purpose of the SQL SELECT statement?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The </span><a href="https://www.geeksforgeeks.org/sql-select-query/" target="_blank" rel="noopener"><span>SELECT</span></a><span> statement retrieves data from one or more tables. It is the most commonly used command in SQL, allowing users to filter, sort, and display data based on specific criteria.</span></p>
+<h3 style="text-align:left"><b><strong>29. What are NULL values in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><b><strong>NULL </strong></b><span>represents a missing or unknown value. It is different from zero or an empty string. NULL values indicate that the data is not available or applicable.</span></p>
+<h3 style="text-align:left"><b><strong>30. What is a stored procedure?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/what-is-stored-procedures-in-sql/" target="_blank" rel="noopener"><span>stored procedure</span></a><span> is a precompiled set of SQL statements stored in the </span><b><strong>database</strong></b><span>. It can take input parameters, perform logic and queries, and return output values or result sets. Stored procedures improve </span><b><strong>performance </strong></b><span>and </span><b><strong>maintainability </strong></b><span>by centralizing business logic.</span></p>
+<h2 style="text-align:left"><span>SQL Intermediate Interview Questions</span></h2>
+<p dir="ltr" style="text-align: justify;"><span>This section covers moderately complex </span><b><strong>SQL topics</strong></b><span> like </span><b><strong>advanced queries</strong></b><span>, </span><b><strong>multi-table joins</strong></b><span>, </span><b><strong>subqueries</strong></b><span>, and </span><b><strong>basic optimization techniques</strong></b><span>. These questions help enhance skills for both </span><b><strong>database developers</strong></b><span> and </span><b><strong>administrators</strong></b><span>, preparing us for more</span><b><strong> technical SQL challenges</strong></b><span> in the field.</span></p>
+<h3 style="text-align:left"><b><strong>31. What is the difference between DDL and DML commands?</strong></b></h3>
+<p dir="ltr"><b><strong>1. DDL (Data Definition Language):</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>These commands are used to </span><b><strong>define </strong></b><span>and </span><b><strong>modify the structure of database</strong></b><span> objects such as </span><b><strong>tables</strong></b><span>, </span><b><strong>indexes</strong></b><span>, and </span><b><strong>views</strong></b><span>. For example, the </span><b><code><strong>CREATE</strong></code></b><b><strong> command</strong></b><span> creates a new table, the </span><b><code><strong>ALTER</strong></code></b><b><strong> command </strong></b><span>modifies an existing table, and the </span><b><code><strong>DROP</strong></code></b><b><strong> command</strong></b><span> removes a table entirely. </span><a href="https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/" target="_blank" rel="noopener"><span>DDL </span></a><span>commands primarily focus on the schema or structure of the database.</span></p>
+<p dir="ltr" style="text-align: justify;"><b><strong>Example:</strong></b></p>
+<pre><span>CREATE TABLE Employees (</span><br><span>    ID INT PRIMARY KEY,</span><br><span>    Name VARCHAR(50)</span><br><span>);</span></pre>
+<p dir="ltr" style="text-align: justify;"><b><strong>2. DML (Data Manipulation Language):</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-2"></div>
+<p dir="ltr" style="text-align: justify;"><span>These commands deal with the </span><b><strong>actual data stored</strong></b><span> within database objects. For instance, the</span><b><strong> </strong></b><b><code><strong>INSERT</strong></code></b><b><strong> command</strong></b><span> adds rows of data to a table, the </span><b><code><strong>UPDATE</strong></code></b><span> command modifies existing data, and the </span><b><code><strong>DELETE</strong></code></b><b><strong> </strong></b><span>command removes rows from a table. In short, </span><a href="https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/" target="_blank" rel="noopener"><span>DML</span></a><span> commands allow you to query and manipulate the data itself rather than the structure.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>INSERT INTO Employees (ID, Name) VALUES (1, 'Alice');</span></pre>
+<h3 style="text-align:left"><b><strong>32. What is the purpose of the ALTER command in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The </span><a href="https://www.geeksforgeeks.org/sql-alter-add-drop-modify/" target="_blank" rel="noopener"><code><span>ALTER</span></code></a><span> command is used to </span><b><strong>modify the structure</strong></b><span> of an existing database object. This command is essential for adapting our </span><b><strong>database schema</strong></b><span> as requirements evolve.</span></p>
+<ul>
+<li value="1"><span>Add or drop a column in a table.</span></li>
+<li value="2"><span>Change a column’s data type.</span></li>
+<li value="3"><span>Add or remove constraints.</span></li>
+<li value="4"><span>Rename columns or tables.</span></li>
+<li value="5"><span>Adjust indexing or storage settings.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>33. What is a composite primary key?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A c</span><b><strong>omposite primary key</strong></b><span> is a primary key made up of two or more columns. Together, these columns must form a unique combination for each row in the table. It’s used when a single column isn’t sufficient to uniquely identify a record.</span></p>
+<p dir="ltr" style="text-align: justify;"><b><strong>Example:</strong></b><span> </span></p>
+<p dir="ltr" style="text-align: justify;"><span>Consider an Orders table where </span><code><span>OrderID</span></code><span> and </span><code><span>ProductID</span></code><span> together uniquely identify each record because multiple orders might include the same product, but not within the same order.</span></p>
+<pre><span>CREATE TABLE OrderDetails (</span><br><span>    OrderID INT,</span><br><span>    ProductID INT,</span><br><span>    Quantity INT,</span><br><span>    PRIMARY KEY (OrderID, ProductID)</span><br><span>);</span></pre>
+<h3 style="text-align:left"><b><strong>34. How is data integrity maintained in SQL databases?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>Data integrity refers to the </span><b><strong>accuracy</strong></b><span>, </span><b><strong>consistency</strong></b><span>, and </span><b><strong>reliability </strong></b><span>of the data stored in the database. SQL databases maintain data integrity through several mechanisms:</span></p>
+<ul>
+<li value="1"><b><strong>Constraints:</strong></b><span> Ensuring that certain conditions are always met. For example, </span><code><span>NOT NULL</span></code><span> ensures a column cannot have missing values, </span><code><span>FOREIGN KEY</span></code><span> ensures a valid relationship between tables, and </span><code><span>UNIQUE</span></code><span> ensures no duplicate values.</span></li>
+<li value="2"><b><strong>Transactions:</strong></b><span> Ensuring that a series of operations either all succeed or all fail, preserving data consistency.</span></li>
+<li value="3"><b><strong>Triggers:</strong></b><span> Automatically enforcing rules or validations before or after changes to data.</span></li>
+<li value="4"><b><strong>Normalization:</strong></b><span> Organizing data into multiple related tables to minimize redundancy and prevent anomalies.</span><br><span>These measures collectively ensure that the data remains reliable and meaningful over time.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>35. What are the advantages of using stored procedures?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>Improved Performance:</strong></b><span> Stored procedures are precompiled and cached in the database, making their execution faster than sending multiple individual queries.</span></li>
+<li value="2"><b><strong>Reduced Network Traffic:</strong></b><span> By executing complex logic on the server, fewer round trips between the application and database are needed.</span></li>
+<li value="3"><b><strong>Enhanced Security:</strong></b><span> Stored procedures can restrict direct access to underlying tables, allowing users to execute only authorized operations.</span></li>
+<li value="4"><b><strong>Reusability and Maintenance:</strong></b><span> Once a procedure is written, it can be reused across multiple applications. If business logic changes, you only need to update the stored procedure, not every application that uses it.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>36. What is a UNION operation, and how is it used?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The</span><a href="https://www.geeksforgeeks.org/sql-union-operator/" target="_blank" rel="noopener"><span> </span><code><span>UNION</span></code></a><span> operator combines the result sets of two or more </span><a href="https://www.geeksforgeeks.org/sql-select-query/" target="_blank" rel="noopener"><code><span>SELECT</span></code><span> queries</span></a><span> into a single result set, removing duplicate rows. This is useful when we need a </span><b><strong>consolidated view</strong></b><span> of data from multiple tables or queries that have similar structure.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT Name FROM Customers  </span><br><span>UNION  </span><br><span>SELECT Name FROM Employees;</span></pre>
+<h3 style="text-align:left"><b><strong>37. What is the difference between UNION and UNION ALL?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>UNION:</strong></b><span> Removes duplicate rows from the result set, ensuring only unique rows are returned.</span></li>
+<li value="2"><b><strong>UNION ALL:</strong></b><span> Includes all rows from each query, including duplicates.</span></li>
+<li value="3"><span>Performance-wise, </span><a href="https://www.geeksforgeeks.org/sql-union-all/" target="_blank" rel="noopener"><code><span>UNION ALL</span></code></a><span> is faster because it doesn’t require an additional step to remove duplicates.</span></li>
+</ul>
+<p dir="ltr"><b><strong>Example:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-3"></div>
+<pre><span>SELECT Name FROM Customers  </span><br><span>UNION ALL  </span><br><span>SELECT Name FROM Employees;</span></pre>
+<h3 style="text-align:left"><b><strong>38. How does the CASE statement work in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The</span><a href="https://www.geeksforgeeks.org/sql-case-statement/" target="_blank" rel="noopener"><span> </span><code><span>CASE</span></code></a><span> statement is SQL’s way of implementing </span><b><strong>conditional logic</strong></b><span> in queries. It evaluates conditions and returns a value based on the first condition that evaluates to true. If no condition is met, it can return a default value using the </span><b><code><strong>ELSE</strong></code></b><b><strong> clause</strong></b><span>.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT ID,  </span><br><span>       CASE  </span><br><span>           WHEN Salary &gt; 100000 THEN 'High'  </span><br><span>           WHEN Salary BETWEEN 50000 AND 100000 THEN 'Medium'  </span><br><span>           ELSE 'Low'  </span><br><span>       END AS SalaryLevel  </span><br><span>FROM Employees;</span></pre>
+<h3 style="text-align:left"><b><strong>39. What are scalar functions in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><a href="https://www.geeksforgeeks.org/sql-functions-aggregate-scalar-functions/" target="_blank" rel="noopener"><span>Scalar functions</span></a><span> operate on individual values and return a single value as a result. They are often used for formatting or converting data. Common examples include:</span></p>
+<ul>
+<li value="1"><b><strong>LEN():</strong></b><span> Returns the length of a string.</span></li>
+<li value="2"><b><strong>ROUND():</strong></b><span> Rounds a numeric value.</span></li>
+<li value="3"><b><strong>CONVERT():</strong></b><span> Converts a value from one data type to another.</span></li>
+</ul>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT LEN('Example') AS StringLength;</span></pre>
+<h3 style="text-align:left"><b><strong>40. What is the purpose of the COALESCE function?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The </span><b><code><strong>COALESCE</strong></code></b><b><strong> function</strong></b><span> returns the first non-NULL value from a list of expressions. It’s commonly used to provide default values or handle missing data gracefully.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT COALESCE(NULL, NULL, 'Default Value') AS Result;</span></pre>
+<h3 style="text-align:left"><b><strong>41. What are the differences between SQL’s COUNT() and SUM() functions?</strong></b></h3>
+<p dir="ltr"><b><strong>1. COUNT():</strong></b><span> Counts the number of rows or non-NULL values in a column.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT COUNT(*) FROM Orders;</span></pre>
+<p dir="ltr"><b><strong>2. SUM():</strong></b><span> Adds up all numeric values in a column.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-4"></div>
+<pre><span>SELECT SUM(TotalAmount) FROM Orders;</span></pre>
+<h3 style="text-align:left"><b><strong>42. What is the difference between the NVL and NVL2 functions?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>NVL():</strong></b><span> Replaces a NULL value with a specified replacement value.</span></li>
+<li value="2"><b><strong>NVL2():</strong></b><span> Evaluates two values:</span>
+<ul>
+<li value="1"><span>If the first argument is NOT NULL, returns the second argument.</span></li>
+<li value="2"><span>If the first argument is NULL, returns the third argument.</span></li>
+</ul>
+</li>
+</ul>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT NVL(Salary, 0) AS AdjustedSalary  </span><br><span>FROM Employees;</span></pre>
+<h3 style="text-align:left"><b><strong>43. How does the RANK() function differ from DENSE_RANK()?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>RANK():</strong></b><span> Assigns a rank to each row, with gaps if there are ties.</span></li>
+<li value="2"><b><strong>DENSE_RANK():</strong></b><span> Assigns consecutive ranks without any gaps.</span></li>
+</ul>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT Name, Salary, RANK() OVER (ORDER BY Salary DESC) AS Rank  </span><br><span>FROM Employees;</span></pre>
+<p dir="ltr" style="text-align: justify;"><span>If two employees have the same salary, they get the same rank, but </span><code><span>RANK()</span></code><span> will skip a number for the next rank, while </span><code><span>DENSE_RANK()</span></code><span> will not.</span></p>
+<h3 style="text-align:left"><b><strong>44. What is the difference between ROW_NUMBER() and RANK()?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>ROW_NUMBER():</strong></b><span> Assigns a unique number to each row regardless of ties.</span></li>
+<li value="2"><b><strong>RANK():</strong></b><span> Assigns the same number to tied rows and leaves gaps for subsequent ranks.</span></li>
+</ul>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT Name, ROW_NUMBER() OVER (ORDER BY Salary DESC) AS RowNum  </span><br><span>FROM Employees;</span></pre>
+<h3 style="text-align:left"><b><strong>45. What are common table expressions (CTEs) in SQL?</strong></b></h3>
+<p dir="ltr"><span>A </span><a href="https://www.geeksforgeeks.org/cte-in-sql/" target="_blank" rel="noopener"><span>CTE</span></a><span> is a temporary result set defined within a query. It improves query readability and can be referenced multiple times.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>WITH TopSalaries AS (  </span><br><span>    SELECT Name, Salary  </span><br><span>    FROM Employees  </span><br><span>    WHERE Salary &gt; 50000  </span><br><span>)  </span><br><span>SELECT * FROM TopSalaries WHERE Name LIKE 'A%';</span></pre>
+<h3 style="text-align:left"><b><strong>46. What are window functions, and how are they used?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><a href="https://www.geeksforgeeks.org/window-functions-in-sql/" target="_blank" rel="noopener"><span>Window functions</span></a><span> perform calculations across a set of rows that are related to the current row. Unlike aggregate functions, they don’t collapse the result set.</span></p>
+<h4 style="text-align:left"><b><strong>Example: </strong></b><span>Calculating a running total</span></h4>
+<pre><span>SELECT Name, Salary, SUM(Salary) OVER (ORDER BY Salary) AS RunningTotal  </span><br><span>FROM Employees;</span></pre>
+<h3 style="text-align:left"><b><strong>47. What is the difference between an index and a key in SQL?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Index</strong></b></p>
+<ul>
+<li value="1"><span>An </span><a href="https://www.geeksforgeeks.org/sql-indexes/" target="_blank" rel="noopener"><span>index </span></a><span>is a database object created to</span><b><strong> speed up data retrieval</strong></b><span>. It stores a sorted reference to table data, which helps the database engine find rows more quickly than scanning the entire table. </span></li>
+<li value="2"><b><strong>Example:</strong></b><span> A non-unique index on a column like </span><code><span>LastName</span></code><span> allows quick lookups of rows where the last name matches a specific value.</span></li>
+</ul>
+<p dir="ltr"><span>2. </span><b><strong>Key</strong></b></p>
+<ul>
+<li value="1"><span>A key is a logical concept that enforces rules for uniqueness or relationships in the data. </span></li>
+<li value="2"><span>For instance, a </span><b><strong>PRIMARY KEY</strong></b><span> uniquely identifies each row in a table and ensures that no duplicate or NULL values exist in the key column(s). </span></li>
+<li value="3"><span>A </span><b><strong>FOREIGN KEY</strong></b><span> maintains referential integrity by linking rows in one table to rows in another.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>48. How does indexing improve query performance?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>Indexing allows the </span><a href="https://www.geeksforgeeks.org/what-is-database/" target="_blank" rel="noopener"><span>database </span></a><span>to locate and access the rows corresponding to a </span><b><strong>query condition</strong></b><span> much faster than scanning the entire table. Instead of reading each row sequentially, the database uses the index to</span><b><strong> jump directly </strong></b><span>to the relevant data pages. This reduces the number of disk</span><b><strong> I/O operations</strong></b><span> and speeds up query execution, especially for large tables.</span></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-5"></div>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>CREATE INDEX idx_lastname ON Employees(LastName);</span><br><span>SELECT * FROM Employees WHERE LastName = 'Smith';</span></pre>
+<p dir="ltr"><span>The index on </span><code><span>LastName</span></code><span> lets the database quickly find all rows matching ‘Smith’ without scanning every record.</span></p>
+<h3 style="text-align:left"><b><strong>49. What are the trade-offs of using indexes in SQL databases?</strong></b></h3>
+<p dir="ltr"><b><strong>Advantages</strong></b></p>
+<ul>
+<li value="1"><span>Faster query performance, especially for SELECT queries with </span><a href="https://www.geeksforgeeks.org/sql-where-clause/" target="_blank" rel="noopener"><span>WHERE</span></a><span> clauses, JOIN conditions, or ORDER BY clauses.</span></li>
+<li value="2"><span>Improved sorting and filtering efficiency.</span></li>
+</ul>
+<p dir="ltr"><b><strong>Disadvantages:</strong></b></p>
+<ul>
+<li value="1"><span>Increased storage space for the index structures.</span></li>
+<li value="2"><span>Additional overhead for write operations (INSERT, UPDATE, DELETE), as indexes must be updated whenever the underlying data changes.</span></li>
+<li value="3"><span>Potentially </span><b><strong>slower bulk data load</strong></b><span>s or batch inserts due to the need to maintain index integrity.</span><br><span>In short, indexes make read operations faster but can slow down write operations and increase storage requirements.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>50. What is the difference between clustered and non-clustered indexes?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Clustered Index:</strong></b></p>
+<ul>
+<li value="1"><span>Organizes the physical data in the table itself in the order of the indexed column(s).</span></li>
+<li value="2"><span>A table can have only one </span><a href="https://www.geeksforgeeks.org/difference-between-clustered-and-non-clustered-index/" target="_blank" rel="noopener"><span>clustered index</span></a><span>.</span></li>
+<li value="3"><span>Improves range queries and queries that sort data.</span></li>
+<li value="4"><span>Example: If </span><code><span>EmployeeID</span></code><span> is the clustered index, the rows in the table are stored physically sorted by </span><code><span>EmployeeID</span></code><span>.</span></li>
+</ul>
+<p dir="ltr"><b><strong>2. Non-Clustered Index:</strong></b></p>
+<ul>
+<li value="1"><span>Maintains a separate structure that contains a reference (or pointer) to the physical data in the table.</span></li>
+<li value="2"><span>A table can have multiple non-clustered indexes.</span></li>
+<li value="3"><span>Useful for specific query conditions that aren’t related to the primary ordering of the data.</span></li>
+<li value="4"><span>Example: A non-clustered index on </span><code><span>LastName</span></code><span> allows fast lookups by last name even if the table is sorted by another column.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>51. What are temporary tables, and how are they used?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><a href="https://www.geeksforgeeks.org/what-is-temporary-table-in-sql/" target="_blank" rel="noopener"><span>Temporary tables</span></a><span> are tables that exist only for the duration of a </span><b><strong>session </strong></b><span>or a </span><b><strong>transaction</strong></b><span>. They are useful for storing intermediate results, simplifying complex queries, or performing operations on subsets of data without modifying the main tables.</span></p>
+<p dir="ltr" style="text-align: justify;"><b><strong>1. Local Temporary Tables:</strong></b></p>
+<ul>
+<li value="1"><span>Prefixed with </span><code><span>#</span></code><span> (e.g., </span><code><span>#TempTable</span></code><span>).</span></li>
+<li value="2"><span>Only visible to the session that created them.</span></li>
+<li value="3"><span>Automatically dropped when the session ends.</span></li>
+</ul>
+<p dir="ltr"><b><strong>2. Global Temporary Tables:</strong></b></p>
+<ul>
+<li value="1"><span>Prefixed with </span><code><span>##</span></code><span> (e.g., </span><code><span>##GlobalTempTable</span></code><span>).</span></li>
+<li value="2"><span>Visible to all sessions.</span></li>
+<li value="3"><span>Dropped when all sessions that reference them are closed.</span></li>
+</ul>
+<p dir="ltr"><b><strong>Example:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-6"></div>
+<pre><span>CREATE TABLE #TempResults (ID INT, Value VARCHAR(50));</span><br><span>INSERT INTO #TempResults VALUES (1, 'Test');</span><br><span>SELECT * FROM #TempResults;</span></pre>
+<h3 style="text-align:left"><b><strong>52. What is a materialized view, and how does it differ from a standard view?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>Standard View:</strong></b>
+<ul>
+<li value="1"><span>A virtual table defined by a query.</span></li>
+<li value="2"><span>Does not store data; the underlying query is executed each time the view is referenced.</span></li>
+<li value="3"><span>A standard view shows real-time data.</span></li>
+</ul>
+</li>
+<li value="2"><b><strong>Materialized View:</strong></b>
+<ul>
+<li value="1"><span>A physical table that stores the result of the query.</span></li>
+<li value="2"><span>Data is precomputed and stored, making reads faster.</span></li>
+<li value="3"><span>Requires periodic refreshes to keep data up to date.</span></li>
+<li value="4"><span>materialized view is used to store aggregated sales data, updated nightly, for fast reporting.</span></li>
+</ul>
+</li>
+</ul>
+<h3 style="text-align:left"><b><strong>53. What is a sequence in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/sql-sequences/" target="_blank" rel="noopener"><span>sequence </span></a><span>is a database object that generates a series of</span><b><strong> unique numeric values</strong></b><span>. It’s often used to produce unique identifiers for primary keys or other columns requiring sequential values.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>CREATE SEQUENCE seq_emp_id START WITH 1 INCREMENT BY 1;</span><br><span>SELECT NEXT VALUE FOR seq_emp_id; -- Returns 1</span><br><span>SELECT NEXT VALUE FOR seq_emp_id; -- Returns 2</span></pre>
+<h3 style="text-align:left"><b><strong>54. What are the advantages of using sequences over identity columns?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Greater Flexibility:</strong></b></p>
+<ul>
+<li value="1"><span>Can specify start values, increments, and maximum values.</span></li>
+<li value="2"><span>Can be easily reused for multiple tables.</span></li>
+</ul>
+<p dir="ltr"><b><strong>2. Dynamic Adjustment:</strong></b><span> Can alter the sequence without modifying the table structure.</span></p>
+<p dir="ltr"><b><strong>3. Cross-Table Consistency:</strong></b><span> Use a single sequence for multiple related tables to ensure unique identifiers across them.</span><br><span>In short, sequences offer more control and reusability than identity columns.</span></p>
+<h3 style="text-align:left"><b><strong>55. How do constraints improve database integrity?</strong></b></h3>
+<p dir="ltr"><span>Constraints enforce rules that the data must follow, preventing invalid or inconsistent data from being entered:</span></p>
+<ul>
+<li value="1"><b><strong>NOT NULL:</strong></b><span> Ensures that a column cannot contain NULL values.</span></li>
+<li value="2"><b><strong>UNIQUE:</strong></b><span> Ensures that all values in a column are distinct.</span></li>
+<li value="3"><b><strong>PRIMARY KEY:</strong></b><span> Combines NOT NULL and UNIQUE, guaranteeing that each row is uniquely identifiable.</span></li>
+<li value="4"><b><strong>FOREIGN KEY:</strong></b><span> Ensures referential integrity by requiring values in one table to match primary key values in another.</span></li>
+<li value="5"><b><strong>CHECK:</strong></b><span> Validates that values meet specific criteria (e.g., </span><code><span>CHECK (Salary &gt; 0)</span></code><span>).</span><br><span>By automatically enforcing these rules, constraints maintain data reliability and consistency.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>56. What is the difference between a local and a global temporary table?</strong></b></h3>
+<ul>
+<li value="1"><b><strong>Local Temporary Table:</strong></b>
+<ul>
+<li value="1"><span>Prefixed with </span><code><span>#</span></code><span> (e.g., </span><code><span>#TempTable</span></code><span>).</span></li>
+<li value="2"><span>Exists only within the session that created it.</span></li>
+<li value="3"><span>Automatically dropped when the session ends.</span></li>
+</ul>
+</li>
+<li value="2"><b><strong>Global Temporary Table:</strong></b>
+<ul>
+<li value="1"><span>Prefixed with </span><code><span>##</span></code><span> (e.g., </span><code><span>##GlobalTempTable</span></code><span>).</span></li>
+<li value="2"><span>Visible to all sessions.</span></li>
+<li value="3"><span>Dropped only when all sessions referencing it are closed.</span></li>
+</ul>
+</li>
+</ul>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>CREATE TABLE #LocalTemp (ID INT);</span><br><span>CREATE TABLE ##GlobalTemp (ID INT);</span></pre>
+<h3 style="text-align:left"><b><strong>57. What is the purpose of the SQL MERGE statement?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The </span><b><code><strong>MERGE</strong></code></b><b><strong> statement </strong></b><span>combines multiple operations INSERT, UPDATE, and DELETE into one. It is used to synchronize two tables by:</span></p>
+<ul>
+<li value="1"><span>Inserting rows that don’t exist in the target table.</span></li>
+<li value="2"><span>Updating rows that already exist.</span></li>
+<li value="3"><span>Deleting rows from the target table based on conditions</span></li>
+</ul>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>MERGE INTO TargetTable T  </span><br><span>USING SourceTable S  </span><br><span>ON T.ID = S.ID  </span><br><span>WHEN MATCHED THEN  </span><br><span>    UPDATE SET T.Value = S.Value  </span><br><span>WHEN NOT MATCHED THEN  </span><br><span>    INSERT (ID, Value) VALUES (S.ID, S.Value);</span></pre>
+<h3 style="text-align:left"><b><strong>58. How can you handle duplicates in a query without using DISTINCT?</strong></b></h3>
+<p dir="ltr"><b><strong>1. GROUP BY:</strong></b><span> Aggregate rows to eliminate duplicates</span></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-7"></div>
+<pre><span>SELECT Column1, MAX(Column2)  </span><br><span>FROM TableName  </span><br><span>GROUP BY Column1;</span></pre>
+<p dir="ltr"><span>2. </span><b><strong>ROW_NUMBER():</strong></b><span> Assign a unique number to each row and filter by that</span></p>
+<pre><span>WITH CTE AS (  </span><br><span>    SELECT Column1, Column2, ROW_NUMBER() OVER (PARTITION BY Column1 ORDER BY Column2) AS RowNum  </span><br><span>    FROM TableName  </span><br><span>)  </span><br><span>SELECT * FROM CTE WHERE RowNum = 1;</span></pre>
+<h3 style="text-align:left"><b><strong>59. What is a correlated subquery?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/sql-correlated-subqueries/" target="_blank" rel="noopener"><span>correlated subquery</span></a><span> is a subquery that references columns from the outer query. It is re-executed for each row processed by the outer query. This makes it more dynamic, but potentially less efficient.</span></p>
+<p dir="ltr" style="text-align: justify;"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT Name,  </span><br><span>       (SELECT COUNT(*)  </span><br><span>        FROM Orders  </span><br><span>        WHERE Orders.CustomerID = Customers.CustomerID) AS OrderCount  </span><br><span>FROM Customers;</span></pre>
+<h3 style="text-align:left"><b><strong>60. What are partitioned tables, and when should we use them?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><b><strong>Partitioned tables</strong></b><span> divide data into </span><b><strong>smaller</strong></b><span>, more </span><b><strong>manageable segments</strong></b><span> based on a column’s value (e.g., date or region). Each partition is stored separately, making queries that target a specific partition more efficient. It is used when</span></p>
+<ul>
+<li value="1"><span>Large tables with millions or billions of rows.</span></li>
+<li value="2"><span>Scenarios where queries frequently filter on partitioned columns (e.g., year, region).</span></li>
+<li value="3"><span>To improve maintenance operations, such as archiving older partitions without affecting the rest of the table.</span></li>
+</ul>
+<h2 style="text-align:left"><span>SQL Advanced Interview Questions</span></h2>
+<p dir="ltr" style="text-align: justify;"><span>This section covers </span><b><strong>complex SQL topics</strong></b><span>, including</span><b><strong> performance tuning</strong></b><span>,</span><b><strong> complex indexing strategies</strong></b><span>, </span><b><strong>transaction isolation levels</strong></b><span>, and </span><b><strong>advanced query optimization techniques</strong></b><span>. By tackling these challenging questions, we’ll gain a deeper understanding of SQL, preparing us for</span><b><strong> senior-level roles</strong></b><span> and </span><b><strong>technical interviews</strong></b><span>.</span></p>
+<h3 style="text-align:left"><b><strong>61. What are the ACID properties of a transaction?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><a href="https://www.geeksforgeeks.org/acid-properties-in-dbms/" target="_blank" rel="noopener"><span>ACID</span></a><span> is an acronym that stands for Atomicity, Consistency, Isolation, and Durability—four key properties that ensure database transactions are processed reliably.</span></p>
+<p dir="ltr" style="text-align: justify;"><span>1. </span><b><strong>Atomicity:</strong></b></p>
+<ul>
+<li value="1"><span>A transaction is treated as a single unit of work, meaning all operations must succeed or fail as a whole.</span></li>
+<li value="2"><span>If any part of the transaction fails, the entire transaction is rolled back.</span></li>
+</ul>
+<p dir="ltr"><span>2. </span><b><strong>Consistency:</strong></b></p>
+<ul>
+<li value="1"><span>A transaction must take the database from one valid state to another, maintaining all defined rules and constraints.</span></li>
+<li value="2"><span>This ensures data integrity is preserved throughout the transaction process.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><span>3. </span><b><strong>Isolation:</strong></b></p>
+<ul>
+<li value="1"><span>Transactions should not interfere with each other.</span></li>
+<li value="2"><span>Even if multiple transactions occur simultaneously, each must operate as if it were the only one in the system until it is complete.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><span>4. </span><b><strong>Durability:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-8"></div>
+<ul>
+<li value="1"><span>Once a transaction is committed, its changes must persist, even in the event of a system failure.</span></li>
+<li value="2"><span>This ensures the data remains stable after the transaction is successfully completed.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>62. What are the differences between isolation levels in SQL?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><b><strong>Isolation levels</strong></b><span> define the extent to which the operations in one </span><a href="https://www.geeksforgeeks.org/sql-transactions/" target="_blank" rel="noopener"><span>transaction </span></a><span>are isolated from those in other transactions. They are critical for </span><b><strong>managing concurrency</strong></b><span> and ensuring data integrity. Common isolation levels include:</span></p>
+<p dir="ltr"><b><strong>1. Read Uncommitted:</strong></b></p>
+<ul>
+<li value="1"><span>Allows reading uncommitted changes from other transactions.</span></li>
+<li value="2"><span>Can result in dirty reads, where a transaction reads data that might later be rolled back.</span></li>
+</ul>
+<p dir="ltr"><b><strong>2. Read Committed:</strong></b></p>
+<ul>
+<li value="1"><span>Ensures a transaction can only read committed data.</span></li>
+<li value="2"><span>Prevents dirty reads but does not protect against non-repeatable reads or phantom reads.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><b><strong>3. Repeatable Read:</strong></b></p>
+<ul>
+<li value="1"><span>Ensures that if a transaction reads a row, that row cannot change until the transaction is complete.</span></li>
+<li value="2"><span>Prevents dirty reads and non-repeatable reads but not phantom reads.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><b><strong>4. Serializable:</strong></b></p>
+<ul>
+<li value="1"><span>The highest level of isolation.</span></li>
+<li value="2"><span>Ensures full isolation by effectively serializing transactions, meaning no other transaction can read or modify data that another transaction is using.</span></li>
+<li value="3"><span>Prevents dirty reads, non-repeatable reads, and phantom reads, but may introduce performance overhead due to locking and reduced concurrency.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>63. What is the purpose of the WITH (NOLOCK) hint in SQL Server?</strong></b></h3>
+<ul>
+<li value="1"><span>The </span><b><strong>WITH (NOLOCK) </strong></b><span>hint allows a query to read data without acquiring shared locks, effectively reading uncommitted data.</span></li>
+<li value="2"><span>It can improve performance by </span><b><strong>reducing contention for locks</strong></b><span>, especially on large tables that are frequently updated.</span></li>
+<li value="3"><span>Results may be inconsistent or unreliable, as the data read might change or be rolled back.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><b><strong>Example:</strong></b></p>
+<pre><span>SELECT *  </span><br><span>FROM Orders WITH (NOLOCK);</span></pre>
+<p dir="ltr" style="text-align: justify;"><span>This query fetches data from the </span><code><span>Orders</span></code><span> table without waiting for other transactions to release their locks.</span></p>
+<h3 style="text-align:left"><b><strong>64. How do you handle deadlocks in SQL databases?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><a href="https://www.geeksforgeeks.org/deadlock-in-dbms/" target="_blank" rel="noopener"><span>Deadlocks</span></a><span> occur when two or more transactions hold resources that the other transactions need, resulting in a cycle of dependency that prevents progress. Strategies to handle deadlocks include:</span></p>
+<p dir="ltr" style="text-align: justify;"><span>1. </span><b><strong>Deadlock detection and retry:</strong></b></p>
+<ul>
+<li value="1"><span>Many database systems have mechanisms to detect deadlocks and terminate one of the transactions to break the cycle.</span></li>
+<li value="2"><span>The terminated transaction can be retried after the other transactions complete.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><span>2. </span><b><strong>Reducing lock contention:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-9"></div>
+<ul>
+<li value="1"><span>Use indexes and optimized queries to minimize the duration and scope of locks.</span></li>
+<li value="2"><span>Break transactions into smaller steps to reduce the likelihood of conflicts.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><span>3. </span><b><strong>Using proper isolation levels:</strong></b></p>
+<ul>
+<li value="1"><span>In some cases, lower isolation levels can help reduce locking.</span></li>
+<li value="2"><span>Conversely, higher isolation levels (like Serializable) may ensure a predictable order of operations, reducing deadlock risk.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><span>4. </span><b><strong>Consistent ordering of resource access:</strong></b></p>
+<ul>
+<li value="1"><span>Ensure that transactions acquire resources in the same order to prevent cyclical dependencies.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>65. What is a database snapshot, and how is it used?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>A </span><a href="https://www.geeksforgeeks.org/sql-snapshots/" target="_blank" rel="noopener"><span>database snapshot</span></a><span> is a read-only, static view of a database at a specific point in time.</span></p>
+<ul>
+<li value="1"><b><strong>Reporting:</strong></b><span> Allowing users to query a consistent dataset without affecting live operations.</span></li>
+<li value="2"><b><strong>Backup and recovery:</strong></b><span> Snapshots can serve as a point-in-time recovery source if changes need to be reversed.</span></li>
+<li value="3"><b><strong>Testing:</strong></b><span> Providing a stable dataset for testing purposes without the risk of modifying the original data.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><b><strong>Example:</strong></b></p>
+<pre><span>CREATE DATABASE MySnapshot ON  </span><br><span>(  </span><br><span>    NAME = MyDatabase_Data,  </span><br><span>    FILENAME = 'C:\Snapshots\MyDatabase_Snapshot.ss'  </span><br><span>)  </span><br><span>AS SNAPSHOT OF MyDatabase;</span></pre>
+<h3 style="text-align:left"><b><strong>66. What are the differences between OLTP and OLAP systems?</strong></b></h3>
+<p dir="ltr"><span>1. </span><b><strong>OLTP (Online Transaction Processing)</strong></b></p>
+<ul>
+<li value="1"><span>Handles large volumes of simple transactions (e.g., order entry, inventory updates).</span></li>
+<li value="2"><span>Optimized for fast, frequent reads and writes.</span></li>
+<li value="3"><span>Normalized schema to ensure data integrity and consistency.</span></li>
+<li value="4"><span>Examples: e-commerce sites, banking systems.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><span>2. </span><b><strong>OLAP (Online Analytical Processing)</strong></b></p>
+<ul>
+<li value="1"><span>Handles complex queries and analysis on large datasets.</span></li>
+<li value="2"><span>Optimized for read-heavy workloads and data aggregation.</span></li>
+<li value="3"><span>Denormalized schema (e.g., star or snowflake schemas) to support faster querying.</span></li>
+<li value="4"><span>Examples: Business intelligence reporting, data warehousing.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>67. What is a live lock, and how does it differ from a deadlock?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><b><strong>1. Live Lock </strong></b></p>
+<ul>
+<li value="1"><span>Occurs when two or more transactions keep responding to each other’s changes, but no progress is made.</span></li>
+<li value="2"><span>Unlike a deadlock, the transactions are not blocked; they are actively running, but they cannot complete.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><span>2. </span><b><strong>Deadlock</strong></b></p>
+<ul>
+<li value="1"><span>Occurs when transactions are blocked waiting for each other to release locks.</span></li>
+<li value="2"><span>No progress can be made unless one of the transactions is terminated</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>68. What is the purpose of the SQL EXCEPT operator?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>The </span><a href="https://www.geeksforgeeks.org/sql-except-clause/" target="_blank" rel="noopener"><code><span>EXCEPT</span></code><span> operator</span></a><span> is used to return rows from one query’s result set that are not present in another query’s result set. It effectively performs a set difference, showing only the data that is </span><b><strong>unique </strong></b><span>to the first query.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-10"></div>
+<pre><span>SELECT ProductID FROM ProductsSold</span><br><span>EXCEPT</span><br><span>SELECT ProductID FROM ProductsReturned;</span></pre>
+<p dir="ltr"><b><strong>Use Case:</strong></b></p>
+<ul>
+<li value="1"><span>To find discrepancies between datasets.</span></li>
+<li value="2"><span>To verify that certain data exists in one dataset but not in another.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><b><strong>Performance Considerations:</strong></b></p>
+<ul>
+<li value="1"><b><code><strong>EXCEPT</strong></code></b><b><strong> works</strong></b><span> best when the datasets involved have appropriate indexing and when the result sets are relatively small.</span></li>
+<li value="2"><span>Large datasets without indexes may cause slower performance because the database has to compare each row.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>69. How do you implement dynamic SQL, and what are its advantages and risks?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><a href="https://www.geeksforgeeks.org/dynamic-sql/" target="_blank" rel="noopener"><span>Dynamic SQL</span></a><span> is SQL code that is constructed and executed at </span><b><strong>runtime </strong></b><span>rather than being fully defined and static. In SQL Server: Use </span><b><code><strong>sp_executesql</strong></code></b><b><strong> </strong></b><span>or </span><code><span>EXEC. </span></code><span>In other databases: Concatenate query strings and execute them using the respective command for the database platform.</span></p>
+<p dir="ltr"><b><strong>Syntax:</strong></b></p>
+<blockquote>
+<p dir="ltr"><span>DECLARE @sql NVARCHAR(MAX)</span><br><span>SET @sql = ‘SELECT * FROM ‘ + @TableName</span><br><span>EXEC sp_executesql @sql;</span></p>
+</blockquote>
+<p dir="ltr"><b><strong>Advantages:</strong></b></p>
+<ul>
+<li value="1"><b><strong>Flexibility:</strong></b><span> Dynamic SQL can adapt to different conditions, tables, or columns that are only known at runtime.</span></li>
+<li value="2"><b><strong>Simplifies Complex Logic:</strong></b><span> Instead of writing multiple queries, a single dynamically constructed query can handle multiple scenarios.</span></li>
+</ul>
+<p dir="ltr"><b><strong>Risks:</strong></b></p>
+<ul>
+<li value="1"><b><strong>SQL Injection Vulnerabilities:</strong></b><span> If user input is not sanitized, attackers can inject malicious SQL code.</span></li>
+<li value="2"><b><strong>Performance Overhead:</strong></b><span> Because dynamic SQL is constructed at runtime, it may not benefit from cached execution plans, leading to slower performance.</span></li>
+<li value="3"><b><strong>Complexity in Debugging:</strong></b><span> Dynamic queries can be harder to read and troubleshoot.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>70. What is the difference between horizontal and vertical partitioning?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><b><strong>Partitioning </strong></b><span>is a database technique used to divide data into smaller, more manageable pieces.</span></p>
+<ul>
+<li value="1"><b><strong>Horizontal Partitioning:</strong></b>
+<ul>
+<li value="1"><span>Divides the rows of a table into multiple partitions based on values in a specific column.</span></li>
+<li value="2"><span>Example: Splitting a customer table into separate partitions by geographic region or by year.</span></li>
+<li value="3"><b><strong>Use Case:</strong></b><span> When dealing with large datasets, horizontal partitioning can improve performance by limiting the number of rows scanned for a query.</span></li>
+</ul>
+</li>
+<li value="2"><b><strong>Vertical Partitioning:</strong></b>
+<ul>
+<li value="1"><span>Divides the columns of a table into multiple partitions.</span></li>
+<li value="2"><span>Example: Storing infrequently accessed columns (e.g., large text or binary fields) in a separate table or partition.</span></li>
+<li value="3"><b><strong>Use Case:</strong></b><span> Helps in optimizing storage and query performance by separating commonly used columns from less frequently accessed data.</span></li>
+</ul>
+</li>
+<li value="3"><b><strong>Key Difference:</strong></b>
+<ul>
+<li value="1"><span>Horizontal partitioning is row-based, focusing on distributing the dataset’s rows across partitions.</span></li>
+<li value="2"><span>Vertical partitioning is column-based, aiming to separate less-used columns into different partitions or tables.</span></li>
+</ul>
+</li>
+</ul>
+<h3 style="text-align:left"><b><strong>71. What are the considerations for indexing very large tables?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Indexing Strategy:</strong></b></p>
+<ul>
+<li value="1"><span>Focus on the most frequently queried columns or those involved in </span><a href="https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/" target="_blank" rel="noopener"><span>JOIN </span></a><span>and WHERE conditions.</span></li>
+<li value="2"><span>Avoid indexing every column, as it increases storage and maintenance costs.</span></li>
+</ul>
+<p dir="ltr"><b><strong>2. Index Types:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-11"></div>
+<ul>
+<li value="1"><span>Use clustered indexes for primary key lookups and range queries.</span></li>
+<li value="2"><span>Use non-clustered indexes for filtering, ordering, and covering specific queries.</span></li>
+</ul>
+<p dir="ltr"><b><strong>3. Partitioned Indexes:</strong></b></p>
+<ul>
+<li value="1"><span>If the table is partitioned, consider creating </span><b><strong>local indexes</strong></b><span> for each partition. This improves manageability and can speed up queries targeting specific partitions.</span></li>
+</ul>
+<p dir="ltr"><b><strong>4. Maintenance Overhead:</strong></b></p>
+<ul>
+<li value="1"><span>Index rebuilding and updating can be resource-intensive. Plan for regular index maintenance during off-peak hours.</span></li>
+<li value="2"><span>Monitor index fragmentation and rebuild indexes as necessary to maintain performance.</span></li>
+</ul>
+<p dir="ltr"><b><strong>5. Monitoring and Tuning:</strong></b></p>
+<ul>
+<li value="1"><span>Continuously evaluate query performance using execution plans and statistics.</span></li>
+<li value="2"><span>Remove unused or rarely accessed indexes to reduce maintenance costs.</span></li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><span>6. Indexing large tables requires a careful approach to ensure that performance gains from faster queries outweigh the costs of increased storage and maintenance effort.</span></p>
+<h3 style="text-align:left"><b><strong>72. What is the difference between database sharding and partitioning?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Sharding</strong></b></p>
+<ul>
+<li value="1"><a href="https://www.geeksforgeeks.org/what-is-sharding/" target="_blank" rel="noopener"><span>Sharding </span></a><span>involves splitting a database into multiple smaller, </span><b><strong>independent databases</strong></b><span> (shards). Each shard operates on a subset of the overall data and can be hosted on separate servers.</span></li>
+<li value="2"><span>Sharding is a horizontal scaling strategy that distributes data across multiple databases, typically to handle massive data volumes and high traffic.</span></li>
+<li value="3"><b><strong>Purpose:</strong></b><span> Horizontal scaling to handle large volumes of data and high query loads.</span></li>
+<li value="4"><b><strong>Example:</strong></b><span> A global user database might be divided into shards by region, such as a shard for North America, Europe, and Asia.</span></li>
+<li value="5"><b><strong>Key Benefit:</strong></b><span> Each shard can be queried independently, reducing the load on any single server.</span></li>
+</ul>
+<p dir="ltr"><span>2. </span><b><strong>Partitioning</strong></b></p>
+<ul>
+<li value="1"><span>Partitioning splits a single table into smaller, logical pieces, usually within the same database.</span></li>
+<li value="2"><span>Partitioning is a</span><b><strong> logical organization of data </strong></b><span>within a single database to optimize performance and manageability.</span></li>
+<li value="3"><b><strong>Purpose:</strong></b><span> Improve query performance by reducing the amount of data scanned, and simplify maintenance tasks such as archiving or purging old data.</span></li>
+<li value="4"><b><strong>Example:</strong></b><span> A sales table could be partitioned by year so that queries targeting recent sales do not need to scan historical data.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>73. What are the best practices for writing optimized SQL queries?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Write Simple, Clear Queries:</strong></b></p>
+<ul>
+<li value="1"><span>Avoid overly complex joins and </span><a href="https://www.geeksforgeeks.org/sql-subquery/" target="_blank" rel="noopener"><span>subqueries</span></a><span>.</span></li>
+<li value="2"><span>Use straightforward, well-structured SQL that is easy to read and maintain.</span></li>
+</ul>
+<p dir="ltr"><b><strong>2. Filter Data Early:</strong></b></p>
+<ul>
+<li value="1"><span>Apply WHERE clauses as early as possible to reduce the amount of data processed.</span></li>
+<li value="2"><span>Consider using indexed columns in WHERE clauses for faster lookups.</span></li>
+</ul>
+<p dir="ltr"><b><strong>3. </strong></b><span>**</span><b><strong>Avoid SELECT</strong></b><span> *</span><b><strong>:</strong></b></p>
+<ul>
+<li value="1"><span>Retrieve only the columns needed. This reduces I/O and improves performance.</span></li>
+</ul>
+<p dir="ltr"><b><strong>4. Use Indexes Wisely:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-12"></div>
+<ul>
+<li value="1"><span>Create indexes on columns that are frequently used in WHERE clauses, JOIN conditions, and ORDER BY clauses.</span></li>
+<li value="2"><span>Regularly review index usage and remove unused indexes.</span></li>
+</ul>
+<p dir="ltr"><b><strong>5. Leverage Query Execution Plans:</strong></b></p>
+<ul>
+<li value="1"><span>Use execution plans to identify bottlenecks, missing indexes, or inefficient query patterns.</span></li>
+</ul>
+<p dir="ltr"><b><strong>6. Use Appropriate Join Types:</strong></b></p>
+<ul>
+<li value="1"><span>Choose INNER JOIN, LEFT JOIN, or OUTER JOIN based on the data relationships and performance requirements.</span></li>
+</ul>
+<p dir="ltr"><b><strong>7. Break Down Complex Queries:</strong></b></p>
+<ul>
+<li value="1"><span>Instead of a single monolithic query, use temporary tables or CTEs to process data in stages.</span></li>
+</ul>
+<p dir="ltr"><b><strong>8. Optimize Aggregations:</strong></b></p>
+<ul>
+<li value="1"><span>Use GROUP BY and aggregate functions efficiently.</span></li>
+<li value="2"><span>Consider pre-aggregating data if queries frequently require the same computations.</span></li>
+</ul>
+<p dir="ltr"><b><strong>9.  Monitor Performance Regularly:</strong></b></p>
+<ul>
+<li value="1"><span>Continuously analyze query performance and fine-tune as data volumes grow or usage patterns change.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>74. How can you monitor query performance in a production database?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Use Execution Plans:</strong></b></p>
+<p dir="ltr"><span>Review the execution plan of queries to understand how the database is retrieving data, which indexes are being used, and where potential bottlenecks exist.</span></p>
+<p dir="ltr"><b><strong>2. Analyze Wait Statistics:</strong></b></p>
+<p dir="ltr"><span>Identify where queries are waiting, such as on locks, I/O, or CPU, to pinpoint the cause of slowdowns.</span></p>
+<p dir="ltr"><b><strong>3. Leverage Built-in Monitoring Tools:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-13"></div>
+<ul>
+<li value="1"><span>SQL Server: Use Query Store, DMVs (Dynamic Management Views), and performance dashboards.</span></li>
+<li value="2"><span>MySQL: Use </span><code><span>EXPLAIN</span></code><span>, </span><code><span>SHOW PROFILE</span></code><span>, and the Performance Schema.</span></li>
+<li value="3"><span>PostgreSQL: Use </span><code><span>EXPLAIN (ANALYZE)</span></code><span>, </span><code><span>pg_stat_statements</span></code><span>, and log-based monitoring.</span></li>
+</ul>
+<p dir="ltr"><span>4. </span><b><strong>Set Up Alerts and Baselines:</strong></b></p>
+<ul>
+<li value="1"><span>Monitor key performance metrics (query duration, IOPS, CPU usage) and set thresholds.</span></li>
+<li value="2"><span>Establish baselines to quickly identify when performance degrades.</span></li>
+</ul>
+<p dir="ltr"><span>5. </span><b><strong>Continuous Query Tuning:</strong></b></p>
+<ul>
+<li value="1"><span>Regularly revisit and tune queries as data grows or application requirements change.</span></li>
+<li value="2"><span>Remove unused or inefficient indexes and re-evaluate the indexing strategy.</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>75. What are the trade-offs of using indexing versus denormalization?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Indexing</strong></b></p>
+<ul>
+<li value="1"><b><strong>Advantages:</strong></b>
+<ul>
+<li value="1"><span>Speeds up read operations and improves query performance without changing the data structure.</span></li>
+<li value="2"><span>Can be applied incrementally and is reversible if not effective.</span></li>
+<li value="3"><span>Consider indexing when you need faster lookups without altering the data model.</span></li>
+</ul>
+</li>
+<li value="2"><b><strong>Disadvantages:</strong></b>
+<ul>
+<li value="1"><span>Slows down write operations as indexes need to be maintained.</span></li>
+<li value="2"><span>Requires additional storage.</span></li>
+</ul>
+</li>
+</ul>
+<p dir="ltr" style="text-align: justify;"><span>2. </span><b><strong>Denormalization</strong></b></p>
+<ul>
+<li value="1"><b><strong>Advantages:</strong></b>
+<ul>
+<li value="1"><span>Simplifies query logic by storing pre-joined or aggregated data.</span></li>
+<li value="2"><span>Can improve performance for read-heavy workloads where complex joins are frequent.</span></li>
+<li value="3"><span>Consider denormalization when complex joins or repeated aggregations significantly slow down queries</span></li>
+</ul>
+</li>
+<li value="2"><b><strong>Disadvantages:</strong></b>
+<ul>
+<li value="1"><span>Introduces data redundancy, which can lead to inconsistencies.</span></li>
+<li value="2"><span>Increases storage requirements.</span></li>
+<li value="3"><span>Makes updates more complex, as redundant data must be synchronized.</span></li>
+</ul>
+</li>
+</ul>
+<h3 style="text-align:left"><b><strong>76. How does SQL handle recursive queries?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><span>SQL handles</span><b><strong> recursive queries</strong></b><span> using </span><b><strong>Common Table Expressions</strong></b><span> (CTEs). A recursive CTE repeatedly references itself to process hierarchical or tree-structured data.</span></p>
+<p dir="ltr" style="text-align: justify;"><b><strong>Key Components:</strong></b></p>
+<ul>
+<li value="1"><b><strong>Anchor Member:</strong></b><span> The initial query that starts the recursion.</span></li>
+<li value="2"><b><strong>Recursive Member:</strong></b><span> A query that references the CTE to continue building the result set.</span></li>
+<li value="3"><b><strong>Termination Condition:</strong></b><span> Ensures that recursion stops after a certain depth or condition is met.</span></li>
+</ul>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<pre><span>WITH RecursiveCTE (ID, ParentID, Depth) AS (  </span><br><span>    SELECT ID, ParentID, 1 AS Depth  </span><br><span>    FROM Categories  </span><br><span>    WHERE ParentID IS NULL  </span><br><span>    UNION ALL  </span><br><span>    SELECT c.ID, c.ParentID, r.Depth + 1  </span><br><span>    FROM Categories c  </span><br><span>    INNER JOIN RecursiveCTE r  </span><br><span>    ON c.ParentID = r.ID  </span><br><span>)  </span><br><span>SELECT * FROM RecursiveCTE;</span></pre>
+<h3 style="text-align:left"><b><strong>77. What are the differences between transactional and analytical queries?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Transactional Queries:</strong></b></p>
+<ul>
+<li value="1"><span>Focus on individual, short-term operations such as inserts, updates, and deletes.</span></li>
+<li value="2"><span>Optimize for high-throughput and low-latency.</span></li>
+<li value="3"><span>Often used in </span><a href="https://www.geeksforgeeks.org/difference-between-olap-and-oltp-in-dbms/" target="_blank" rel="noopener"><span>OLTP</span></a><span> (Online Transaction Processing) systems.</span></li>
+</ul>
+<p dir="ltr"><b><strong>2. Analytical Queries:</strong></b></p>
+<ul>
+<li value="1"><span>Involve complex aggregations, multi-dimensional analysis, and data transformations.</span></li>
+<li value="2"><span>Typically read-heavy, processing large amounts of historical or aggregated data.</span></li>
+<li value="3"><span>Often used in OLAP (Online Analytical Processing) systems.</span></li>
+</ul>
+<p dir="ltr"><b><strong>3. Key Differences:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-14"></div>
+<ul>
+<li value="1"><b><strong>Transactional queries</strong></b><span> support day-to-day operations and maintain data integrity.</span></li>
+<li value="2"><b><strong>Analytical queries</strong></b><span> support decision-making by providing insights from large datasets</span></li>
+</ul>
+<h3 style="text-align:left"><b><strong>78. How can you ensure data consistency across distributed databases?</strong></b></h3>
+<p dir="ltr" style="text-align: justify;"><b><strong>1. Use Distributed Transactions: </strong></b><span>Implement two-phase commit (2PC) to ensure all participating databases commit changes simultaneously or roll back if any part fails.</span></p>
+<p dir="ltr" style="text-align: justify;"><b><strong>2. Implement Eventual Consistency: </strong></b><span>If strong consistency isn’t required, allow data to become consistent over time. This approach is common in distributed systems where high availability is a priority.</span></p>
+<p dir="ltr" style="text-align: justify;"><b><strong>3. Conflict Resolution Mechanisms: </strong></b><span>Use versioning, timestamps, or conflict detection rules to resolve inconsistencies.</span></p>
+<p dir="ltr" style="text-align: justify;"><b><strong>4. Data Replication and Synchronization: </strong></b><span>Use reliable replication strategies to ensure that changes made in one database are propagated to others.</span></p>
+<p dir="ltr" style="text-align: justify;"><b><strong>5. Regular Audits and Validation: </strong></b><span>Periodically verify that data remains consistent across databases and fix discrepancies as needed.</span></p>
+<h3 style="text-align:left"><b><strong>79. What is the purpose of the SQL PIVOT operator?</strong></b></h3>
+<p dir="ltr"><span>The </span><a href="https://www.geeksforgeeks.org/pivot-and-unpivot-in-sql/" target="_blank" rel="noopener"><span>PIVOT operator</span></a><span> transforms rows into columns, making it easier to summarize or rearrange data for reporting.</span></p>
+<p dir="ltr"><b><strong>Example:</strong></b></p>
+<p dir="ltr"><span>Converting a dataset that lists monthly sales into a format that displays each month as a separate column.</span></p>
+<pre><span>SELECT ProductID, [2021], [2022]  </span><br><span>FROM (  </span><br><span>    SELECT ProductID, YEAR(SaleDate) AS SaleYear, Amount  </span><br><span>    FROM Sales  </span><br><span>) AS Source  </span><br><span>PIVOT (  </span><br><span>    SUM(Amount)  </span><br><span>    FOR SaleYear IN ([2021], [2022])  </span><br><span>) AS PivotTable;</span></pre>
+<h3 style="text-align:left"><b><strong>80. What is a bitmap index, and how does it differ from a B-tree index?</strong></b></h3>
+<p dir="ltr"><b><strong>1. Bitmap Index:</strong></b></p>
+<ul>
+<li value="1"><span>Represents data with bitmaps (arrays of bits) to indicate the presence or absence of a value in each row.</span></li>
+<li value="2"><span>Efficient for low-cardinality columns, such as “gender” or “yes/no” fields.</span></li>
+<li value="3"><span>Can perform fast logical operations (AND, OR, NOT) on multiple columns simultaneously.</span></li>
+</ul>
+<p dir="ltr"><b><strong>2. B-tree Index:</strong></b></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-15"></div>
+<ul>
+<li value="1"><span>Uses a balanced tree structure to store indexed data in a sorted order.</span></li>
+<li value="2"><span>Suitable for high-cardinality columns (e.g., unique identifiers, large ranges of values).</span></li>
+<li value="3"><span>Supports range-based queries efficiently.</span></li>
+</ul>
+<p dir="ltr"><b><strong>3. Key Difference:</strong></b></p>
+<ul>
+<li value="1"><span>Bitmap indexes excel with low-cardinality data and complex boolean conditions.</span></li>
+<li value="2"><span>B-tree indexes are better for unique or high-cardinality data and range queries.</span></li>
+</ul>
+<h2 style="text-align:left"><span>Query Based SQL Interview Questions</span></h2>
+<p dir="ltr" style="text-align: justify;"><span>This section is dedicated to questions that focus on </span><b><strong>writing </strong></b><span>and </span><b><strong>understanding SQL queries</strong></b><span>. By practicing these examples, we’ll learn </span><b><strong>how to retrieve</strong></b><span>, </span><b><strong>manipulate</strong></b><span>, and</span><b><strong> analyze data</strong></b><span> effectively, building the</span><b><strong> problem-solving</strong></b><span> skills needed for </span><b><strong>real-world scenarios</strong></b><span>.</span></p>
+<h3 style="text-align:left"><span>81. Write a query to find the second-highest salary of an employee in a table.</span></h3>
+<pre><span>SELECT MAX(Salary) AS SecondHighestSalary</span><br><span>FROM Employee</span><br><span>WHERE Salary &lt; (SELECT MAX(Salary) FROM Employee);</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>This query identifies the second-highest salary by selecting the maximum salary that is less than the overall highest salary. The subquery determines the top salary, while the outer query finds the next highest value.</span></p>
+<h3 style="text-align:left"><span>82. Write a query to retrieve employees who earn more than the average salary.</span></h3>
+<pre><span>SELECT * </span><br><span>FROM Employee </span><br><span>WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee);</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>This query fetches details of employees whose salary exceeds the average salary. The subquery calculates the average salary, and the main query filters rows based on that result.</span></p>
+<h3 style="text-align:left"><span>83. </span><b><strong>Write a query to fetch the duplicate values from a column in a table.</strong></b></h3>
+<pre><span>SELECT ColumnName, COUNT(*)</span><br><span>FROM TableName</span><br><span>GROUP BY ColumnName</span><br><span>HAVING COUNT(*) &gt; 1;</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>The query uses </span><code><span>GROUP BY</span></code><span> to group identical values and </span><code><span>HAVING COUNT(*) &gt; 1</span></code><span> to identify values that appear more than once in the specified column.</span></p>
+<h3 style="text-align:left"><span>84. Write a query to find the employees who joined in the last 30 days.</span></h3>
+<pre><span>SELECT * </span><br><span>FROM Employee</span><br><span>WHERE JoiningDate &gt; DATE_SUB(CURDATE(), INTERVAL 30 DAY);</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>By comparing the </span><code><span>JoiningDate</span></code><span> to the current date minus 30 days, this query retrieves all employees who joined within the last month.</span></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-16"></div>
+<h3 style="text-align:left"><span>85. Write a query to fetch top 3 earning employees.</span></h3>
+<pre><span>SELECT * </span><br><span>FROM Employee </span><br><span>ORDER BY Salary DESC </span><br><span>LIMIT 3;</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>The query sorts employees by salary in descending order and uses </span><code><span>LIMIT 3</span></code><span> to return only the top three earners.</span></p>
+<h3 style="text-align:left"><span>86. Write a query to delete duplicate rows in a table without using the ROWID keyword.</span></h3>
+<pre><span>DELETE FROM Employee </span><br><span>WHERE EmployeeID NOT IN (</span><br><span>   SELECT MIN(EmployeeID)</span><br><span>   FROM Employee</span><br><span>   GROUP BY Column1, Column2</span><br><span>);</span></pre>
+<p dir="ltr"><b><strong>Explanation</strong></b><span>:</span></p>
+<p dir="ltr" style="text-align: justify;"><span>This query retains only one row for each set of duplicates by keeping the row with the smallest </span><code><span>EmployeeID</span></code><span>. It identifies duplicates using </span><code><span>GROUP BY</span></code><span> and removes rows not matching the minimum ID.</span></p>
+<h3 style="text-align:left"><span>87. Write a query to fetch common records from two tables.</span></h3>
+<pre><span>SELECT *</span><br><span>FROM TableA</span><br><span>INNER JOIN TableB ON TableA.ID = TableB.ID;</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr"><span>An </span><code><span>INNER JOIN</span></code><span> is used to find rows present in both tables by matching a common column (in this case, </span><code><span>ID</span></code><span>).</span></p>
+<h3 style="text-align:left"><span>88. Write a query to fetch employees whose names start and end with ‘A’.</span></h3>
+<pre><span>SELECT * </span><br><span>FROM Employee </span><br><span>WHERE Name LIKE 'A%' AND Name LIKE '%A';</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr"><span>The query uses </span><code><span>LIKE</span></code><span> with wildcard characters to filter rows where the </span><code><span>Name</span></code><span> column starts and ends with the letter ‘A’.</span></p>
+<h3 style="text-align:left"><span>89. Write a query to display all departments along with the number of employees in each.</span></h3>
+<pre><span>SELECT DepartmentID, COUNT(*) AS EmployeeCount</span><br><span>FROM Employee</span><br><span>GROUP BY DepartmentID;</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>By grouping employees by their </span><code><span>DepartmentID</span></code><span> and counting rows in each group, the query produces a list of departments along with the employee count.</span></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-17"></div>
+<h3 style="text-align:left"><span>90. Write a query to find employees who do not have managers.</span></h3>
+<pre><span>SELECT * </span><br><span>FROM Employee</span><br><span>WHERE ManagerID IS NULL;</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr"><span>This query selects employees whose </span><code><span>ManagerID</span></code><span> column is </span><code><span>NULL</span></code><span>, indicating they don’t report to a manager.</span></p>
+<h3 style="text-align:left"><b><strong>91. Write a query to fetch the 3rd and 4th highest salaries.</strong></b></h3>
+<pre><span>SELECT Salary </span><br><span>FROM Employee</span><br><span>ORDER BY Salary DESC</span><br><span>LIMIT 2 OFFSET 2;</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>Using </span><code><span>ORDER BY</span></code><span> and the combination of </span><code><span>LIMIT</span></code><span> and </span><code><span>OFFSET</span></code><span>, the query skips the top two salaries and retrieves the next two highest.</span></p>
+<h3 style="text-align:left"><span>92. Write a query to transpose rows into columns.</span></h3>
+<pre><span>SELECT </span><br><span>   MAX(CASE WHEN ColumnName = 'Condition1' THEN Value END) AS Column1,</span><br><span>   MAX(CASE WHEN ColumnName = 'Condition2' THEN Value END) AS Column2</span><br><span>FROM TableName;</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>This query converts specific row values into columns using conditional aggregation with </span><code><span>CASE</span></code><span>. Each column’s value is determined based on a condition applied to rows.</span></p>
+<h3 style="text-align:left"><span>93. Write a query to fetch records updated within the last hour.</span></h3>
+<pre><span>SELECT * </span><br><span>FROM TableName</span><br><span>WHERE UpdatedAt &gt;= NOW() - INTERVAL 1 HOUR;</span></pre>
+<p dir="ltr"><b><strong>Explanation</strong></b><span>:</span></p>
+<p dir="ltr" style="text-align: justify;"><span>By comparing the </span><code><span>UpdatedAt</span></code><span> timestamp to the current time minus one hour, the query retrieves rows updated in the last 60 minutes.</span></p>
+<h3 style="text-align:left"><span>94. Write a query to list employees in departments that have fewer than 5 employees.</span></h3>
+<pre><span>SELECT * </span><br><span>FROM Employee</span><br><span>WHERE DepartmentID IN (</span><br><span>    SELECT DepartmentID </span><br><span>    FROM Employee </span><br><span>    GROUP BY DepartmentID </span><br><span>    HAVING COUNT(*) &lt; 5</span><br><span>);</span></pre>
+<p dir="ltr"><b><strong>Explanation</strong></b><span>:</span></p>
+<p dir="ltr" style="text-align: justify;"><span>The subquery counts employees in each department, and the main query uses those results to find employees working in departments with fewer than 5 members.</span></p><div style="text-align:center;margin:20px 0;max-height:280px" id="GFG_AD_gfg_outstream_incontent-18"></div>
+<h3 style="text-align:left"><span>95. Write a query to check if a table contains any records.</span></h3>
+<pre><span>SELECT CASE </span><br><span>       WHEN EXISTS (SELECT * FROM TableName) THEN 'Has Records'</span><br><span>       ELSE 'No Records'</span><br><span>       END AS Status;</span></pre>
+<p dir="ltr"><b><strong>Explanation</strong></b><span>:</span></p>
+<p dir="ltr" style="text-align: justify;"><span>The query uses </span><code><span>EXISTS</span></code><span> to determine if any rows exist in the table, returning a status of ‘Has Records’ or ‘No Records’ based on the result.</span></p>
+<h3 style="text-align:left"><b><strong>96. Write a query to find employees whose salaries are higher than their managers.</strong></b></h3>
+<pre><span>SELECT e.EmployeeID, e.Salary</span><br><span>FROM Employee e</span><br><span>JOIN Employee m ON e.ManagerID = m.EmployeeID</span><br><span>WHERE e.Salary &gt; m.Salary;</span></pre>
+<p dir="ltr"><b><strong>Explanation</strong></b><span>:</span></p>
+<p dir="ltr" style="text-align: justify;"><span>This query joins the </span><code><span>Employee</span></code><span> table with itself to compare employee salaries to their respective managers’ salaries, selecting those who earn more.</span></p>
+<h3 style="text-align:left"><b><strong>97. Write a query to fetch alternating rows from a table.</strong></b></h3>
+<pre><span>SELECT * </span><br><span>FROM Employee</span><br><span>WHERE MOD(RowID, 2) = 0;</span></pre>
+<p dir="ltr"><b><strong>Explanation</strong></b><span>:</span></p>
+<p dir="ltr" style="text-align: justify;"><span>By applying a modulo operation on a unique identifier (</span><code><span>RowID</span></code><span>), the query returns rows with even IDs, effectively fetching every other row.</span></p>
+<h3 style="text-align:left"><span>98. Write a query to find departments with the highest average salary.</span></h3>
+<pre><span>SELECT DepartmentID</span><br><span>FROM Employee</span><br><span>GROUP BY DepartmentID</span><br><span>ORDER BY AVG(Salary) DESC</span><br><span>LIMIT 1;</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>Grouping by </span><code><span>DepartmentID</span></code><span> and ordering by the average salary in descending order, the query returns the department with the highest average.</span></p>
+<h3 style="text-align:left"><span>99. Write a query to fetch the nth record from a table.</span></h3>
+<pre><span>SELECT *</span><br><span>FROM Employee</span><br><span>LIMIT 1 OFFSET (n-1);</span></pre>
+<p dir="ltr"><b><strong>Explanation</strong></b><span>:</span></p>
+<p dir="ltr"><span>Using </span><code><span>LIMIT 1 OFFSET (n-1)</span></code><span>, this query retrieves a single row corresponding to the specified position (nth) in the ordered result set.</span></p>
+<h3 style="text-align:left"><span>100. Write a query to find employees hired in the same month of any year.</span></h3>
+<pre><span>SELECT * </span><br><span>FROM Employee</span><br><span>WHERE MONTH(JoiningDate) = MONTH(CURDATE());</span></pre>
+<p dir="ltr"><b><strong>Explanation:</strong></b></p>
+<p dir="ltr" style="text-align: justify;"><span>By comparing the month of </span><code><span>JoiningDate</span></code><span> to the current month, the query selects all employees who were hired in that month regardless of the year.</span></p>
+<h2 style="text-align:left"><span>Conclusion</span></h2>
+<p dir="ltr" style="text-align: justify;"><span>A solid understanding of SQL is essential for anyone aspiring to work in</span><b><strong> data analysis</strong></b><span>,</span><a href="https://www.geeksforgeeks.org/dba-full-form/" target="_blank" rel="noopener"><span> database administration</span></a><span>, or</span><b><strong> software development</strong></b><span>. By reviewing and practicing these</span><b><strong> 100 SQL interview questions</strong></b><span>, we will gain the </span><b><strong>confidence </strong></b><span>and </span><b><strong>knowledge </strong></b><span>needed to answer even the </span><b><strong>toughest queries</strong></b><span> during our </span><b><strong>next interview</strong></b><span>. Remember, </span><b><strong>preparation </strong></b><span>is the key because each question we master brings us </span><b><strong>closer to securing</strong></b><span> that </span><b><strong>dream job</strong></b><span> in the tech industry.</span></p>
+<br><div id="AP_G4GR_6"></div>
+<!-- Quiz Carousel -->
+
+<div class="article_bottom_text"></div><br>
+<div id="video-tab-content" class="video-tab-content">
+<div style="text-align: center; margin: 20px 0px; min-height: 0px;" id="GFG_AD_InContent_Desktop_728x280"></div>
+ </div>
+<div class="d-row content-bw article-pgnavi v-divider-gfg" style="margin-top: 20px;">
+<div class="article-pgnavi_prev"><div class="comment_div" data-title="Comments"><button class="author_footer_btn" data-gfg-action="loadComments">
+<div class="discussion_panel">
+<i class="discussion_button">
+</i>
+Comment
+</div></button></div><div class="trigger-div"><button class="author_footer_btn"><div class="more_info">More info<span class="more_info_uparrow gfg-icon gfg-icon_arrow-down-thin"></span></div></button></div>
+<a href="https://www.geeksforgeeks.org/about/contact-us/?listicles" target="_blank" class="advertise-with-us-div"><button class="advertise-with-us-btn"><span class="advertise-with-us-text">Advertise with us</span></button></a>   
+</div>
+<div class="article-pgnavi_next">
+<a href="https://www.geeksforgeeks.org/sql-listagg/?ref=next_article" class="pg-head">
+<span>Next Article</span>
+<span class="gfg-icon gfg-icon_next"></span>
+</a>
+<!-- <div class="pg-meta">8 Min Read&ensp;|&ensp;<a href="#">Java</a></div> -->
+<div class="pg-main">
+<a href="https://www.geeksforgeeks.org/sql-listagg/?ref=next_article">SQL | LISTAGG</a>
+</div>
+</div>
+</div>
+<div class="more-info hidden-div">
+<div class="article-meta-author-details ">
+<div class="article-meta-author-details-block">
+<div class="article-meta-author-details-profile-display">
+<div class="author_info">
+<div class="article-meta-author-details-profile-display-icon">
+<a href="https://www.geeksforgeeks.org/user/kartik/contributions/?itm_source=geeksforgeeks&amp;itm_medium=article_author&amp;itm_campaign=auth_user" style="text-decoration: none;"><div class="image-wrap" style="position: relative"><img src="https://media.geeksforgeeks.org/auth/profile/sb7ciorr5k5t22woqkes" class="avatarprofile_image restrict-popup-gfg" alt="author">
+<div style="position: absolute;top: -35px; left: -13px;">
+<i class="gfg-badge-icon md master"></i>
+</div>
+</div>
+</a>                                                </div>
+<div class="article-meta-author-details-profile-display-name">
+<a aria-label="author profile" href="https://www.geeksforgeeks.org/user/kartik/contributions/?itm_source=geeksforgeeks&amp;itm_medium=article_author&amp;itm_campaign=auth_user" style="display: block;overflow: hidden;width: 65px;text-decoration: none;text-overflow: ellipsis;color: var(--gfg-title-color);font-weight: bold;white-space: nowrap;">kartik</a>                                                </div>
+</div>
+<div class="author_follow_btn"><div class="article-meta-author-details-follow-button">
+<div class="follow-container">
+<div class="follow-btn">
+<button id="followAuthor" type="button" onclick="followOrUnfollowAuthor()" value="kartik">
+<span role="img" aria-label="plus" class="plus-icon"><svg viewBox="64 64 896 896" focusable="false" data-icon="plus" width="1em" height="1em" fill="currentColor" aria-hidden="true"><defs><style></style></defs><path d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"></path><path d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z"></path></svg></span> <span>Follow</span></button></div></div></div></div>                                            </div>
+
+</div>
+<div class="article_bottom_suggestion_wrapper">
+<div class="article_bottom_suggestion" data-title="Follow">
+<a href="https://news.google.com/publications/CAAqBwgKMLTrzwsw44bnAw?hl=en-IN&amp;gl=IN&amp;ceid=IN%3Aen" target="_blank">
+<img class="gfg-icon_Gnews no-zoom-in-cursor" src="https://media.geeksforgeeks.org/auth-dashboard-uploads/Google-news.svg" loading="lazy" alt="News">
+</a>
+</div> 
+<div pid="140730" class="article--viewer_like tooltip tooltipBottom" data-title="Like Article">
+<!-- <span class="tooltiptext likeTooltipBottom">Like Article</span> -->
+<button id="likeButton" aria-label="like article" data-gfg-action="like-article" data-bookmark-value="0" data-liked="false" style="color: #5B5A5A !important; display: flex; align-items: center; background-color: unset; margin: 0px !important; padding: 5px 0px;">
+<i class="author-badge-like-button"></i>
+<figure id="likeCount" style="margin-left: 3px; margin-top: 4px; color: var(--like-count-color); font-size: 14px; font-weight: 600;" class="favoriteText">219</figure>
+</button>
+</div>
+<div class="article_bottom_suggestion" onclick="improveArticleCall()" data-title="Improve">
+<span class="improveTooltipBottom">Improve</span>
+<i class="author-badge-improvement-button"></i>
+</div>
+</div>
+</div>
+<div class="bottom-wrap" style="margin-top: 12px; margin-bottom: 25px;">
+<div class="improved">
+<div class="t-head">Article Tags : </div>
+<ul>
+
+<li style="border-radius: 25px;" class="">
+<a href="https://www.geeksforgeeks.org/category/databases/?ref=article_category">Databases</a>
+</li>
+<li style="border-radius: 25px;" class="">
+<a href="https://www.geeksforgeeks.org/category/computer-subject/dbms/?ref=article_category">DBMS</a>
+</li>
+<li style="border-radius: 25px;" class="">
+<a href="https://www.geeksforgeeks.org/category/databases/sql/?ref=article_category">SQL</a>
+</li>
+<li style="border-radius: 25px;" class="">
+<a href="https://www.geeksforgeeks.org/tag/interview-questions/?ref=article_tag">interview-questions</a>
+</li>
+<li style="border-radius: 25px;display:none;" class="articles-hidden-tags">
+<a href="https://www.geeksforgeeks.org/tag/placement-preparation/?ref=article_tag">placement preparation</a>
+</li>                                    </ul>
+<button id="showMoreTagsBtn" class="show-more-recommendation-button">+1 More</button>
+</div>
+ </div>
+</div>
+
+</div></article>

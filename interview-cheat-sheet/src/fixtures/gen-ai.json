@@ -1,0 +1,99 @@
+{
+  "title": "Generative AI Concepts",
+  "table": {
+    "headers": ["Concept", "Description"],
+    "rows": [
+      {
+        "name": "Large Language Models (LLMs)",
+        "description": "Neural networks trained on vast amounts of text data to understand and generate human-like text. Examples include GPT-4, PaLM, and BERT. Key concepts: transformer architecture, attention mechanisms, and pre-training/fine-tuning."
+      },
+      {
+        "name": "Prompt Engineering",
+        "description": "The practice of designing and optimizing input prompts to get desired outputs from AI models. Includes techniques like few-shot learning, chain-of-thought prompting, and system prompts."
+      },
+      {
+        "name": "RAG (Retrieval-Augmented Generation)",
+        "description": "Technique that combines LLMs with external knowledge retrieval to improve accuracy and provide up-to-date information. Helps ground model responses in verified data sources."
+      },
+      {
+        "name": "Fine-tuning",
+        "description": "Process of adapting a pre-trained model to specific tasks or domains using additional training data. Includes techniques like PEFT (Parameter-Efficient Fine-Tuning) and LoRA (Low-Rank Adaptation)."
+      },
+      {
+        "name": "Embeddings",
+        "description": "Dense vector representations of text that capture semantic meaning, used for similarity search, clustering, and information retrieval in AI applications."
+      },
+      {
+        "name": "Tokens & Context Window",
+        "description": "Tokens are the basic units of text that models process. Context window defines how many tokens a model can consider at once, affecting its ability to understand long-range dependencies."
+      },
+      {
+        "name": "Hallucination",
+        "description": "When AI models generate plausible but factually incorrect information. Mitigation strategies include RAG, fact-checking, and careful prompt design."
+      },
+      {
+        "name": "Model Evaluation",
+        "description": "Metrics and techniques to assess model performance, including perplexity, ROUGE scores, human evaluation, and task-specific benchmarks."
+      }
+    ]
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between traditional ML models and Large Language Models?",
+      "answer": "Traditional ML models are typically task-specific and require structured data, while LLMs are trained on vast amounts of text data and can handle multiple tasks through natural language understanding. LLMs use transformer architectures and can generate human-like text, while traditional ML models often use simpler architectures for specific classification or regression tasks."
+    },
+    {
+      "question": "Explain how RAG (Retrieval-Augmented Generation) works and its benefits.",
+      "answer": "RAG combines an LLM with a knowledge retrieval system. When a query is received, it first retrieves relevant documents from a knowledge base, then uses these documents to augment the LLM's prompt. Benefits include: more accurate and up-to-date responses, reduced hallucinations, and the ability to cite sources. It's particularly useful when dealing with domain-specific or proprietary information."
+    },
+    {
+      "question": "What are embeddings and how are they used in GenAI applications?",
+      "answer": "Embeddings are dense vector representations of text that capture semantic meaning. In GenAI, they're used for: similarity search (finding related content), clustering (grouping similar items), information retrieval, and as input features for downstream tasks. They enable efficient search and comparison of text by converting words/sentences into numerical vectors that preserve semantic relationships."
+    },
+    {
+      "question": "How do you handle bias and ethical concerns in GenAI applications?",
+      "answer": "Key approaches include: careful dataset curation and cleaning, regular bias testing and monitoring, implementing content filters, using model cards for transparency, getting diverse feedback during development, implementing user feedback mechanisms, and having clear documentation about model limitations and potential biases. It's also important to have human oversight and clear escalation paths for issues."
+    },
+    {
+      "question": "What are the key considerations when fine-tuning an LLM?",
+      "answer": "Important considerations include: quality and quantity of training data, computational resources required, choice of fine-tuning method (full fine-tuning vs PEFT/LoRA), preventing catastrophic forgetting, maintaining model performance on general tasks, evaluation metrics, and cost-benefit analysis compared to prompt engineering alternatives."
+    },
+    {
+      "question": "Explain the concept of prompt engineering and its best practices.",
+      "answer": "Prompt engineering is the process of designing inputs to get optimal outputs from LLMs. Best practices include: being specific and clear, providing context and examples (few-shot learning), using consistent formatting, breaking complex tasks into steps, and including system-level instructions. It's important to test prompts across different scenarios and implement proper error handling."
+    },
+    {
+      "question": "How do you evaluate the performance of a GenAI model?",
+      "answer": "Evaluation involves multiple approaches: automated metrics (perplexity, ROUGE, BLEU scores), human evaluation for quality and relevance, task-specific benchmarks, A/B testing, monitoring of production metrics (user engagement, error rates), and specific tests for hallucination, bias, and toxicity. It's important to have a comprehensive evaluation framework that covers both technical and user-centric metrics."
+    },
+    {
+      "question": "What strategies can be used to reduce hallucinations in LLMs?",
+      "answer": "Key strategies include: implementing RAG to ground responses in verified data, using structured prompts that encourage step-by-step reasoning, setting appropriate temperature values, implementing fact-checking mechanisms, using system prompts to encourage admitting uncertainty, and maintaining up-to-date knowledge bases for domain-specific applications."
+    },
+    {
+      "question": "How do you handle context window limitations in LLMs?",
+      "answer": "Strategies include: text chunking and summarization, implementing sliding window approaches, using embeddings to select most relevant context, recursive summarization for long documents, and implementing efficient token management. It's also important to consider the trade-offs between context length and computational resources."
+    },
+    {
+      "question": "What are the key differences between zero-shot, few-shot, and fine-tuning approaches?",
+      "answer": "Zero-shot requires no examples but may have lower accuracy. Few-shot provides examples in the prompt, improving accuracy without training but using more tokens. Fine-tuning modifies model weights with new data, potentially providing best performance but requiring more resources and data. The choice depends on factors like data availability, performance requirements, and resource constraints."
+    }
+  ],
+  "resources": [
+    {
+      "name": "101 GenAI Cheat Sheets - Comprehensive Collection",
+      "url": "https://medium.com/@anushka.datascoop/101-gen-ai-cheat-sheets-831e17f1e6a7",
+      "icon": "📚"
+    },
+    {
+      "name": "OpenAI Prompt Engineering Guide",
+      "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+      "icon": "📝"
+    },
+    {
+      "name": "DeepLearning.AI Prompt Engineering Course",
+      "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/",
+      "icon": "🎓"
+    }
+  ]
+} 

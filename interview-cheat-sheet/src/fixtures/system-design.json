@@ -1,0 +1,640 @@
+{
+  "architectural_patterns": [
+    {
+      "name": "Microservices",
+      "description": "Architecture that structures an application as a collection of loosely coupled, independently deployable services.",
+      "key_characteristics": [
+        "Independent deployability",
+        "Decentralized data management",
+        "Service autonomy",
+        "Failure isolation",
+        "Scalability per service"
+      ],
+      "advantages": [
+        "Independent scaling",
+        "Technology flexibility",
+        "Faster deployment",
+        "Improved fault isolation"
+      ],
+      "challenges": [
+        "Distributed system complexity",
+        "Network latency",
+        "Data consistency",
+        "Service coordination"
+      ]
+    },
+    {
+      "name": "Monolithic",
+      "description": "Traditional unified model where all components of an application are interconnected and interdependent.",
+      "key_characteristics": [
+        "Single codebase",
+        "Shared database",
+        "Single deployment unit",
+        "Tightly coupled components"
+      ],
+      "advantages": [
+        "Simpler development",
+        "Easier testing",
+        "Faster communication",
+        "ACID transactions"
+      ],
+      "challenges": [
+        "Scaling difficulties",
+        "Technology lock-in",
+        "Large deployment risk",
+        "Complex maintenance"
+      ]
+    }
+  ],
+  "scalability_patterns": [
+    {
+      "name": "Load Balancing",
+      "description": "Distributes incoming network traffic across multiple servers.",
+      "types": [
+        "Round Robin",
+        "Least Connections",
+        "IP Hash",
+        "Weighted Round Robin"
+      ],
+      "use_cases": [
+        "High-traffic websites",
+        "API services",
+        "Distributed systems"
+      ]
+    },
+    {
+      "name": "Caching",
+      "description": "Stores frequently accessed data in faster storage to reduce database load.",
+      "types": [
+        "Client-side caching",
+        "CDN caching",
+        "Application caching",
+        "Database caching"
+      ],
+      "strategies": [
+        "Write-through",
+        "Write-back",
+        "Write-around",
+        "Cache-aside"
+      ]
+    },
+    {
+      "name": "Database Sharding",
+      "description": "Horizontally partitions data across multiple databases.",
+      "strategies": [
+        "Range based",
+        "Hash based",
+        "Directory based",
+        "Geographic based"
+      ],
+      "considerations": [
+        "Join complexity",
+        "Rebalancing overhead",
+        "Hot spot prevention",
+        "Global transactions"
+      ]
+    },
+    {
+      "name": "Horizontal Scaling",
+      "description": "Adding more machines to handle increased load instead of upgrading existing hardware.",
+      "strategies": [
+        "Stateless design",
+        "Session management",
+        "Distributed caching",
+        "Load balancing"
+      ],
+      "advantages": [
+        "Linear scaling capability",
+        "Better fault tolerance",
+        "Cost-effective",
+        "No hardware limits"
+      ],
+      "considerations": [
+        "Data consistency",
+        "Network complexity",
+        "Service discovery",
+        "Infrastructure management"
+      ]
+    },
+    {
+      "name": "Vertical Scaling",
+      "description": "Upgrading existing hardware resources (CPU, RAM, Storage) to handle increased load.",
+      "strategies": [
+        "Hardware upgrade",
+        "Resource optimization",
+        "Performance tuning",
+        "Memory management"
+      ],
+      "advantages": [
+        "Simpler architecture",
+        "Less operational complexity",
+        "Better data consistency",
+        "Lower network overhead"
+      ],
+      "considerations": [
+        "Hardware limits",
+        "Single point of failure",
+        "Downtime during upgrades",
+        "Cost efficiency"
+      ]
+    },
+    {
+      "name": "Database Replication",
+      "description": "Creating and maintaining copies of database across multiple servers.",
+      "types": [
+        "Master-Slave",
+        "Master-Master",
+        "Multi-Master",
+        "Circular Replication"
+      ],
+      "use_cases": [
+        "Read scaling",
+        "High availability",
+        "Disaster recovery",
+        "Geographic distribution"
+      ],
+      "challenges": [
+        "Replication lag",
+        "Consistency management",
+        "Conflict resolution",
+        "Failover complexity"
+      ]
+    },
+    {
+      "name": "Message Queues",
+      "description": "Decoupling system components through asynchronous message passing.",
+      "patterns": [
+        "Publisher-Subscriber",
+        "Point-to-Point",
+        "Request-Reply",
+        "Competing Consumers"
+      ],
+      "benefits": [
+        "Load leveling",
+        "System decoupling",
+        "Asynchronous processing",
+        "Peak handling"
+      ],
+      "implementations": [
+        "Apache Kafka",
+        "RabbitMQ",
+        "Amazon SQS",
+        "Redis Pub/Sub"
+      ]
+    },
+    {
+      "name": "CDN (Content Delivery Network)",
+      "description": "Distributed network of servers that delivers content based on user's geographic location.",
+      "use_cases": [
+        "Static content delivery",
+        "Media streaming",
+        "Dynamic content caching",
+        "Security (DDoS protection)"
+      ],
+      "benefits": [
+        "Reduced latency",
+        "Lower bandwidth costs",
+        "Improved availability",
+        "Global reach"
+      ],
+      "considerations": [
+        "Cache invalidation",
+        "Cost management",
+        "HTTPS setup",
+        "Origin fallback"
+      ]
+    },
+    {
+      "name": "Microservices",
+      "description": "Breaking down application into small, independent services that can be scaled independently.",
+      "benefits": [
+        "Independent scaling",
+        "Technology flexibility",
+        "Isolated failures",
+        "Faster deployment"
+      ],
+      "patterns": [
+        "API Gateway",
+        "Service Discovery",
+        "Circuit Breaker",
+        "Saga Pattern"
+      ],
+      "challenges": [
+        "Distributed transactions",
+        "Service coordination",
+        "Monitoring complexity",
+        "Network latency"
+      ]
+    },
+    {
+      "name": "Elastic Computing",
+      "description": "Automatically scaling resources up or down based on demand.",
+      "strategies": [
+        "Auto-scaling groups",
+        "Serverless computing",
+        "Container orchestration",
+        "Load-based scaling"
+      ],
+      "benefits": [
+        "Cost optimization",
+        "Automatic scaling",
+        "Resource efficiency",
+        "High availability"
+      ],
+      "platforms": [
+        "AWS Auto Scaling",
+        "Kubernetes HPA",
+        "Azure Scale Sets",
+        "Google Cloud Autoscaler"
+      ]
+    },
+    {
+      "name": "Data Partitioning",
+      "description": "Dividing data across multiple storage units to improve performance and manageability.",
+      "types": [
+        "Horizontal (Sharding)",
+        "Vertical (Functional)",
+        "Directory-Based",
+        "Hash-Based"
+      ],
+      "benefits": [
+        "Improved query performance",
+        "Better maintenance",
+        "Increased availability",
+        "Scalable data growth"
+      ],
+      "challenges": [
+        "Join operations",
+        "Rebalancing data",
+        "Schema changes",
+        "Transaction handling"
+      ]
+    },
+    {
+      "name": "Read Replicas",
+      "description": "Creating copies of database specifically for handling read operations.",
+      "use_cases": [
+        "Analytics queries",
+        "Reporting",
+        "Read-heavy workloads",
+        "Geographic distribution"
+      ],
+      "benefits": [
+        "Reduced main DB load",
+        "Better read performance",
+        "Geographical optimization",
+        "Analytics isolation"
+      ],
+      "challenges": [
+        "Replication lag",
+        "Consistency model",
+        "Additional costs",
+        "Maintenance overhead"
+      ]
+    }
+  ],
+  "reliability_patterns": [
+    {
+      "name": "Circuit Breaker",
+      "description": "Prevents cascading failures by failing fast when a system component is down.",
+      "states": [
+        "Closed (normal operation)",
+        "Open (failure state)",
+        "Half-open (testing recovery)"
+      ],
+      "benefits": [
+        "Fail fast",
+        "Graceful degradation",
+        "Recovery testing",
+        "Protection of resources"
+      ]
+    },
+    {
+      "name": "Bulkhead",
+      "description": "Isolates elements of an application into pools so that if one fails, the others will continue to function.",
+      "implementations": [
+        "Thread pools",
+        "Process pools",
+        "Connection pools",
+        "Service pools"
+      ]
+    }
+  ],
+  "data_patterns": [
+    {
+      "name": "CQRS",
+      "description": "Command Query Responsibility Segregation - Separates read and write operations for data stores.",
+      "benefits": [
+        "Independent scaling",
+        "Optimized data schemas",
+        "Improved performance",
+        "Security control"
+      ],
+      "challenges": [
+        "Eventually consistent",
+        "Increased complexity",
+        "Multiple models"
+      ]
+    },
+    {
+      "name": "Event Sourcing",
+      "description": "Stores all changes to application state as a sequence of events.",
+      "benefits": [
+        "Complete audit trail",
+        "Event replay",
+        "Temporal queries",
+        "Debug capability"
+      ],
+      "challenges": [
+        "Event schema evolution",
+        "Event store size",
+        "Learning curve"
+      ]
+    }
+  ],
+  "common_components": [
+    {
+      "name": "API Gateway",
+      "description": "Single entry point for all clients, handles routing, composition, and protocol translation.",
+      "responsibilities": [
+        "Authentication",
+        "SSL termination",
+        "Rate limiting",
+        "Load balancing",
+        "Request routing"
+      ]
+    },
+    {
+      "name": "Message Queue",
+      "description": "Enables asynchronous communication between components via messages.",
+      "use_cases": [
+        "Decoupling",
+        "Spike handling",
+        "Async processing",
+        "Work distribution"
+      ],
+      "examples": [
+        "RabbitMQ",
+        "Apache Kafka",
+        "Amazon SQS"
+      ]
+    },
+    {
+      "name": "Cache",
+      "description": "Temporary data store for faster access to frequently used data.",
+      "types": [
+        "In-memory (Redis)",
+        "CDN",
+        "Browser cache",
+        "Application cache"
+      ],
+      "considerations": [
+        "Expiration policy",
+        "Consistency",
+        "Cache invalidation",
+        "Storage capacity"
+      ]
+    }
+  ],
+  "best_practices": [
+    {
+      "category": "Scalability",
+      "practices": [
+        "Design for horizontal scaling",
+        "Use caching appropriately",
+        "Implement proper database indexing",
+        "Consider eventual consistency",
+        "Use asynchronous processing"
+      ]
+    },
+    {
+      "category": "Reliability",
+      "practices": [
+        "Implement circuit breakers",
+        "Use health checks",
+        "Plan for failure",
+        "Implement proper logging",
+        "Use monitoring and alerts"
+      ]
+    },
+    {
+      "category": "Security",
+      "practices": [
+        "Implement authentication/authorization",
+        "Use HTTPS everywhere",
+        "Validate all inputs",
+        "Follow least privilege principle",
+        "Regular security audits"
+      ]
+    }
+  ],
+  "interview_process": {
+    "steps": [
+      {
+        "phase": "1. Requirements Clarification",
+        "description": "Spend 5-10 minutes understanding the problem and scope",
+        "key_questions": [
+          "Who are the users of the system?",
+          "What are the core features needed?",
+          "What are the non-functional requirements (scale, performance, latency)?",
+          "What are the limitations or constraints?",
+          "What is the expected traffic and data volume?",
+          "What is the expected read-to-write ratio?"
+        ]
+      },
+      {
+        "phase": "2. System Interface Definition",
+        "description": "Define what APIs are expected",
+        "key_points": [
+          "Define key APIs and their parameters",
+          "Outline basic data contracts",
+          "Discuss API authentication requirements",
+          "Consider rate limiting needs",
+          "Think about error handling"
+        ]
+      },
+      {
+        "phase": "3. Back-of-the-envelope Estimation",
+        "description": "Estimate the scale of the system",
+        "calculations": [
+          "Traffic estimates (QPS, peak vs average)",
+          "Storage requirements",
+          "Network bandwidth usage",
+          "Memory requirements (caching)",
+          "Number of servers needed"
+        ]
+      },
+      {
+        "phase": "4. Define Data Model",
+        "description": "Design the data schema and how data will flow",
+        "considerations": [
+          "What database type fits best (SQL vs NoSQL)?",
+          "What are the entities and their relationships?",
+          "How will the data be partitioned/sharded?",
+          "What indices are needed?",
+          "How will the data evolve over time?"
+        ]
+      },
+      {
+        "phase": "5. High-level Design",
+        "description": "Draw the basic architecture diagram",
+        "components": [
+          "Application servers",
+          "Database servers",
+          "Caching layer",
+          "Load balancers",
+          "CDN if needed",
+          "Queue services if needed"
+        ]
+      },
+      {
+        "phase": "6. Detailed Design",
+        "description": "Deep dive into 2-3 core components",
+        "focus_areas": [
+          "Critical components that need scaling",
+          "Unique challenges in the system",
+          "Data partitioning approach",
+          "Caching strategy",
+          "Load balancing methods"
+        ]
+      },
+      {
+        "phase": "7. Identifying Bottlenecks",
+        "description": "Discuss potential issues and solutions",
+        "areas": [
+          "Single points of failure",
+          "Data consistency challenges",
+          "Monitoring and alerting needs",
+          "Security concerns",
+          "Resource constraints"
+        ]
+      }
+    ],
+    "important_questions": {
+      "scalability": [
+        "How do we handle increased load?",
+        "What happens when a server fails?",
+        "How do we handle data growth?",
+        "How do we improve response time?",
+        "What's the strategy for geographic distribution?"
+      ],
+      "availability": [
+        "What is our uptime requirement?",
+        "How do we handle failures?",
+        "What's our disaster recovery plan?",
+        "How do we monitor system health?",
+        "What's our backup strategy?"
+      ],
+      "performance": [
+        "What's the expected latency?",
+        "How do we handle slow queries?",
+        "What's our caching strategy?",
+        "How do we optimize the critical path?",
+        "What metrics should we track?"
+      ],
+      "security": [
+        "How do we handle authentication?",
+        "How do we protect sensitive data?",
+        "How do we prevent DDoS attacks?",
+        "What's our encryption strategy?",
+        "How do we handle access control?"
+      ],
+      "data": [
+        "What type of database should we use?",
+        "How do we ensure data consistency?",
+        "What's our sharding strategy?",
+        "How do we handle data backup?",
+        "What's our data retention policy?"
+      ]
+    },
+    "common_numbers": {
+      "latency_numbers": [
+        {
+          "operation": "L1 cache reference",
+          "latency": "0.5 ns"
+        },
+        {
+          "operation": "Branch mispredict",
+          "latency": "5 ns"
+        },
+        {
+          "operation": "L2 cache reference",
+          "latency": "7 ns"
+        },
+        {
+          "operation": "Mutex lock/unlock",
+          "latency": "100 ns"
+        },
+        {
+          "operation": "Main memory reference",
+          "latency": "100 ns"
+        },
+        {
+          "operation": "Compress 1K bytes with Zippy",
+          "latency": "10,000 ns"
+        },
+        {
+          "operation": "Send 2K bytes over 1 Gbps network",
+          "latency": "20,000 ns"
+        },
+        {
+          "operation": "Read 1 MB sequentially from memory",
+          "latency": "250,000 ns"
+        },
+        {
+          "operation": "Round trip within same datacenter",
+          "latency": "500,000 ns"
+        },
+        {
+          "operation": "Disk seek",
+          "latency": "10,000,000 ns"
+        },
+        {
+          "operation": "Read 1 MB sequentially from disk",
+          "latency": "20,000,000 ns"
+        },
+        {
+          "operation": "Send packet CA->Netherlands->CA",
+          "latency": "150,000,000 ns"
+        }
+      ],
+      "availability_numbers": [
+        {
+          "availability": "99% (two nines)",
+          "downtime_per_year": "3.65 days"
+        },
+        {
+          "availability": "99.9% (three nines)",
+          "downtime_per_year": "8.77 hours"
+        },
+        {
+          "availability": "99.99% (four nines)",
+          "downtime_per_year": "52.60 minutes"
+        },
+        {
+          "availability": "99.999% (five nines)",
+          "downtime_per_year": "5.26 minutes"
+        }
+      ],
+      "qps_estimates": [
+        {
+          "scale": "Small application",
+          "qps": "10-100"
+        },
+        {
+          "scale": "Medium application",
+          "qps": "100-1000"
+        },
+        {
+          "scale": "Large application",
+          "qps": "1000-10000"
+        },
+        {
+          "scale": "Very large application",
+          "qps": "10000+"
+        }
+      ]
+    }
+  }
+} 
+
