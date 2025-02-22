@@ -20,6 +20,8 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - name: Change to project directory working-directory: interviews-python/interview-cheat-sheet
+      - run: cd interview-cheat-sheet
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
