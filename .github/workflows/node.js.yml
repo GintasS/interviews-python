@@ -11,22 +11,32 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
+    defaults:
+      run:
+        working-directory: ./interview-cheat-sheet
+
     steps:
-    - run: cd interview-cheat-sheet
     - uses: actions/checkout@v4
+    - name: Print working directory
+      run: |
+        pwd
+        ls -la
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd interview-cheat-sheet && npm ci
-    - run: cd interview-cheat-sheet && npm run build --if-present
-    - run: cd  cd interview-cheat-sheet && npm test
+        cache-dependency-path: './interview-cheat-sheet/package-lock.json'
+    - name: Install dependencies
+      run: npm install
+    - name: Build
+      run: npm run build --if-present
+    - name: Test
+      run: npm test
