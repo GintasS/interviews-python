@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "title": "LeetCode Problems Tracker",
+    "description": "Track solved LeetCode problems and progress",
+    "lastUpdated": "2024-03-19",
+    "totalProblems": 2000,
+    "categories": [
+      "Arrays & Strings",
+      "Linked Lists",
+      "Trees & Graphs",
+      "Dynamic Programming",
+      "Backtracking",
+      "Design",
+      "Math",
+      "Bit Manipulation",
+      "Sorting & Searching",
+      "Greedy",
+      "Heap/Priority Queue",
+      "Stack & Queue"
+    ]
+  },
+  "difficultyLevels": {
+    "Easy": {
+      "color": "#00AF9B",
+      "count": 0,
+      "percentage": 0
+    },
+    "Medium": {
+      "color": "#FFB800",
+      "count": 0,
+      "percentage": 0
+    },
+    "Hard": {
+      "color": "#FF2D55",
+      "count": 0,
+      "percentage": 0
+    }
+  },
+  "solvedProblems": [
+    {
+      "id": 1,
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "category": "Arrays & Strings",
+      "dateSolved": "2024-03-19",
+      "timeComplexity": "O(n)",
+      "spaceComplexity": "O(n)",
+      "notes": "Used hash map for O(n) solution",
+      "tags": ["Array", "Hash Table"],
+      "solution": "https://github.com/yourusername/leetcode-solutions/blob/main/1-two-sum.py",
+      "reviewStatus": "Needs Review"
+    }
+  ],
+  "progress": {
+    "totalSolved": 0,
+    "completionPercentage": 0,
+    "streak": 0,
+    "lastSolvedDate": null,
+    "dailyGoal": 3,
+    "weeklyGoal": 15,
+    "monthlyGoal": 50
+  },
+  "studyPlan": {
+    "currentTopic": "Arrays & Strings",
+    "nextTopic": "Linked Lists",
+    "topics": [
+      {
+        "name": "Arrays & Strings",
+        "completed": 0,
+        "total": 50,
+        "priority": 1
+      },
+      {
+        "name": "Linked Lists",
+        "completed": 0,
+        "total": 30,
+        "priority": 2
+      }
+    ]
+  },
+  "statistics": {
+    "dailyProgress": [],
+    "weeklyProgress": [],
+    "monthlyProgress": [],
+    "problemTypes": {
+      "Arrays & Strings": 0,
+      "Linked Lists": 0,
+      "Trees & Graphs": 0,
+      "Dynamic Programming": 0,
+      "Backtracking": 0,
+      "Design": 0,
+      "Math": 0,
+      "Bit Manipulation": 0,
+      "Sorting & Searching": 0,
+      "Greedy": 0,
+      "Heap/Priority Queue": 0,
+      "Stack & Queue": 0
+    }
+  }
+} 

@@ -47,6 +47,53 @@
       "description": "Servers can temporarily extend the functionality of a client by transferring executable code (e.g., JavaScript) within a response, enhancing flexibility and reducing client-server coupling."
     }
   ],
+
+  "rest_api_good_design": [
+    {
+      "name": "Use Nouns for Resource URIs",
+      "description": "Design endpoints around resources (nouns), not actions (verbs). For example, use /users instead of /getUsers or /createUser."
+    },
+    {
+      "name": "Use HTTP Methods Appropriately",
+      "description": "Leverage standard HTTP methods (GET, POST, PUT, PATCH, DELETE) to perform actions on resources, aligning with RESTful conventions."
+    },
+    {
+      "name": "Statelessness",
+      "description": "Ensure each request contains all necessary information, and the server does not store client context between requests."
+    },
+    {
+      "name": "Consistent Naming Conventions",
+      "description": "Use consistent, predictable, and lowercase naming for endpoints. Use hyphens to improve readability (e.g., /user-profiles)."
+    },
+    {
+      "name": "Versioning",
+      "description": "Include an API version in the URI (e.g., /v1/users) or in headers to manage changes and maintain backward compatibility."
+    },
+    {
+      "name": "Proper Use of Status Codes",
+      "description": "Return appropriate HTTP status codes (e.g., 200 OK, 201 Created, 400 Bad Request, 404 Not Found, 500 Internal Server Error) to indicate the result of requests."
+    },
+    {
+      "name": "Error Handling",
+      "description": "Provide clear, consistent error responses with useful messages and error codes to help clients understand and resolve issues."
+    },
+    {
+      "name": "Filtering, Sorting, and Pagination",
+      "description": "Support query parameters for filtering, sorting, and paginating large collections (e.g., /users?role=admin&page=2&sort=name)."
+    },
+    {
+      "name": "Security Best Practices",
+      "description": "Implement authentication (e.g., OAuth2, JWT), authorization, input validation, and HTTPS to protect data and endpoints."
+    },
+    {
+      "name": "Documentation",
+      "description": "Provide comprehensive, up-to-date documentation (e.g., OpenAPI/Swagger) to help consumers understand and use the API effectively."
+    }
+  ],
+
+
+
+  
   "graphql": [
     {
       "name": "Schema",
