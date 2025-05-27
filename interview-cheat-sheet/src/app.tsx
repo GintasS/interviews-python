@@ -3,6 +3,7 @@ import { useSignal, useComputed } from "@preact/signals";
 
 import codeColor from "./fixtures/code-color.json";
 //import agentFrameworks from "./fixtures/agent_frameworks.json";
+
 import asymptoticNotations from "./fixtures/asymptotic-notations.json";
 import timeComplexities from "./fixtures/time-complexities.json";
 import sortingAlgorithms from "./fixtures/sorting-algorithms.json";
@@ -3438,15 +3439,7 @@ function AgentFrameworksTable() {
     </>
   );
 }
-
-export function HuggingFaceAgentsCourse() {
-  return (
-    <h2>
-      Open Notes folder -&gt; hugging_face_agent_course_notes.md 
-    </h2>
-  );
-}
-  */
+*/
 
 function SecurityTable() {
   return (
