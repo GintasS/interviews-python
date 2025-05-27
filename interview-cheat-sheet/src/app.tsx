@@ -2,7 +2,7 @@ import { useEffect, useRef } from "preact/hooks";
 import { useSignal, useComputed } from "@preact/signals";
 
 import codeColor from "./fixtures/code-color.json";
-import agentFrameworks from "./fixtures/agent_frameworks.json";
+//import agentFrameworks from "./fixtures/agent_frameworks.json";
 import asymptoticNotations from "./fixtures/asymptotic-notations.json";
 import timeComplexities from "./fixtures/time-complexities.json";
 import sortingAlgorithms from "./fixtures/sorting-algorithms.json";
@@ -40,14 +40,15 @@ export function App() {
         <li onClick={() => (currentView.value = 4)}>Principles & Design</li>
         <li onClick={() => (currentView.value = 5)}>APIs</li>
         <li onClick={() => (currentView.value = 6)}>SQL</li>
-        <li onClick={() => (currentView.value = 7)}>Python</li>
-        <li onClick={() => (currentView.value = 8)}>Python Extended</li>
-        <li onClick={() => (currentView.value = 9)}>Security</li>
+        <li onClick={() => (currentView.value = 8)}>Python</li>
+        <li onClick={() => (currentView.value = 9)}>Python Extended</li>
+        <li onClick={() => (currentView.value = 10)}>Security</li>
         <li onClick={() => (currentView.value = 10)}>Web Services</li>
         <li onClick={() => (currentView.value = 11)}>System Design</li>
         <li onClick={() => (currentView.value = 14)}>JS/React Fundamentals</li>
         <li onClick={() => (currentView.value = 15)}>GenAI</li>
         <li onClick={() => (currentView.value = 16)}>Leetcode</li>
+        <li onClick={() => (currentView.value = 17)}>Databases</li>
         <li onClick={() => (currentView.value = 99)}>Resources</li>
       </ul>
 
@@ -66,6 +67,7 @@ export function App() {
       {show(14, <JavaScriptReactFundamentals />)}
       {show(15, <GenAITable />)}
       {show(16, <LeetcodeTable />)}
+      {show(17, <DatabasesTable />)}
       {show(99, <ResourcesView />)}
     </>
   );
@@ -836,7 +838,7 @@ Output: {example.output}
             </tr>
           ) : (
             <tr class="add-row-trigger">
-              <td colspan="8">
+              <td>
                 <button 
                   onClick={() => showInlineAdd.value = true}
                   class="add-inline-btn"
@@ -3326,7 +3328,7 @@ After:
     </>
   );
 }
-
+/*
 function AgentFrameworksTable() {
   return (
     <>
@@ -3444,6 +3446,7 @@ export function HuggingFaceAgentsCourse() {
     </h2>
   );
 }
+  */
 
 function SecurityTable() {
   return (
