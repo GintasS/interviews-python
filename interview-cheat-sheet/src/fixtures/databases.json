@@ -1,0 +1,474 @@
+{
+  "title": "Database Concepts",
+  "top_10_concepts": [
+    {
+      "name": "ACID Properties",
+      "explanation": "Fundamental database transaction properties:\n- Atomicity: All-or-nothing transactions\n- Consistency: Database remains valid\n- Isolation: Transactions don't interfere\n- Durability: Committed changes persist\nCritical for financial and mission-critical systems."
+    },
+    {
+      "name": "Indexing",
+      "explanation": "Database performance optimization technique:\n- B-Tree: Default, balanced for reads/writes\n- Hash: Fast exact matches\n- Bitmap: Low-cardinality columns\n- Trade-off: Faster reads vs slower writes\nKnow when and where to use each type."
+    },
+    {
+      "name": "Normalization",
+      "explanation": "Database design process to:\n- Eliminate redundancy\n- Ensure data integrity\n- 1NF: Atomic values\n- 2NF: Remove partial dependencies\n- 3NF: Remove transitive dependencies\nBalance between normalization and performance."
+    },
+    {
+      "name": "Transactions & Concurrency",
+      "explanation": "Managing simultaneous database access:\n- Transaction isolation levels\n- Deadlock prevention\n- Lock types (shared, exclusive)\n- MVCC (Multi-Version Concurrency Control)\nCritical for multi-user applications."
+    },
+    {
+      "name": "SQL vs NoSQL",
+      "explanation": "Database type comparison:\n- Structured vs Flexible schema\n- Vertical vs Horizontal scaling\n- ACID vs BASE properties\n- Use cases for each\nKnow when to use which type."
+    },
+    {
+      "name": "Query Optimization",
+      "explanation": "Performance tuning techniques:\n- Execution plans\n- Index usage\n- Join optimization\n- Subquery optimization\n- Caching strategies\nFundamental for scalable applications."
+    },
+    {
+      "name": "Sharding & Partitioning",
+      "explanation": "Data distribution strategies:\n- Horizontal vs Vertical partitioning\n- Sharding strategies\n- Partition keys\n- Advantages and challenges\nEssential for large-scale systems."
+    },
+    {
+      "name": "Backup & Recovery",
+      "explanation": "Data protection strategies:\n- Full vs Incremental backups\n- Point-in-time recovery\n- Transaction logs\n- Disaster recovery planning\nCritical for data safety."
+    },
+    {
+      "name": "CAP Theorem",
+      "explanation": "Distributed system trade-offs:\n- Consistency\n- Availability\n- Partition tolerance\nCan only guarantee two out of three properties."
+    },
+    {
+      "name": "Database Security",
+      "explanation": "Protection measures:\n- Authentication & Authorization\n- SQL injection prevention\n- Encryption (at rest/in transit)\n- Audit logging\n- Access control\nMandatory for all applications."
+    }
+  ],
+  "sections": [
+    {
+      "name": "SQL vs NoSQL",
+      "comparison": {
+        "headers": ["Feature", "SQL", "NoSQL"],
+        "rows": [
+          {
+            "feature": "Data Structure",
+            "sql": "Structured data in tables with predefined schema",
+            "nosql": "Various structures: document, key-value, wide-column, graph"
+          },
+          {
+            "feature": "Scalability",
+            "sql": "Vertical scaling (scale-up)",
+            "nosql": "Horizontal scaling (scale-out)"
+          },
+          {
+            "feature": "Schema",
+            "sql": "Fixed schema, strict",
+            "nosql": "Dynamic schema, flexible"
+          },
+          {
+            "feature": "ACID Properties",
+            "sql": "Fully ACID compliant",
+            "nosql": "May sacrifice ACID compliance for performance and scalability"
+          },
+          {
+            "feature": "Use Cases",
+            "sql": "Complex queries, transactions",
+            "nosql": "High traffic, big data, rapid changes"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ACID Properties",
+      "properties": [
+        {
+          "name": "Atomicity",
+          "description": "All operations in a transaction succeed or all are rolled back"
+        },
+        {
+          "name": "Consistency",
+          "description": "Database remains in a consistent state before and after transaction"
+        },
+        {
+          "name": "Isolation",
+          "description": "Concurrent transactions don't interfere with each other"
+        },
+        {
+          "name": "Durability",
+          "description": "Completed transactions persist even after system failures"
+        }
+      ]
+    },
+    {
+      "name": "Indexing",
+      "concepts": [
+        {
+          "name": "B-Tree Index",
+          "description": "Balanced tree structure for efficient range queries and equality searches"
+        },
+        {
+          "name": "Hash Index",
+          "description": "Fast point queries but not suitable for range searches"
+        },
+        {
+          "name": "Bitmap Index",
+          "description": "Efficient for low-cardinality columns"
+        },
+        {
+          "name": "Covering Index",
+          "description": "Index that includes all columns needed by the query"
+        }
+      ]
+    },
+    {
+      "name": "PostgreSQL",
+      "concepts": [
+        {
+          "name": "Key Features",
+          "description": "ACID compliance, JSON support, extensibility (extensions), full-text search, multi-version concurrency control (MVCC), table inheritance, materialized views, and partitioning"
+        },
+        {
+          "name": "Data Types",
+          "description": "Numeric (int, decimal), Character (char, varchar, text), Date/Time, Boolean, Arrays, JSON/JSONB, UUID, Geometric types, Network addresses, XML"
+        },
+        {
+          "name": "Indexes",
+          "description": "B-tree (default), Hash, GiST (Generalized Search Tree), SP-GiST (Space-partitioned GiST), GIN (Generalized Inverted Index), BRIN (Block Range INdex)"
+        },
+        {
+          "name": "Window Functions",
+          "description": "ROW_NUMBER(), RANK(), DENSE_RANK(), LAG(), LEAD(), FIRST_VALUE(), LAST_VALUE(), NTH_VALUE(), functions over partitions"
+        }
+      ]
+    },
+    {
+      "name": "PostgreSQL with Python",
+      "concepts": [
+        {
+          "name": "psycopg2",
+          "description": "Most popular PostgreSQL adapter for Python. Provides efficient database operations, supports all PostgreSQL features, and offers both synchronous and asynchronous operations."
+        },
+        {
+          "name": "SQLAlchemy",
+          "description": "Python SQL toolkit and ORM that provides a full suite of enterprise-level persistence patterns. Offers both low-level SQL operations and high-level ORM functionality."
+        },
+        {
+          "name": "Basic Connection",
+          "code": "import psycopg2\n\nconn = psycopg2.connect(\n    dbname='mydb',\n    user='user',\n    password='password',\n    host='localhost'\n)\ncursor = conn.cursor()"
+        },
+        {
+          "name": "Common Operations",
+          "code": "# Insert data\ncursor.execute('INSERT INTO users (name, email) VALUES (%s, %s)', ('John', 'john@example.com'))\n\n# Query data\ncursor.execute('SELECT * FROM users WHERE name = %s', ('John',))\nresult = cursor.fetchall()\n\n# Update data\ncursor.execute('UPDATE users SET email = %s WHERE name = %s', ('new@email.com', 'John'))\n\n# Delete data\ncursor.execute('DELETE FROM users WHERE name = %s', ('John',))\n\n# Commit changes\nconn.commit()"
+        }
+      ]
+    },
+    {
+      "name": "SQLAlchemy Deep Dive",
+      "concepts": [
+        {
+          "name": "Core Components",
+          "items": [
+            "Engine: Database connectivity and pooling",
+            "Connection Pool: Manages database connections",
+            "Schema/MetaData: Database structure definition",
+            "Session: Unit of work pattern implementation",
+            "ORM: Object-relational mapping system"
+          ]
+        },
+        {
+          "name": "Key Features",
+          "items": [
+            "Database agnostic queries",
+            "Connection pooling",
+            "Transaction management",
+            "Migration support (via Alembic)",
+            "Relationship management",
+            "Lazy loading",
+            "Query optimization"
+          ]
+        },
+        {
+          "name": "Common Relationships",
+          "code": "from sqlalchemy import Column, Integer, String, ForeignKey\nfrom sqlalchemy.orm import relationship\n\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    posts = relationship('Post', back_populates='author')\n\nclass Post(Base):\n    __tablename__ = 'posts'\n    id = Column(Integer, primary_key=True)\n    title = Column(String)\n    author_id = Column(Integer, ForeignKey('users.id'))\n    author = relationship('User', back_populates='posts')"
+        },
+        {
+          "name": "Query Operations",
+          "code": "# Basic queries\nusers = session.query(User).all()\nuser = session.query(User).filter_by(name='John').first()\n\n# Joins\nposts = session.query(Post).join(User).filter(User.name=='John').all()\n\n# Aggregations\nfrom sqlalchemy import func\npost_count = session.query(func.count(Post.id)).scalar()\n\n# Complex filters\nfrom sqlalchemy import and_, or_\nusers = session.query(User).filter(\n    and_(\n        User.name.like('%John%'),\n        or_(User.id > 5, User.email.contains('@example.com'))\n    )\n).all()"
+        }
+      ]
+    },
+    {
+      "name": "Database Normalization",
+      "concepts": [
+        {
+          "name": "What is Normalization?",
+          "explanation": "Database normalization is a systematic process of organizing data to minimize redundancy and dependency by dividing larger tables into smaller ones and linking them using relationships. The main goals are:\n- Eliminate data redundancy\n- Ensure data integrity\n- Reduce data anomalies\n- Simplify data management"
+        },
+        {
+          "name": "When to Normalize",
+          "explanation": "Consider normalization when:\n- Data redundancy is causing storage issues\n- Insert/Update/Delete anomalies are occurring\n- Data integrity needs to be enforced\n- Complex data relationships exist\n- Database size is growing significantly"
+        },
+        {
+          "name": "When Not to Normalize",
+          "explanation": "Denormalization might be better when:\n- Read performance is critical\n- Data is mostly static\n- Joins would be too expensive\n- Real-time reporting is needed\n- Data relationships are simple"
+        },
+        {
+          "name": "First Normal Form (1NF)",
+          "explanation": "Requirements:\n1. Each table cell should contain a single value\n2. Each record needs to be unique\n3. Each column should have a unique name\n\nExample:\nBefore 1NF:\nCustomer(ID, Name, Phone_Numbers)\n1, John, '555-0123,555-0124'\n\nAfter 1NF:\nCustomer(ID, Name)\nPhone(Customer_ID, Phone_Number)\n1, John\n1, 555-0123\n1, 555-0124"
+        },
+        {
+          "name": "Second Normal Form (2NF)",
+          "explanation": "Requirements:\n1. Must be in 1NF\n2. All non-key attributes must fully depend on the primary key\n\nExample:\nBefore 2NF:\nOrders(Order_ID, Product_ID, Product_Name, Customer_ID, Quantity)\n\nAfter 2NF:\nOrders(Order_ID, Product_ID, Customer_ID, Quantity)\nProducts(Product_ID, Product_Name)"
+        },
+        {
+          "name": "Third Normal Form (3NF)",
+          "explanation": "Requirements:\n1. Must be in 2NF\n2. No transitive dependencies (non-key attributes depending on other non-key attributes)\n\nExample:\nBefore 3NF:\nEmployee(ID, Department_ID, Department_Name, Manager_ID)\n\nAfter 3NF:\nEmployee(ID, Department_ID)\nDepartment(Department_ID, Department_Name, Manager_ID)"
+        },
+        {
+          "name": "Pros of Normalization",
+          "items": [
+            "Reduces data redundancy",
+            "Better data integrity",
+            "Easier data maintenance",
+            "Smaller database size",
+            "More flexible database design",
+            "Better handling of data modifications"
+          ]
+        },
+        {
+          "name": "Cons of Normalization",
+          "items": [
+            "More complex queries needed",
+            "More joins required",
+            "Can impact read performance",
+            "More tables to manage",
+            "More complex application logic",
+            "Potential overhead in some scenarios"
+          ]
+        }
+      ]
+    }
+  ],
+  "interview_questions": [
+    {
+      "question": "What are the key differences between SQL and NoSQL databases?",
+      "answer": "SQL databases use structured tables with predefined schemas and are ACID compliant, while NoSQL databases offer flexible schemas and various data models. SQL databases typically scale vertically, while NoSQL databases are designed for horizontal scaling. SQL is better for complex queries and transactions, while NoSQL excels in handling high traffic and big data scenarios."
+    },
+    {
+      "question": "Explain database indexing and its importance",
+      "answer": "Indexing is a data structure technique to speed up data retrieval operations. It creates a separate structure that holds a reference to the actual data. While it speeds up read operations, it can slow down writes as the index needs to be updated. Common types include B-Tree (balanced tree for range queries), Hash (for exact matches), and Bitmap indexes (for low-cardinality columns)."
+    },
+    {
+      "question": "What are ACID properties and why are they important?",
+      "answer": "ACID properties ensure database transaction reliability: Atomicity (transactions are all-or-nothing), Consistency (database remains valid), Isolation (concurrent transactions don't interfere), and Durability (completed transactions persist). They're crucial for maintaining data integrity in systems where accuracy is critical, like financial transactions."
+    },
+    {
+      "question": "Explain database normalization",
+      "answer": "Normalization is the process of organizing data to reduce redundancy and improve data integrity. It involves breaking down larger tables into smaller ones and establishing relationships between them. The main forms are 1NF (atomic values), 2NF (partial dependencies removed), 3NF (transitive dependencies removed), and BCNF (all dependencies on candidate keys)."
+    },
+    {
+      "question": "What is database sharding and when should it be used?",
+      "answer": "Sharding is a database architecture pattern where data is horizontally partitioned across multiple databases. It's used to handle large datasets and high throughput requirements. Sharding should be considered when vertical scaling becomes impractical, but it adds complexity to queries and transactions spanning multiple shards."
+    },
+    {
+      "question": "What makes PostgreSQL different from other SQL databases?",
+      "answer": "PostgreSQL stands out with its advanced features like: extensibility through custom functions and data types, sophisticated indexing options (GiST, GIN, etc.), support for JSON and other NoSQL features, table inheritance, materialized views, and strong standards compliance. It also offers robust concurrency through MVCC without read locks."
+    },
+    {
+      "question": "Explain MVCC in PostgreSQL",
+      "answer": "Multi-Version Concurrency Control (MVCC) allows PostgreSQL to handle concurrent access by maintaining multiple versions of rows. Instead of using locks, each transaction sees a snapshot of the database as it was when the transaction started. This ensures data consistency while allowing high concurrency. Old versions are eventually removed by the VACUUM process."
+    },
+    {
+      "question": "What are PostgreSQL's indexing options and when to use them?",
+      "answer": "PostgreSQL offers multiple index types: B-tree (default, good for comparisons), Hash (equality only), GiST (geometric data and full-text search), GIN (arrays and full-text search), BRIN (large tables with correlated physical and logical ordering). Choice depends on data type, query patterns, and performance requirements."
+    },
+    {
+      "question": "Explain SQLAlchemy's Session and Unit of Work pattern",
+      "answer": "SQLAlchemy's Session implements the Unit of Work pattern, which tracks changes to objects and coordinates writing them to the database. Key points:\n1. Session maintains an identity map of objects\n2. Changes are tracked automatically\n3. Transactions are managed at the Session level\n4. Flush operations are coordinated\n5. Changes are committed atomically"
+    },
+    {
+      "question": "How do you handle relationships in SQLAlchemy?",
+      "answer": "SQLAlchemy offers several relationship patterns:\n1. One-to-Many: Using relationship() with ForeignKey\n2. Many-to-Many: Using association tables\n3. One-to-One: Using uselist=False\n4. Back references: Using back_populates or backref\nRelationships can be configured with different loading strategies (lazy, eager, joined) and cascade behaviors."
+    },
+    {
+      "question": "Compare SQLAlchemy Core vs ORM",
+      "answer": "SQLAlchemy Core provides SQL abstraction with:\n1. Direct table operations\n2. Lower overhead\n3. More control over SQL\n\nSQLAlchemy ORM adds:\n1. Object-oriented patterns\n2. Automatic relationship handling\n3. Identity map\n4. Change tracking\n5. Higher-level abstractions\n\nChoice depends on needs: Core for performance and direct SQL control, ORM for complex object relationships and maintainability."
+    },
+    {
+      "question": "How do you optimize SQLAlchemy queries?",
+      "answer": "Key optimization strategies:\n1. Use specific column selection instead of select *\n2. Implement proper indexing\n3. Choose appropriate relationship loading strategies\n4. Use bulk operations for multiple records\n5. Implement pagination\n6. Profile queries using session.execute(query.statement).explain()\n7. Use query caching when appropriate"
+    }
+  ],
+  "sqlalchemy_questions": [
+    {
+      "question": "Explain SQLAlchemy's Session and Unit of Work pattern",
+      "answer": "SQLAlchemy's Session implements the Unit of Work pattern, which tracks changes to objects and coordinates writing them to the database. Key points:\n1. Session maintains an identity map of objects\n2. Changes are tracked automatically\n3. Transactions are managed at the Session level\n4. Flush operations are coordinated\n5. Changes are committed atomically"
+    },
+    {
+      "question": "How do you handle relationships in SQLAlchemy?",
+      "answer": "SQLAlchemy offers several relationship patterns:\n1. One-to-Many: Using relationship() with ForeignKey\n2. Many-to-Many: Using association tables\n3. One-to-One: Using uselist=False\n4. Back references: Using back_populates or backref\nRelationships can be configured with different loading strategies (lazy, eager, joined) and cascade behaviors."
+    },
+    {
+      "question": "Compare SQLAlchemy Core vs ORM",
+      "answer": "SQLAlchemy Core provides SQL abstraction with:\n1. Direct table operations\n2. Lower overhead\n3. More control over SQL\n\nSQLAlchemy ORM adds:\n1. Object-oriented patterns\n2. Automatic relationship handling\n3. Identity map\n4. Change tracking\n5. Higher-level abstractions\n\nChoice depends on needs: Core for performance and direct SQL control, ORM for complex object relationships and maintainability."
+    },
+    {
+      "question": "How do you optimize SQLAlchemy queries?",
+      "answer": "Key optimization strategies:\n1. Use specific column selection instead of select *\n2. Implement proper indexing\n3. Choose appropriate relationship loading strategies\n4. Use bulk operations for multiple records\n5. Implement pagination\n6. Profile queries using session.execute(query.statement).explain()\n7. Use query caching when appropriate"
+    },
+    {
+      "question": "Explain SQLAlchemy's different relationship loading strategies",
+      "answer": "SQLAlchemy offers several loading strategies:\n1. Lazy Loading: Default, loads relationships when accessed\n2. Eager Loading: Loads relationships upfront using joinedload()\n3. Subquery Loading: Uses separate query for relationships\n4. Selectin Loading: Efficient loading for collections\n5. Immediate Loading: Forces load with .all() or .one()\nChoice impacts query performance and N+1 query problems."
+    },
+    {
+      "question": "How do you handle migrations with SQLAlchemy?",
+      "answer": "SQLAlchemy migrations are typically handled using Alembic:\n1. Initialize Alembic with 'alembic init'\n2. Configure database connection\n3. Generate migration scripts with 'alembic revision --autogenerate'\n4. Review and edit migration scripts\n5. Apply migrations with 'alembic upgrade head'\n6. Track migration history\n7. Handle rollbacks if needed"
+    },
+    {
+      "question": "Explain SQLAlchemy's Event System",
+      "answer": "SQLAlchemy's Event System allows hooking into various ORM events:\n1. Instance events (before_insert, after_update, etc.)\n2. Session events (before_commit, after_commit)\n3. Attribute events (set, append, remove)\n4. Mapper events (before_configured, after_configured)\nUseful for audit trails, validation, and automatic property updates."
+    },
+    {
+      "question": "How do you implement custom types in SQLAlchemy?",
+      "answer": "Custom types can be implemented by:\n1. Subclassing TypeDecorator\n2. Implementing process_bind_param and process_result_value\n3. Defining Python<->SQL conversion logic\n4. Optionally implementing comparison operators\n5. Registering with TypeEngine\nUseful for complex data types or special formatting needs."
+    },
+    {
+      "question": "Explain SQLAlchemy's Query API vs Select API",
+      "answer": "Query API (Legacy):\n1. Higher-level ORM interface\n2. More Pythonic query construction\n3. Limited to ORM operations\n\nSelect API (2.0 style):\n1. Unified Core and ORM syntax\n2. More consistent behavior\n3. Better type hints\n4. More explicit execution model\n5. Future-proof approach"
+    },
+    {
+      "question": "How do you handle connection pooling in SQLAlchemy?",
+      "answer": "Connection pooling configuration:\n1. Set pool_size for maximum connections\n2. Configure pool_timeout for wait time\n3. Use pool_recycle to prevent stale connections\n4. Enable pool_pre_ping for connection testing\n5. Handle pool overflow with max_overflow\n6. Implement proper connection cleanup\nCritical for application performance and reliability."
+    }
+  ],
+  "resources": [
+    {
+      "name": "Database Design Fundamentals",
+      "url": "https://www.postgresql.org/docs/current/tutorial.html",
+      "icon": "📚"
+    },
+    {
+      "name": "SQL vs NoSQL Detailed Guide",
+      "url": "https://www.mongodb.com/nosql-explained",
+      "icon": "📊"
+    },
+    {
+      "name": "Database Indexing Strategies",
+      "url": "https://use-the-index-luke.com/",
+      "icon": "🔍"
+    },
+    {
+      "name": "PostgreSQL Official Documentation",
+      "url": "https://www.postgresql.org/docs/current/",
+      "icon": "🐘"
+    },
+    {
+      "name": "PostgreSQL Exercises",
+      "url": "https://pgexercises.com/",
+      "icon": "💪"
+    },
+    {
+      "name": "SQLAlchemy Documentation",
+      "url": "https://docs.sqlalchemy.org/",
+      "icon": "📚"
+    },
+    {
+      "name": "SQLAlchemy Tutorial",
+      "url": "https://docs.sqlalchemy.org/en/14/orm/tutorial.html",
+      "icon": "🎓"
+    }
+  ],
+  "normalization_deep_dive": {
+    "title": "Database Normalization Deep Dive",
+    "intro": {
+      "title": "What is Normalization?",
+      "description": "Database normalization is a systematic process of organizing data to minimize redundancy and dependency by dividing larger tables into smaller ones and linking them using relationships.",
+      "goals": [
+        "Eliminate data redundancy",
+        "Ensure data integrity",
+        "Reduce data anomalies",
+        "Simplify data management"
+      ]
+    },
+    "usage_guidelines": {
+      "when_to_use": {
+        "title": "When to Use Normalization",
+        "points": [
+          "Data redundancy is causing storage issues",
+          "Insert/Update/Delete anomalies are occurring",
+          "Data integrity needs to be enforced",
+          "Complex data relationships exist",
+          "Database size is growing significantly"
+        ]
+      },
+      "when_to_denormalize": {
+        "title": "When to Consider Denormalization",
+        "points": [
+          "Read performance is critical",
+          "Data is mostly static",
+          "Joins would be too expensive",
+          "Real-time reporting is needed",
+          "Data relationships are simple"
+        ]
+      }
+    },
+    "normal_forms": [
+      {
+        "title": "First Normal Form (1NF)",
+        "requirements": [
+          "Each table cell should contain a single value",
+          "Each record needs to be unique",
+          "Each column should have a unique name"
+        ],
+        "example": {
+          "before": "Customer(ID, Name, Phone_Numbers)\n1, John, '555-0123,555-0124'",
+          "after": "Customer(ID, Name)\nPhone(Customer_ID, Phone_Number)\n1, John\n1, 555-0123\n1, 555-0124"
+        }
+      },
+      {
+        "title": "Second Normal Form (2NF)",
+        "requirements": [
+          "Must be in 1NF",
+          "All non-key attributes must fully depend on the primary key"
+        ],
+        "example": {
+          "before": "Orders(Order_ID, Product_ID, Product_Name, Customer_ID, Quantity)",
+          "after": "Orders(Order_ID, Product_ID, Customer_ID, Quantity)\nProducts(Product_ID, Product_Name)"
+        }
+      },
+      {
+        "title": "Third Normal Form (3NF)",
+        "requirements": [
+          "Must be in 2NF",
+          "No transitive dependencies"
+        ],
+        "example": {
+          "before": "Employee(ID, Department_ID, Department_Name, Manager_ID)",
+          "after": "Employee(ID, Department_ID)\nDepartment(Department_ID, Department_Name, Manager_ID)"
+        }
+      }
+    ],
+    "evaluation": {
+      "pros": {
+        "title": "Pros of Normalization",
+        "points": [
+          "Reduces data redundancy",
+          "Better data integrity",
+          "Easier data maintenance",
+          "Smaller database size",
+          "More flexible database design",
+          "Better handling of data modifications"
+        ]
+      },
+      "cons": {
+        "title": "Cons of Normalization",
+        "points": [
+          "More complex queries needed",
+          "More joins required",
+          "Can impact read performance",
+          "More tables to manage",
+          "More complex application logic",
+          "Potential overhead in some scenarios"
+        ]
+      }
+    }
+  }
+} 

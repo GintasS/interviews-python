@@ -2,49 +2,60 @@
   "oop": [
     {
       "name": "Object",
-      "description": "An instance of a class that encapsulates data and behavior."
+      "description": "An instance of a class that encapsulates data and behavior.",
+      "example": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\nperson = Person('John', 30)  # person is an object"
     },
     {
       "name": "Class",
-      "description": "A blueprint for creating objects, defining their attributes (data) and methods (behavior)."
+      "description": "A blueprint for creating objects, defining their attributes (data) and methods (behavior).",
+      "example": "class Car:\n    def __init__(self, brand, model):\n        self.brand = brand\n        self.model = model\n    \n    def start_engine(self):\n        return f'{self.brand} {self.model} engine started'"
     },
     {
       "name": "Inheritance",
-      "description": "A mechanism in OOP that allows a class to inherit properties and behaviors from another class, promoting code reusability and establishing a parent-child relationship."
+      "description": "A mechanism in OOP that allows a class to inherit properties and behaviors from another class, promoting code reusability and establishing a parent-child relationship.",
+      "example": "class Animal:\n    def __init__(self, name):\n        self.name = name\n    \n    def speak(self):\n        pass\n\nclass Dog(Animal):\n    def speak(self):\n        return f'{self.name} says Woof!'\n\nclass Cat(Animal):\n    def speak(self):\n        return f'{self.name} says Meow!'"
     },
     {
       "name": "Polymorphism",
-      "description": "The ability for objects of different classes to be treated as objects of a common superclass, enabling methods to be invoked dynamically based on the type of object."
+      "description": "The ability for objects of different classes to be treated as objects of a common superclass, enabling methods to be invoked dynamically based on the type of object.",
+      "example": "class Shape:\n    def area(self):\n        pass\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    \n    def area(self):\n        return 3.14 * self.radius ** 2\n\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def area(self):\n        return self.width * self.height\n\n# Polymorphic behavior\ndef print_area(shape):\n    print(f'Area: {shape.area()}')"
     },
     {
       "name": "Abstraction",
-      "description": "The process of hiding complex implementation details and exposing only the essential features of an object, making it easier to understand and use."
+      "description": "The process of hiding complex implementation details and exposing only the essential features of an object, making it easier to understand and use.",
+      "example": "from abc import ABC, abstractmethod\n\nclass Database(ABC):\n    @abstractmethod\n    def connect(self):\n        pass\n    \n    @abstractmethod\n    def disconnect(self):\n        pass\n\nclass MySQLDatabase(Database):\n    def connect(self):\n        return 'Connected to MySQL'\n    \n    def disconnect(self):\n        return 'Disconnected from MySQL'"
     },
     {
       "name": "Encapsulation",
-      "description": "The bundling of data and methods within a class, restricting access to the internal state of an object and promoting data integrity by controlling how data is accessed and modified."
+      "description": "The bundling of data and methods within a class, restricting access to the internal state of an object and promoting data integrity by controlling how data is accessed and modified.",
+      "example": "class BankAccount:\n    def __init__(self, account_number, balance):\n        self.__account_number = account_number  # private attribute\n        self.__balance = balance  # private attribute\n    \n    def get_balance(self):\n        return self.__balance\n    \n    def deposit(self, amount):\n        if amount > 0:\n            self.__balance += amount\n            return True\n        return False\n    \n    def withdraw(self, amount):\n        if 0 < amount <= self.__balance:\n            self.__balance -= amount\n            return True\n        return False"
     }
   ],
   "solid": [
     {
       "name": "Single Responsibility",
-      "description": "A class should have only one reason to change, meaning it should have only one responsibility or job."
+      "description": "A class should have only one reason to change, meaning it should have only one responsibility or job.",
+      "example": "# Bad: Multiple responsibilities\nclass User:\n    def __init__(self, name, email):\n        self.name = name\n        self.email = email\n    \n    def save_to_database(self):\n        # Database logic\n        pass\n    \n    def send_email(self):\n        # Email logic\n        pass\n\n# Good: Single responsibility\nclass User:\n    def __init__(self, name, email):\n        self.name = name\n        self.email = email\n\nclass UserRepository:\n    def save(self, user):\n        # Database logic\n        pass\n\nclass EmailService:\n    def send_email(self, user):\n        # Email logic\n        pass"
     },
     {
       "name": "Open / Closed",
-      "description": "Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification, allowing new functionality to be added without altering existing code."
+      "description": "Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification, allowing new functionality to be added without altering existing code.",
+      "example": "from abc import ABC, abstractmethod\n\nclass PaymentMethod(ABC):\n    @abstractmethod\n    def process_payment(self, amount):\n        pass\n\nclass CreditCardPayment(PaymentMethod):\n    def process_payment(self, amount):\n        return f'Processing ${amount} via Credit Card'\n\nclass PayPalPayment(PaymentMethod):\n    def process_payment(self, amount):\n        return f'Processing ${amount} via PayPal'\n\n# New payment methods can be added without modifying existing code"
     },
     {
       "name": "Liskov Substitution",
-      "description": "Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program."
+      "description": "Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.",
+      "example": "class Bird:\n    def fly(self):\n        return 'Flying'\n\nclass Sparrow(Bird):\n    def fly(self):\n        return 'Sparrow flying'\n\nclass Penguin(Bird):\n    def fly(self):\n        raise NotImplementedError('Penguins cannot fly')\n\n# Violates LSP because Penguin cannot fly\ndef make_bird_fly(bird: Bird):\n    return bird.fly()"
     },
     {
       "name": "Interface Segregation",
-      "description": "Clients should not be forced to depend on interfaces they do not use. Instead, interfaces should be specific to the needs of the client."
+      "description": "Clients should not be forced to depend on interfaces they do not use. Instead, interfaces should be specific to the needs of the client.",
+      "example": "from abc import ABC, abstractmethod\n\nclass Printer(ABC):\n    @abstractmethod\n    def print_document(self):\n        pass\n\nclass Scanner(ABC):\n    @abstractmethod\n    def scan_document(self):\n        pass\n\nclass SimplePrinter(Printer):\n    def print_document(self):\n        return 'Printing document'\n\nclass AllInOnePrinter(Printer, Scanner):\n    def print_document(self):\n        return 'Printing document'\n    \n    def scan_document(self):\n        return 'Scanning document'"
     },
     {
       "name": "Dependency Inversion",
-      "description": "High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions."
+      "description": "High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions.",
+      "example": "from abc import ABC, abstractmethod\n\nclass NotificationService(ABC):\n    @abstractmethod\n    def send_notification(self, message):\n        pass\n\nclass EmailService(NotificationService):\n    def send_notification(self, message):\n        return f'Sending email: {message}'\n\nclass SMSService(NotificationService):\n    def send_notification(self, message):\n        return f'Sending SMS: {message}'\n\nclass UserService:\n    def __init__(self, notification_service: NotificationService):\n        self.notification_service = notification_service\n    \n    def notify_user(self, message):\n        return self.notification_service.send_notification(message)"
     }
   ],
   "design": [
