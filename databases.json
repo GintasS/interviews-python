@@ -1,0 +1,151 @@
+{
+  "title": "Database Types: SQL vs NoSQL",
+  "html_structure": {
+    "container": "<div class='database-comparison'>",
+    "section": "<section class='database-section'>",
+    "subsection": "<div class='subsection'>",
+    "list": "<ul class='feature-list'>",
+    "list_item": "<li class='feature-item'>",
+    "heading": "<h2 class='section-heading'>",
+    "subheading": "<h3 class='subsection-heading'>",
+    "paragraph": "<p class='description'>",
+    "example": "<div class='example-box'>"
+  },
+  "sql_databases": {
+    "description": "Relational databases store data in structured tables with predefined schemas. They use SQL (Structured Query Language) for defining and manipulating data.",
+    "key_characteristics": [
+      "ACID compliance (Atomicity, Consistency, Isolation, Durability)",
+      "Fixed schema",
+      "Data relationships through foreign keys",
+      "Strong data consistency",
+      "Vertical scaling"
+    ],
+    "popular_databases": [
+      {
+        "name": "MySQL",
+        "features": [
+          "Open-source",
+          "Widely used for web applications",
+          "Good for OLTP (Online Transaction Processing)"
+        ]
+      },
+      {
+        "name": "PostgreSQL",
+        "features": [
+          "Advanced open-source database",
+          "Supports complex queries and JSON",
+          "Strong data integrity"
+        ]
+      },
+      {
+        "name": "Oracle",
+        "features": [
+          "Enterprise-grade",
+          "High performance",
+          "Advanced features for large-scale applications"
+        ]
+      },
+      {
+        "name": "Microsoft SQL Server",
+        "features": [
+          "Windows-centric",
+          "Good integration with Microsoft products",
+          "Strong business intelligence features"
+        ]
+      }
+    ]
+  },
+  "nosql_databases": {
+    "description": "NoSQL (Not Only SQL) databases are designed for unstructured data and offer flexible schemas. They are optimized for specific data models and access patterns.",
+    "types": [
+      {
+        "name": "Document Databases",
+        "description": "Store data in JSON-like documents",
+        "characteristics": [
+          "Flexible schema",
+          "Good for content management and real-time big data"
+        ],
+        "examples": [
+          "MongoDB",
+          "CouchDB",
+          "Firebase"
+        ]
+      },
+      {
+        "name": "Key-Value Stores",
+        "description": "Simplest NoSQL databases",
+        "characteristics": [
+          "Store data as key-value pairs",
+          "High performance for simple queries"
+        ],
+        "examples": [
+          "Redis",
+          "DynamoDB",
+          "Riak"
+        ]
+      },
+      {
+        "name": "Column-Family Stores",
+        "description": "Store data in columns rather than rows",
+        "characteristics": [
+          "Good for analytics and data warehousing"
+        ],
+        "examples": [
+          "Cassandra",
+          "HBase",
+          "ScyllaDB"
+        ]
+      },
+      {
+        "name": "Graph Databases",
+        "description": "Store data in nodes and edges",
+        "characteristics": [
+          "Optimized for relationship-heavy data"
+        ],
+        "examples": [
+          "Neo4j",
+          "ArangoDB",
+          "Amazon Neptune"
+        ]
+      }
+    ],
+    "key_characteristics": [
+      "Flexible schema",
+      "Horizontal scaling",
+      "High performance for specific use cases",
+      "Eventual consistency (in most cases)",
+      "Better suited for big data and real-time applications"
+    ]
+  },
+  "use_cases": {
+    "sql_use_cases": [
+      "Banking systems",
+      "E-commerce platforms",
+      "Inventory management",
+      "Customer relationship management (CRM)"
+    ],
+    "nosql_use_cases": [
+      "Social media platforms",
+      "IoT applications",
+      "Real-time analytics",
+      "Content management systems",
+      "Gaming leaderboards",
+      "Caching layers"
+    ]
+  },
+  "selection_criteria": {
+    "choose_sql_when": [
+      "Data is structured and relationships are important",
+      "ACID compliance is required",
+      "Complex queries and transactions are needed",
+      "Data consistency is critical"
+    ],
+    "choose_nosql_when": [
+      "Data is unstructured or semi-structured",
+      "High scalability is required",
+      "Real-time big data processing is needed",
+      "Schema flexibility is important",
+      "High write throughput is required"
+    ]
+  }
+} 

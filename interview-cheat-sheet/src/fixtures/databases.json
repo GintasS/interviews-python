@@ -245,6 +245,153 @@
           ]
         }
       ]
+    },
+    {
+      "name": "NoSQL Database Types",
+      "types": [
+        {
+          "name": "Document Databases",
+          "description": "Store data in JSON-like documents",
+          "characteristics": [
+            "Flexible schema",
+            "Good for content management and real-time big data",
+            "Natural fit for object-oriented programming"
+          ],
+          "examples": [
+            {
+              "name": "MongoDB",
+              "features": [
+                "Most popular document database",
+                "Rich querying capabilities",
+                "Horizontal scaling",
+                "Built-in sharding"
+              ]
+            },
+            {
+              "name": "CouchDB",
+              "features": [
+                "Multi-master replication",
+                "Offline-first capabilities",
+                "RESTful API"
+              ]
+            },
+            {
+              "name": "Firebase",
+              "features": [
+                "Real-time synchronization",
+                "Built-in authentication",
+                "Cloud hosting"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Key-Value Stores",
+          "description": "Simplest NoSQL databases storing data as key-value pairs",
+          "characteristics": [
+            "High performance for simple queries",
+            "Excellent for caching",
+            "Simple data model"
+          ],
+          "examples": [
+            {
+              "name": "Redis",
+              "features": [
+                "In-memory data store",
+                "Rich data types",
+                "Pub/Sub messaging",
+                "Atomic operations"
+              ]
+            },
+            {
+              "name": "DynamoDB",
+              "features": [
+                "Fully managed service",
+                "Automatic scaling",
+                "Single-digit millisecond latency"
+              ]
+            },
+            {
+              "name": "Riak",
+              "features": [
+                "High availability",
+                "Multi-datacenter replication",
+                "Strong consistency options"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Column-Family Stores",
+          "description": "Store data in columns rather than rows",
+          "characteristics": [
+            "Good for analytics and data warehousing",
+            "Efficient for column-based queries",
+            "High write throughput"
+          ],
+          "examples": [
+            {
+              "name": "Cassandra",
+              "features": [
+                "Linear scalability",
+                "Multi-datacenter support",
+                "Tunable consistency"
+              ]
+            },
+            {
+              "name": "HBase",
+              "features": [
+                "Built on Hadoop",
+                "Strong consistency",
+                "Automatic sharding"
+              ]
+            },
+            {
+              "name": "ScyllaDB",
+              "features": [
+                "C++ implementation",
+                "Drop-in Cassandra replacement",
+                "Higher performance"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Graph Databases",
+          "description": "Store data in nodes and edges",
+          "characteristics": [
+            "Optimized for relationship-heavy data",
+            "Natural fit for social networks",
+            "Complex relationship queries"
+          ],
+          "examples": [
+            {
+              "name": "Neo4j",
+              "features": [
+                "Most popular graph database",
+                "ACID compliant",
+                "Rich query language (Cypher)"
+              ]
+            },
+            {
+              "name": "ArangoDB",
+              "features": [
+                "Multi-model database",
+                "Graph, document, and key-value in one",
+                "Built-in graph traversal"
+              ]
+            },
+            {
+              "name": "Amazon Neptune",
+              "features": [
+                "Fully managed service",
+                "Supports multiple graph models",
+                "High availability"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "interview_questions": [
